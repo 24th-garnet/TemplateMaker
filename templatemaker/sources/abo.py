@@ -25,6 +25,7 @@ from .. import category as cat
 
 BASE = "https://amazon-berkeley-objects.s3.amazonaws.com/"
 MODELS_CSV = "3dmodels/metadata/3dmodels.csv.gz"
+IMAGES_CSV = "images/metadata/images.csv.gz"
 LISTING_SHARDS = "0123456789abcdef"
 
 LICENSE = "CC BY 4.0"
@@ -141,6 +142,7 @@ def fetch_catalog(cache: Path) -> None:
     for h in LISTING_SHARDS:
         _get(f"listings/metadata/listings_{h}.json.gz",
              cache / f"listings_{h}.json.gz")
+    _get(IMAGES_CSV, cache / "images.csv.gz")
     fetch_sizes(cache)
 
 
@@ -175,6 +177,35 @@ def fetch_sizes(cache: Path) -> dict[str, int]:
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(sizes))
     return sizes
+
+
+def thumb_url(path: str) -> str:
+    """商品写真の場所。`small` は一辺 256px 程度で 1 枚 10KB ほど。
+
+    一覧で形を見分けるのに要る。寸法と名前だけで 376 体から選ぶのは無理。
+    """
+    return f"{BASE}images/small/{path}"
+
+
+def fetch_thumb(path: str, dest: Path) -> int:
+    if dest.exists() and dest.stat().st_size > 0:
+        return dest.stat().st_size
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_suffix(".part")
+    with urllib.request.urlopen(thumb_url(path)) as r, tmp.open("wb") as f:
+        while chunk := r.read(1 << 16):
+            f.write(chunk)
+    tmp.replace(dest)
+    return dest.stat().st_size
+
+
+def _images(cache: Path) -> dict[str, str]:
+    """`image_id` から写真の置き場所へ。無ければ空で返す（写真は必須ではない）。"""
+    p = cache / "images.csv.gz"
+    if not p.exists():
+        return {}
+    text = gzip.decompress(p.read_bytes()).decode("utf-8")
+    return {r["image_id"]: r["path"] for r in csv.DictReader(io.StringIO(text))}
 
 
 def glb_url(asin: str) -> str:
@@ -214,6 +245,8 @@ def _listings(cache: Path) -> dict[str, dict]:
                     d.setdefault("product_type", pt[0]["value"])
                 if br := r.get("brand"):
                     d.setdefault("brand", br[0]["value"])
+                if mi := r.get("main_image_id"):
+                    d.setdefault("main_image_id", mi)
                 for nm in r.get("item_name", []):
                     tag = nm.get("language_tag")
                     rank = LANGS.index(tag) if tag in LANGS else len(LANGS)
@@ -231,6 +264,7 @@ def load(cache: Path) -> Iterator[dict]:
     """
     meta = _listings(cache)
     sizes = fetch_sizes(cache)
+    images = _images(cache)
     raw = (cache / "3dmodels.csv.gz").read_bytes()
     text = gzip.decompress(raw).decode("utf-8")
     for r in csv.DictReader(io.StringIO(text)):
@@ -250,6 +284,7 @@ def load(cache: Path) -> Iterator[dict]:
             "vertices": int(r["vertices"]),
             "faces": int(r["faces"]),
             "bytes": sizes.get(asin, 0),
+            "image": images.get(m.get("main_image_id", ""), ""),
             "path": r["path"],
             "url": glb_url(asin),
         }

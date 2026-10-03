@@ -1,0 +1,6494 @@
+{
+ "schema_version": "tm-manifest-1",
+ "source": "abo",
+ "license": "CC BY 4.0",
+ "license_url": "https://creativecommons.org/licenses/by/4.0/",
+ "attribution": "Amazon Berkeley Objects (ABO)",
+ "generated_at": "2026-10-03T15:59:21Z",
+ "criteria": {
+  "tier": "b",
+  "per_category": 25,
+  "sane_range_m": [
+   0.02,
+   3.5
+  ],
+  "max_faces": 200000,
+  "limits_wdh_m": {
+   "bed": [
+    2.15,
+    1.6,
+    1.3
+   ],
+   "bench": [
+    1.7,
+    0.6,
+    1.0
+   ],
+   "ceiling_light": [
+    1.0,
+    1.0,
+    1.2
+   ],
+   "chair": [
+    0.9,
+    0.95,
+    1.4
+   ],
+   "decor": [
+    0.6,
+    0.6,
+    0.9
+   ],
+   "desk": [
+    1.6,
+    0.8,
+    1.3
+   ],
+   "headboard": [
+    1.6,
+    0.3,
+    1.4
+   ],
+   "lamp": [
+    0.7,
+    0.7,
+    1.9
+   ],
+   "mirror": [
+    1.1,
+    0.3,
+    2.0
+   ],
+   "planter": [
+    0.8,
+    0.8,
+    1.6
+   ],
+   "rug": [
+    3.0,
+    2.2,
+    0.08
+   ],
+   "sofa": [
+    2.1,
+    1.0,
+    1.0
+   ],
+   "stool": [
+    0.9,
+    0.8,
+    0.7
+   ],
+   "storage": [
+    1.4,
+    0.6,
+    2.1
+   ],
+   "table": [
+    1.8,
+    1.1,
+    0.85
+   ],
+   "wall_decor": [
+    1.5,
+    0.2,
+    1.5
+   ]
+  }
+ },
+ "count": 376,
+ "items": [
+  {
+   "id": "B01N6AQX0A",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Intex",
+   "name": "Intex Premaire Luchtbed met Fiber Tech-technologie, nieuwe geïntegreerde elektrische pomp met gegevens en USB, PVC, grijs, 152 x 203 x 46 cm",
+   "extent": [
+    1.519935958462177,
+    0.4599939730931111,
+    2.036355134964831
+   ],
+   "vertices": 20146,
+   "faces": 36954,
+   "bytes": 13692172,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/A/B01N6AQX0A.glb",
+   "image": "1b/1b16aee9.jpg"
+  },
+  {
+   "id": "B0718WYQ8D",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Aveyron Single Bed Frame, 195 x 100 x 80cm, Pink",
+   "extent": [
+    0.9980985522270203,
+    0.8047987818717957,
+    1.9628776907920837
+   ],
+   "vertices": 9204,
+   "faces": 13640,
+   "bytes": 2039264,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B0718WYQ8D.glb",
+   "image": "1e/1e9f5de3.jpg"
+  },
+  {
+   "id": "B071H75K71",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Aveyron Single Bed Frame, 195 x 100 x 80cm, Grey",
+   "extent": [
+    0.9980985522270203,
+    0.8047987818717957,
+    1.9628774523735046
+   ],
+   "vertices": 10128,
+   "faces": 15016,
+   "bytes": 2056744,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B071H75K71.glb",
+   "image": "20/20d9ed6f.jpg"
+  },
+  {
+   "id": "B071ZHY8X9",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Newport 3-Drawer Bedroom Dresser, 34\"W, Toffee Oak",
+   "extent": [
+    1.249997854232788,
+    1.2244125604629517,
+    0.5912379920482635
+   ],
+   "vertices": 21690,
+   "faces": 21344,
+   "bytes": 2949368,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B071ZHY8X9.glb",
+   "image": "56/56a703fb.jpg"
+  },
+  {
+   "id": "B073WQ8JLT",
+   "source": "abo",
+   "category": "bed",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Foldable, 14\" Metal Platform Bed Frame with Tool-Free Assembly, No Box Spring Needed - Twin XL",
+   "extent": [
+    1.010025978088379,
+    0.35741084814071655,
+    2.0153985023498535
+   ],
+   "vertices": 25452,
+   "faces": 33318,
+   "bytes": 1509988,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B073WQ8JLT.glb",
+   "image": "b6/b6da0eb0.jpg"
+  },
+  {
+   "id": "B075QG3JWL",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Rivet",
+   "name": "Rivet Kyler Mid-Century Upholstered Tufted Queen Bed with Headboard, 66\"W, Charcoal",
+   "extent": [
+    1.53114652633667,
+    0.9327985048294067,
+    1.637528896331787
+   ],
+   "vertices": 24362,
+   "faces": 43852,
+   "bytes": 3093252,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B075QG3JWL.glb",
+   "image": "17/17c62f00.jpg"
+  },
+  {
+   "id": "B075QMHYV8",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Ainsley Geometric Steel Bed Frame - Queen Size - Grey",
+   "extent": [
+    1.5972872972488403,
+    1.221845030784607,
+    2.0628052949905396
+   ],
+   "vertices": 31193,
+   "faces": 56106,
+   "bytes": 2918268,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B075QMHYV8.glb",
+   "image": "01/01cf5690.jpg"
+  },
+  {
+   "id": "B075Z1NM6N",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Stark Modern Wood Starburst Stitch Queen Bed with Headboard, 82.3\"W, Antique Espresso",
+   "extent": [
+    1.5657272338867188,
+    1.165174961090088,
+    2.1165385246276855
+   ],
+   "vertices": 11033,
+   "faces": 20036,
+   "bytes": 3000012,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B075Z1NM6N.glb",
+   "image": "8a/8abe5c9d.jpg"
+  },
+  {
+   "id": "B075Z8THYY",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Bateman Casual Rustic Wood Bedroom Dresser, 55 Inch Wide, Brown",
+   "extent": [
+    1.3874903917312622,
+    0.8916049003601074,
+    0.4379652738571167
+   ],
+   "vertices": 6663,
+   "faces": 6190,
+   "bytes": 2623540,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075Z8THYY.glb",
+   "image": "01/01e340ab.jpg"
+  },
+  {
+   "id": "B07B4W2FFY",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Jonathan Mid-Century Modern Wood Bedside Nightstand, 20\", Walnut",
+   "extent": [
+    0.5210472643375397,
+    0.6074930429458618,
+    0.4446444660425186
+   ],
+   "vertices": 9756,
+   "faces": 13890,
+   "bytes": 2471640,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07B4W2FFY.glb",
+   "image": "3f/3f527ee3.jpg"
+  },
+  {
+   "id": "B07B4W2FKR",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet A8910 Dresser",
+   "extent": [
+    1.5471501350402832,
+    0.8340798020362854,
+    0.4874805063009262
+   ],
+   "vertices": 13583,
+   "faces": 13808,
+   "bytes": 8088480,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07B4W2FKR.glb",
+   "image": "fc/fc68397a.jpg"
+  },
+  {
+   "id": "B07B4W5TZF",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Contemporary Curved Wood King Bed, 79\"W, Toffee Oak",
+   "extent": [
+    1.5020995736122131,
+    1.1345961093902588,
+    2.1078051924705505
+   ],
+   "vertices": 14692,
+   "faces": 25588,
+   "bytes": 2885124,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07B4W5TZF.glb",
+   "image": "0d/0dd1f33a.jpg"
+  },
+  {
+   "id": "B07B51H792",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Imogene Oiled Bronze Queen Bed, 63.5\"W, Dark Bronze",
+   "extent": [
+    1.572060227394104,
+    1.172817349433899,
+    2.1221213340759277
+   ],
+   "vertices": 10024,
+   "faces": 17216,
+   "bytes": 1327036,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B51H792.glb",
+   "image": "75/75347621.jpg"
+  },
+  {
+   "id": "B07D4BD47F",
+   "source": "abo",
+   "category": "bed",
+   "brand": "AmazonBasics",
+   "name": "Amazon Basics 9-Leg Support Metal Bed Frame - Strong Support for Box Spring and Mattress Set - Tool-Free Easy Assembly - Queen Size Bed",
+   "extent": [
+    1.4976122379302979,
+    0.2480267435312271,
+    1.9900389313697815
+   ],
+   "vertices": 11357,
+   "faces": 14088,
+   "bytes": 7184668,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07D4BD47F.glb",
+   "image": "24/24577cc9.jpg"
+  },
+  {
+   "id": "B07D4BD5D3",
+   "source": "abo",
+   "category": "bed",
+   "brand": "AmazonBasics",
+   "name": "Amazon Basics 6-Leg Support Metal Bed Frame - Strong Support for Box Spring and Mattress Set - Tool-Free Easy Assembly - Twin Size Bed",
+   "extent": [
+    0.9677665531635284,
+    0.2480267882347107,
+    1.897135615348816
+   ],
+   "vertices": 9650,
+   "faces": 11976,
+   "bytes": 3255872,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07D4BD5D3.glb",
+   "image": "15/15512469.jpg"
+  },
+  {
+   "id": "B07D4BHP6T",
+   "source": "abo",
+   "category": "bed",
+   "brand": "AmazonBasics",
+   "name": "Amazon Basics 9-Leg Support Metal Bed Frame - Strong Support for Box Spring and Mattress Set - Tool-Free Easy Assembly - Full Size Bed",
+   "extent": [
+    1.355626404285431,
+    0.2245117723941803,
+    1.8013669848442078
+   ],
+   "vertices": 11357,
+   "faces": 14088,
+   "bytes": 7184672,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07D4BHP6T.glb",
+   "image": "24/24577cc9.jpg"
+  },
+  {
+   "id": "B07GFFR415",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Constance Lift-Up Double Bed Frame with Storage, 190 x 140 x 31.5cm, Light Brown Oak-Effect",
+   "extent": [
+    1.4000479519245348,
+    0.5610859976604843,
+    1.8999200573125568
+   ],
+   "vertices": 14368,
+   "faces": 20036,
+   "bytes": 13637996,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07GFFR415.glb",
+   "image": "ce/ce04dd2a.jpg"
+  },
+  {
+   "id": "B07GFRKNBK",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Marchio Amazon - Movian, letto matrimoniale con testiera bassa e pediera, in stile moderno, modello Kolva, 144,5 x 194,5 x 31,7, colore bianco",
+   "extent": [
+    1.4447520677259578,
+    0.4967297508645957,
+    1.9448780947778064
+   ],
+   "vertices": 28244,
+   "faces": 39912,
+   "bytes": 4034216,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07GFRKNBK.glb",
+   "image": "01/01f1275d.jpg"
+  },
+  {
+   "id": "B07GFRNHYW",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Marca Amazon - Movian Indre Modern - Base para cama de matrimonio con cabecero bajo, 194,5 x 144,5 x 31,7 cm (Efecto Roble)",
+   "extent": [
+    1.4899999476243269,
+    0.4619999953829322,
+    1.949999989569186
+   ],
+   "vertices": 36782,
+   "faces": 56100,
+   "bytes": 14557868,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07GFRNHYW.glb",
+   "image": "14/1448e5b6.jpg"
+  },
+  {
+   "id": "B07GFVJWNM",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Marque Amazon - Movian - Cadre de lit double avec coffre Constance Modern, 190 x 140 x 31,5, Blanc",
+   "extent": [
+    1.3997940341846802,
+    0.4060783495233694,
+    1.8999202132129658
+   ],
+   "vertices": 51482,
+   "faces": 37900,
+   "bytes": 4882792,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07GFVJWNM.glb",
+   "image": "ff/ff729f07.jpg"
+  },
+  {
+   "id": "B07H8JNCDR",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Movian Morava Under-Bed Storage Drawer, 120 x 20 x 67cm, Oak Sonoma Colour",
+   "extent": [
+    1.1999999284744263,
+    0.2088477462530136,
+    0.6852152943611145
+   ],
+   "vertices": 9128,
+   "faces": 4750,
+   "bytes": 3000464,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07H8JNCDR.glb",
+   "image": "0a/0aa2cadb.jpg"
+  },
+  {
+   "id": "B07H8PWFFS",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Movian",
+   "name": "Movian Cinca",
+   "extent": [
+    1.2999718606488744,
+    0.1412679456571198,
+    0.6697979852466142
+   ],
+   "vertices": 9271,
+   "faces": 14154,
+   "bytes": 2228616,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07H8PWFFS.glb",
+   "image": "49/49179ec7.jpg"
+  },
+  {
+   "id": "B07RGR6XYT",
+   "source": "abo",
+   "category": "bed",
+   "brand": "Max & Finn",
+   "name": "Max & Finn Twin Floor Bunk Bed, Gray",
+   "extent": [
+    2.012956380844116,
+    1.206113338470459,
+    1.1053916811943054
+   ],
+   "vertices": 27439,
+   "faces": 43744,
+   "bytes": 6446840,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07RGR6XYT.glb",
+   "image": "c1/c185460a.jpg"
+  },
+  {
+   "id": "B086TFXK75",
+   "source": "abo",
+   "category": "bed",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Metal Bed with Modern Industrial Design Headboard - 14 Inch Height for Under-Bed Storage - Wood Slats - Easy Assemble, Twin",
+   "extent": [
+    0.9910250902175903,
+    0.9670000076293945,
+    1.9303747415542603
+   ],
+   "vertices": 24429,
+   "faces": 39080,
+   "bytes": 14694388,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B086TFXK75.glb",
+   "image": "bf/bfe1c4c2.jpg"
+  },
+  {
+   "id": "B086VLRYXS",
+   "source": "abo",
+   "category": "bed",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Heavy Duty Non-Slip Bed Frame with Steel Slats, Easy Assembly - 18\" H, (Twin)",
+   "extent": [
+    1.023347020149231,
+    0.65927654504776,
+    1.949783444404602
+   ],
+   "vertices": 26514,
+   "faces": 40084,
+   "bytes": 12597444,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B086VLRYXS.glb",
+   "image": "9c/9c738ff7.jpg"
+  },
+  {
+   "id": "B073G7BVBP",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Martin Modern Storage Bench, 39\"W, Sundried Velvet",
+   "extent": [
+    1.0159474611282349,
+    0.47081175446510315,
+    0.491835355758667
+   ],
+   "vertices": 10271,
+   "faces": 15456,
+   "bytes": 2750140,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B073G7BVBP.glb",
+   "image": "a5/a5ab1856.jpg"
+  },
+  {
+   "id": "B073G82HBV",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Union Modern Storage Bench, 38\"W, Teal",
+   "extent": [
+    0.9948050081729889,
+    0.4743095934391022,
+    0.4758542627096176
+   ],
+   "vertices": 4726,
+   "faces": 7268,
+   "bytes": 3522820,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B073G82HBV.glb",
+   "image": "3d/3dc524d1.jpg"
+  },
+  {
+   "id": "B073G947XM",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Union Modern Storage Bench, 38\"W, Emerald",
+   "extent": [
+    0.9890691936016083,
+    0.5007567405700684,
+    0.5047429949045181
+   ],
+   "vertices": 4210,
+   "faces": 6744,
+   "bytes": 2342556,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B073G947XM.glb",
+   "image": "d0/d0954294.jpg"
+  },
+  {
+   "id": "B073GC43QZ",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Martin Modern Storage Bench, 39\"W, Scopic Blue",
+   "extent": [
+    1.0159474611282349,
+    0.47669917345046997,
+    0.491835355758667
+   ],
+   "vertices": 10103,
+   "faces": 15296,
+   "bytes": 2847788,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B073GC43QZ.glb",
+   "image": "c3/c372ed49.jpg"
+  },
+  {
+   "id": "B073GCWSTH",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Martin Modern Storage Bench, 39\"W, Navy Velvet",
+   "extent": [
+    1.0103742480278015,
+    0.4668234884738922,
+    0.48913729190826416
+   ],
+   "vertices": 9328,
+   "faces": 15546,
+   "bytes": 2814876,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B073GCWSTH.glb",
+   "image": "b5/b5ccf9ec.jpg"
+  },
+  {
+   "id": "B073GGGF7H",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Martin Modern Storage Bench, 39\"W, Scopic Black",
+   "extent": [
+    1.0159474611282349,
+    0.47669917345046997,
+    0.491835355758667
+   ],
+   "vertices": 9234,
+   "faces": 15456,
+   "bytes": 2849532,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B073GGGF7H.glb",
+   "image": "72/72f40599.jpg"
+  },
+  {
+   "id": "B075QDQXW1",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Nori Tufted Storage Bench, 58\"L, Natural",
+   "extent": [
+    1.4804868698120117,
+    0.46722105145454407,
+    0.4546089917421341
+   ],
+   "vertices": 23260,
+   "faces": 39706,
+   "bytes": 3210836,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B075QDQXW1.glb",
+   "image": "80/800283d9.jpg"
+  },
+  {
+   "id": "B075QFCZ1Z",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Nailhead Upholstered Storage Bench, 58 Inch L, Natural",
+   "extent": [
+    1.4821275472640991,
+    0.44703447818756104,
+    0.4700031131505966
+   ],
+   "vertices": 22261,
+   "faces": 40109,
+   "bytes": 3054776,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B075QFCZ1Z.glb",
+   "image": "70/70dff8df.jpg"
+  },
+  {
+   "id": "B07B4SC9RP",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Contemporary Metal Bedroom Bench with Cushion, 58\"W, Oatmeal",
+   "extent": [
+    1.4881218075752258,
+    0.48812320828437805,
+    0.47923754155635834
+   ],
+   "vertices": 8827,
+   "faces": 14168,
+   "bytes": 1859588,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07B4SC9RP.glb",
+   "image": "0f/0f5b0e6a.jpg"
+  },
+  {
+   "id": "B07DBB1S8N",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Upholstered Entryway Cushioned Storage Bench - 47 1/4-Inch, Espresso",
+   "extent": [
+    1.1961816549301147,
+    0.46757256984710693,
+    0.36726316809654236
+   ],
+   "vertices": 7697,
+   "faces": 13995,
+   "bytes": 2646952,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07DBB1S8N.glb",
+   "image": "92/92d72672.jpg"
+  },
+  {
+   "id": "B07DBB1T6Z",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Upholstered Entryway Cushioned Storage Bench - 31 1/2-Inch, White",
+   "extent": [
+    0.7340747117996216,
+    0.46145951747894287,
+    0.3615613877773285
+   ],
+   "vertices": 15048,
+   "faces": 13096,
+   "bytes": 2094176,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B07DBB1T6Z.glb",
+   "image": "1b/1b70b5a8.jpg"
+  },
+  {
+   "id": "B07DBB7FN6",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Radcliffe Upholstered Wood Storage Bench, 40\"W, Dark Espresso",
+   "extent": [
+    0.9871610999107361,
+    0.6458922624588013,
+    0.36900293827056885
+   ],
+   "vertices": 6572,
+   "faces": 6108,
+   "bytes": 851612,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBB7FN6.glb",
+   "image": "5a/5a5afb4e.jpg"
+  },
+  {
+   "id": "B07DBDTCTY",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Upholstered Entryway Cushioned Storage Bench - 31 1/2-Inch, Espresso",
+   "extent": [
+    0.7340747117996216,
+    0.46145951747894287,
+    0.3615613877773285
+   ],
+   "vertices": 7626,
+   "faces": 13096,
+   "bytes": 1144508,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07DBDTCTY.glb",
+   "image": "82/82b1d300.jpg"
+  },
+  {
+   "id": "B07DBDZ4SG",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Upholstered Entryway Cushioned Storage Bench - 47 1/4-Inch, White",
+   "extent": [
+    1.1961816549301147,
+    0.4525905251502991,
+    0.36323873698711395
+   ],
+   "vertices": 10350,
+   "faces": 17778,
+   "bytes": 1149780,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07DBDZ4SG.glb",
+   "image": "76/76d4c0db.jpg"
+  },
+  {
+   "id": "B07DBGHYG6",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Radcliffe Upholstered Storage Bench, 40\"W, White",
+   "extent": [
+    0.9871610999107361,
+    0.5887019634246826,
+    0.34591130912303925
+   ],
+   "vertices": 4581,
+   "faces": 5902,
+   "bytes": 689656,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBGHYG6.glb",
+   "image": "5f/5f71f2f6.jpg"
+  },
+  {
+   "id": "B07DBHC33H",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Galer Tufted Nailhead Lift Top Storage Bedroom and Entryway Bench, 15.75\"W, Denim Blue",
+   "extent": [
+    1.0522404909133911,
+    0.4916229248046875,
+    0.41723619401454926
+   ],
+   "vertices": 16239,
+   "faces": 29980,
+   "bytes": 4162668,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07DBHC33H.glb",
+   "image": "f8/f8d84448.jpg"
+  },
+  {
+   "id": "B07DBHPK22",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Galer Tufted Nailhead Lift Top Storage Bedroom and Entryway Bench, 15.75\"W, Charcoal Grey",
+   "extent": [
+    1.0522404909133911,
+    0.47036847472190857,
+    0.41723620891571045
+   ],
+   "vertices": 16195,
+   "faces": 29919,
+   "bytes": 3344512,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07DBHPK22.glb",
+   "image": "97/97c3c2c9.jpg"
+  },
+  {
+   "id": "B07DYJVQZZ",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Red Hook",
+   "name": "Red Hook Barcelona Wooden Bench with Faux-Leather Upholstered Cushion - Bittersweet Brown",
+   "extent": [
+    1.2585825887375681,
+    0.4905536675466495,
+    0.400966001647774
+   ],
+   "vertices": 7985,
+   "faces": 13524,
+   "bytes": 43447920,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B07DYJVQZZ.glb",
+   "image": "64/64ae65e3.jpg"
+  },
+  {
+   "id": "B07K7NQR23",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Alkove",
+   "name": "Marca Amazon - Alkove - Hayes - Banco de madera maciza con asiento tapizado (roble salvaje)",
+   "extent": [
+    1.199895977973938,
+    0.4798059190371369,
+    0.40487578657871737
+   ],
+   "vertices": 2008,
+   "faces": 3076,
+   "bytes": 21740784,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07K7NQR23.glb",
+   "image": "6d/6dcbdce6.jpg"
+  },
+  {
+   "id": "B07K8193NL",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Alkove",
+   "name": "Marque Amazon - Alkove - Hayes - Banc de chambre avec siège tapissé",
+   "extent": [
+    1.201982026865017,
+    0.4297679657832024,
+    0.449833973505935
+   ],
+   "vertices": 4083,
+   "faces": 5452,
+   "bytes": 24689936,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07K8193NL.glb",
+   "image": "74/74855fcf.jpg"
+  },
+  {
+   "id": "B07M6PKC6D",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Classic Solid Pine Storage Bench, 46.5\"W, Rustic Gray Finish",
+   "extent": [
+    1.184578776359558,
+    0.5009178519248962,
+    0.40237167477607727
+   ],
+   "vertices": 15277,
+   "faces": 22368,
+   "bytes": 38705240,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07M6PKC6D.glb",
+   "image": "1f/1f8e2270.jpg"
+  },
+  {
+   "id": "B07M6PKCQQ",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Classic Solid Pine Storage Bench, 45\"W, White Wash Finish",
+   "extent": [
+    1.184578776359558,
+    0.48634544014930725,
+    0.40237167477607727
+   ],
+   "vertices": 15277,
+   "faces": 22368,
+   "bytes": 17960984,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07M6PKCQQ.glb",
+   "image": "b1/b18d48a7.jpg"
+  },
+  {
+   "id": "B07MF1RR2V",
+   "source": "abo",
+   "category": "bench",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Classic Solid Pine Storage Bench, 45\"W, Black Finish",
+   "extent": [
+    1.1403944492340088,
+    0.5009178519248962,
+    0.3984447419643402
+   ],
+   "vertices": 5091,
+   "faces": 7200,
+   "bytes": 15065168,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07MF1RR2V.glb",
+   "image": "a2/a2274471.jpg"
+  },
+  {
+   "id": "B07P64ZJQG",
+   "source": "abo",
+   "category": "bench",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Classic Shoe Bench with Lift-Top Compartment and 3 Storage Cubbies - Black Oak",
+   "extent": [
+    0.9050818979740143,
+    0.5010303854942322,
+    0.40145742893218994
+   ],
+   "vertices": 6019,
+   "faces": 9240,
+   "bytes": 29162092,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07P64ZJQG.glb",
+   "image": "66/667a1bd9.jpg"
+  },
+  {
+   "id": "B07P652THV",
+   "source": "abo",
+   "category": "bench",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Classic Shoe Bench with Lift-Top Compartment and 3 Storage Cubbies - White Oak",
+   "extent": [
+    0.8992105842577583,
+    0.5004054059444198,
+    0.4012946043889086
+   ],
+   "vertices": 13248,
+   "faces": 23128,
+   "bytes": 26988336,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07P652THV.glb",
+   "image": "82/824fb571.jpg"
+  },
+  {
+   "id": "B0719H3LG2",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Industrial Round Ceiling Pendant Chandelier Fixture - 6.5 Inch Shade, 10 - 58 Inch Cord, Chrome and Black",
+   "extent": [
+    0.17265544831752777,
+    0.741199791431427,
+    0.17265545576810837
+   ],
+   "vertices": 18947,
+   "faces": 30494,
+   "bytes": 1093108,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B0719H3LG2.glb",
+   "image": "47/4725939d.jpg"
+  },
+  {
+   "id": "B071F6WK9K",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Glass Ceiling Pendant Chandelier Fixture With Edison Light Bulb - 9.75 Inch Shade, 12-58 Inch Cord, Black and Chrome",
+   "extent": [
+    0.2650872766971588,
+    1.0549583435058594,
+    0.26508721709251404
+   ],
+   "vertices": 9184,
+   "faces": 16246,
+   "bytes": 1194764,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B071F6WK9K.glb",
+   "image": "0d/0d10c0bf.jpg"
+  },
+  {
+   "id": "B071HSN4ZJ",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Industrial Chandelier With Bulbs, Adjustable 35.5\"-47.5\"H, Oil-Rubbed Bronze",
+   "extent": [
+    0.500935971736908,
+    1.1703624725341797,
+    0.5009360313415527
+   ],
+   "vertices": 20137,
+   "faces": 34896,
+   "bytes": 1598404,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B071HSN4ZJ.glb",
+   "image": "2e/2ee6e1df.jpg"
+  },
+  {
+   "id": "B07374K539",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Ceiling Pendant Light Chandelier Fixture With Glass Shade - 11.5 x 11.5 x 42 Inches, Black",
+   "extent": [
+    0.29181428253650665,
+    1.1446536779403687,
+    0.2918143719434738
+   ],
+   "vertices": 8163,
+   "faces": 13014,
+   "bytes": 1986624,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07374K539.glb",
+   "image": "ba/ba7a184e.jpg"
+  },
+  {
+   "id": "B07376VCCS",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Eclipse Mid Century Modern 5-Globe Hanging Ceiling Pendant Chandelier Fixture - 30 x 12 x 36 Inches, Brass with Frosted Glass Globes",
+   "extent": [
+    0.8633253276348114,
+    0.8691771626472473,
+    0.2987423539161682
+   ],
+   "vertices": 9149,
+   "faces": 16416,
+   "bytes": 815580,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07376VCCS.glb",
+   "image": "39/39152046.jpg"
+  },
+  {
+   "id": "B0737756WD",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Deco Black Accordion Arm Wall Mount Sconce Light Fixture with Metal Shade - 20 x 28 x 6 Inches, Dark Bronze with Brass Accent",
+   "extent": [
+    0.16219739615917206,
+    0.7145726680755615,
+    0.49925437569618225
+   ],
+   "vertices": 13349,
+   "faces": 19910,
+   "bytes": 1620924,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B0737756WD.glb",
+   "image": "09/09db43a9.jpg"
+  },
+  {
+   "id": "B075X1KVHZ",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Rivetto Diana Moderno Ciondolo Globo Bianco e Oro Con Lampadina pendente Old Skool Pro",
+   "extent": [
+    0.14705628901720047,
+    0.510046660900116,
+    0.1459217369556427
+   ],
+   "vertices": 18824,
+   "faces": 34096,
+   "bytes": 1788536,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B075X1KVHZ.glb",
+   "image": "0d/0d7cb811.jpg"
+  },
+  {
+   "id": "B07B4SC2JX",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Schoolhouse Ceiling Pendant Fixture With Light Bulb And Clear Glass Shade - 11 x 11 x 18 Inches, 6 - 48 Inch Cord, Matte Black",
+   "extent": [
+    0.27933545410633087,
+    0.6127590537071228,
+    0.2809714525938034
+   ],
+   "vertices": 9277,
+   "faces": 15200,
+   "bytes": 1293240,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B07B4SC2JX.glb",
+   "image": "2a/2a8d93a4.jpg"
+  },
+  {
+   "id": "B07B4VSTG2",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Schoolhouse Semi-Flush Mount Ceiling Fixture With Light Bulb And Clear Glass Shade - 11 x 11 x 10.5 Inches, Brushed Nickel",
+   "extent": [
+    0.279353991150856,
+    0.2693932056427002,
+    0.2793540358543396
+   ],
+   "vertices": 9417,
+   "faces": 15626,
+   "bytes": 835268,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B4VSTG2.glb",
+   "image": "c9/c9ab4c88.jpg"
+  },
+  {
+   "id": "B07B4W24JT",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Schoolhouse Vanity Fixture With 3 Light Bulbs And Clear Glass Shades - 23.25 x 9.5 x 10 Inches, Matte Black",
+   "extent": [
+    0.5890944600105286,
+    0.24233698844909668,
+    0.23952487111091614
+   ],
+   "vertices": 15036,
+   "faces": 22476,
+   "bytes": 1478008,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07B4W24JT.glb",
+   "image": "81/8190bc24.jpg"
+  },
+  {
+   "id": "B07B4YRZ1D",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Industrial Modern 3 Light Bathroom Wall Vanity Sconce Fixture With Light Bulbs - 22 x 5.25 x 13.5 Inch, Matte Black",
+   "extent": [
+    0.5779930651187897,
+    0.3868589401245117,
+    0.15181660652160645
+   ],
+   "vertices": 22641,
+   "faces": 43157,
+   "bytes": 1944308,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07B4YRZ1D.glb",
+   "image": "17/17e00bb2.jpg"
+  },
+  {
+   "id": "B07B4YVX5Q",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Schoolhouse Vanity Fixture With 3 Light Bulbs And Glass Opal Shades - 23.25 x 9.5 x 10 Inches, Matte Black",
+   "extent": [
+    0.5872743129730225,
+    0.24193376302719116,
+    0.23861479759216309
+   ],
+   "vertices": 7013,
+   "faces": 11966,
+   "bytes": 700448,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07B4YVX5Q.glb",
+   "image": "aa/aa26c8a0.jpg"
+  },
+  {
+   "id": "B07B4YZWKD",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Schoolhouse Ceiling Pendant Chandelier Fixture With 2 Light Bulbs With Glass Milk White Shade - 21 x 8 x 53 Inches, 42 Inch Cord, Black",
+   "extent": [
+    0.488524928689003,
+    0.7431055903434753,
+    0.42232951521873474
+   ],
+   "vertices": 27313,
+   "faces": 42772,
+   "bytes": 1606164,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07B4YZWKD.glb",
+   "image": "28/28279e3e.jpg"
+  },
+  {
+   "id": "B07B4Z9BS4",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Schoolhouse Semi-Flush Mount Ceiling Fixture With Light Bulb And Clear Glass Shade - 11 x 11 x 10.5 Inches, Matte Black",
+   "extent": [
+    0.2793540060520172,
+    0.2693932056427002,
+    0.2793540358543396
+   ],
+   "vertices": 9259,
+   "faces": 16178,
+   "bytes": 1197544,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B07B4Z9BS4.glb",
+   "image": "4b/4be5baf0.jpg"
+  },
+  {
+   "id": "B07B4Z9C39",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Vintage Bathroom Vanity Fixture With 3 Light Bulbs And Glass Shade - 25 x 7 x 11.5 Inches, Matte Black",
+   "extent": [
+    0.6376226544380188,
+    0.2921285629272461,
+    0.17728044092655182
+   ],
+   "vertices": 19529,
+   "faces": 30850,
+   "bytes": 1088564,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07B4Z9C39.glb",
+   "image": "f1/f1ad733f.jpg"
+  },
+  {
+   "id": "B07B4ZP62F",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Modern Ceiling Hanging Glass Globe Pendant Fixture With Light Bulb - 5 x 5x 10 Inches, Matte Black",
+   "extent": [
+    0.066761814057827,
+    0.2493075281381607,
+    0.0667617991566658
+   ],
+   "vertices": 10212,
+   "faces": 17578,
+   "bytes": 1174668,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07B4ZP62F.glb",
+   "image": "b1/b19ca854.jpg"
+  },
+  {
+   "id": "B07DBHC39X",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Ravenna Home",
+   "name": "Ravenna Home Classic Linen Fabric Flushmount Ceiling Pendant Light Fixture with 2 LED Light Bulbs - 13 x 13 x 7.5 Inches, Silver",
+   "extent": [
+    0.3931860327720642,
+    0.2287249118089676,
+    0.3931860327720642
+   ],
+   "vertices": 4736,
+   "faces": 8640,
+   "bytes": 837944,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B07DBHC39X.glb",
+   "image": "56/56ba597b.jpg"
+  },
+  {
+   "id": "B07DBHGJ15",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Ravenna Home",
+   "name": "Ravenna Home Classic Linen Fabric Flushmount Ceiling Pendant Light Fixture with 2 LED Light Bulbs - 13 x 13 x 7.5 Inches, Dark Bronze",
+   "extent": [
+    0.3894956111907959,
+    0.22924573719501495,
+    0.38949570059776306
+   ],
+   "vertices": 4570,
+   "faces": 8320,
+   "bytes": 1371092,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DBHGJ15.glb",
+   "image": "28/288702a2.jpg"
+  },
+  {
+   "id": "B07DBJYDLK",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Ravenna Home",
+   "name": "Ravenna Home Classic Fabric Semi-Flushmount Ceiling Pendant Light Fixture with 3 LED Light Bulbs - 15 x 15 x 11.5 Inches, Brushed Nickel",
+   "extent": [
+    0.3820144683122635,
+    0.30357688665390015,
+    0.3949045091867447
+   ],
+   "vertices": 10160,
+   "faces": 18310,
+   "bytes": 815020,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07DBJYDLK.glb",
+   "image": "e2/e20101ca.jpg"
+  },
+  {
+   "id": "B07HK3HJQK",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Swiveling Long Arms, Pivoting Head, Plug-In, Hardwire or 2-in-1 Option Wall Sconce with Bulb, 11\"H, Matte Black with Antique Brass",
+   "extent": [
+    0.23950958251953125,
+    0.3123422861099243,
+    0.5161679909657688
+   ],
+   "vertices": 16095,
+   "faces": 30352,
+   "bytes": 1792600,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07HK3HJQK.glb",
+   "image": "ba/babf0521.jpg"
+  },
+  {
+   "id": "B07HK67M8R",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Modern Sputnik Flush-Mount Ceiling Chandelier Fixture with 3 Light Bulbs - 15.75 x 15.75 x 8 Inches, Chrome",
+   "extent": [
+    0.3968166708946228,
+    0.19673800468444824,
+    0.4030107259750366
+   ],
+   "vertices": 17038,
+   "faces": 29584,
+   "bytes": 1689920,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07HK67M8R.glb",
+   "image": "99/99840195.jpg"
+  },
+  {
+   "id": "B07HK6B4D7",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Swiveling Wall Sconce with Bulb, 16.2\"H, Antique Brass and Matte Black",
+   "extent": [
+    0.1887289583683014,
+    0.6650936603546143,
+    0.421692430973053
+   ],
+   "vertices": 12221,
+   "faces": 19268,
+   "bytes": 1247072,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07HK6B4D7.glb",
+   "image": "70/7046f291.jpg"
+  },
+  {
+   "id": "B07HKF28KS",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Swiveling Wall Sconce with Bulb, 11\"H, Black and Antique Brass",
+   "extent": [
+    0.21473315358161926,
+    0.69573974609375,
+    0.7203507637977609
+   ],
+   "vertices": 8245,
+   "faces": 13836,
+   "bytes": 1872424,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07HKF28KS.glb",
+   "image": "1e/1efe0eb5.jpg"
+  },
+  {
+   "id": "B07QC9Y53F",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Casual Flush Mount, 4\"H, Brushed Nickel",
+   "extent": [
+    0.3546077311038971,
+    0.10194844752550125,
+    0.35598546266555786
+   ],
+   "vertices": 16766,
+   "faces": 31884,
+   "bytes": 1560656,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07QC9Y53F.glb",
+   "image": "07/076d3f20.jpg"
+  },
+  {
+   "id": "B082DN26GC",
+   "source": "abo",
+   "category": "ceiling_light",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet 2-Light Plug-In Wall Sconce with Glossy White Shades, LED Bulbs Included, 24\"H, Antique Brass",
+   "extent": [
+    0.6416684091091156,
+    0.4677428361028433,
+    0.2387706434726713
+   ],
+   "vertices": 21228,
+   "faces": 34828,
+   "bytes": 1567120,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B082DN26GC.glb",
+   "image": "b5/b537a5b4.jpg"
+  },
+  {
+   "id": "B071J7Q6KD",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Revolve Modern Upholstered Armchair with Tapered Legs, 33\"W, Grey Weave",
+   "extent": [
+    0.8545464277267456,
+    0.9267301559448242,
+    0.8003071546554565
+   ],
+   "vertices": 18734,
+   "faces": 33279,
+   "bytes": 2076008,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B071J7Q6KD.glb",
+   "image": "81/81135328.jpg"
+  },
+  {
+   "id": "B072Y6Y96S",
+   "source": "abo",
+   "category": "chair",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Classic Reception Office Chair with Mahogany Wood Finish Legs - Black",
+   "extent": [
+    0.6831257343292236,
+    0.9509277939796448,
+    0.7722269892692566
+   ],
+   "vertices": 7928,
+   "faces": 13700,
+   "bytes": 1471456,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B072Y6Y96S.glb",
+   "image": "fc/fc802ff2.jpg"
+  },
+  {
+   "id": "B073G6GTKL",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Sweeping Arm Accent Chair, 28\"W, Emerald",
+   "extent": [
+    0.6626339554786682,
+    0.7921636700630188,
+    0.7434181869029999
+   ],
+   "vertices": 9690,
+   "faces": 16948,
+   "bytes": 1701136,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B073G6GTKL.glb",
+   "image": "d7/d7088363.jpg"
+  },
+  {
+   "id": "B075X4N515",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Lawson Modern Angled Chair, 33\"W, Smoke",
+   "extent": [
+    0.8364929556846619,
+    0.9108421206474304,
+    0.8312136828899384
+   ],
+   "vertices": 12600,
+   "faces": 22648,
+   "bytes": 1907520,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B075X4N515.glb",
+   "image": "bf/bf8e9438.jpg"
+  },
+  {
+   "id": "B075X4YDCM",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Cameron Classic Oversized Chair, 32\"W, Natural",
+   "extent": [
+    0.7660592496395111,
+    0.9444146752357483,
+    0.8417526185512543
+   ],
+   "vertices": 12923,
+   "faces": 22828,
+   "bytes": 2105212,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B075X4YDCM.glb",
+   "image": "f5/f58b7f34.jpg"
+  },
+  {
+   "id": "B075X65R45",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Cameron Classic Oversized Chair, 32\"W, Dove",
+   "extent": [
+    0.7660592496395111,
+    0.9415438771247864,
+    0.8417526483535767
+   ],
+   "vertices": 12922,
+   "faces": 22828,
+   "bytes": 2003752,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B075X65R45.glb",
+   "image": "df/dfa2f7d0.jpg"
+  },
+  {
+   "id": "B075YMJ254",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Florence Mid-Century Wide Open-Back Accent Dining Room Chairs, 18.8\"W, Red, Set of 2",
+   "extent": [
+    0.483458012342453,
+    0.8918980956077576,
+    0.5689239799976349
+   ],
+   "vertices": 5688,
+   "faces": 10016,
+   "bytes": 1145620,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B075YMJ254.glb",
+   "image": "82/825982fa.jpg"
+  },
+  {
+   "id": "B075YMJ25F",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Florence Mid-Century Wide Open-Back Accent Dining Room Chairs, 18.8\"W, Hunter Green, Set of 2",
+   "extent": [
+    0.46981386840343475,
+    0.9311750531196594,
+    0.6121139824390411
+   ],
+   "vertices": 6119,
+   "faces": 11032,
+   "bytes": 2048584,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B075YMJ25F.glb",
+   "image": "d2/d2419e99.jpg"
+  },
+  {
+   "id": "B075YN3HN9",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Ray Mid-Century Modern Kitchen Dining Room Chairs, Set of 2, 34.3\"H, Charcoal Faux Leather",
+   "extent": [
+    0.471750408411026,
+    0.8894266486167908,
+    0.5605731904506683
+   ],
+   "vertices": 5179,
+   "faces": 9308,
+   "bytes": 1732520,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B075YN3HN9.glb",
+   "image": "45/45573415.jpg"
+  },
+  {
+   "id": "B075YP38DX",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Tina Mid-Century Modern Curved Back Kitchen Dining Chairs, 25\"W x 36\"H, Ash Grey, Set of 2",
+   "extent": [
+    0.5353464484214783,
+    0.9236390590667725,
+    0.6231892704963684
+   ],
+   "vertices": 12895,
+   "faces": 24712,
+   "bytes": 2076492,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B075YP38DX.glb",
+   "image": "d6/d6826e7f.jpg"
+  },
+  {
+   "id": "B075YP3BD8",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Bergen Tufted Kitchen Dining Room Table Farmhouse Chairs, 38.6\"H, Set of 2, Slate Grey, Wood Oak",
+   "extent": [
+    0.5131253600120544,
+    0.9051707983016968,
+    0.5843465030193329
+   ],
+   "vertices": 6158,
+   "faces": 10690,
+   "bytes": 2280044,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B075YP3BD8.glb",
+   "image": "b9/b9a95e29.jpg"
+  },
+  {
+   "id": "B075YPTG6M",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Brianna Mid-Century 2-Pack Removable Cushion Chairs, 34.2\"H, Red",
+   "extent": [
+    0.4789029061794281,
+    0.8576355576515198,
+    0.5179936438798904
+   ],
+   "vertices": 6908,
+   "faces": 12508,
+   "bytes": 1722564,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B075YPTG6M.glb",
+   "image": "5b/5b415b9d.jpg"
+  },
+  {
+   "id": "B075YQ4778",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Malida Mid-Century Modern Open Back Kitchen Dining Room Accent Chair, 33\"H, Felt Grey",
+   "extent": [
+    0.547731339931488,
+    0.8492010235786438,
+    0.6046790182590485
+   ],
+   "vertices": 9044,
+   "faces": 16446,
+   "bytes": 2175900,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B075YQ4778.glb",
+   "image": "7d/7d49e0b5.jpg"
+  },
+  {
+   "id": "B075YQXQJR",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Bergen Tufted Dining Room Kitchen Chairs, 38.6\"H, Set of 2, Hemp Beige, Wood Oak",
+   "extent": [
+    0.5131253600120544,
+    0.9051707983016968,
+    0.5843465030193329
+   ],
+   "vertices": 6151,
+   "faces": 10678,
+   "bytes": 2326496,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B075YQXQJR.glb",
+   "image": "1c/1ca1d616.jpg"
+  },
+  {
+   "id": "B076HDDMKM",
+   "source": "abo",
+   "category": "chair",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Padded Dining Chair - Set of 2, Brown",
+   "extent": [
+    0.3987991511821747,
+    0.8969757556915283,
+    0.5564617067575455
+   ],
+   "vertices": 3177,
+   "faces": 5795,
+   "bytes": 1090100,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B076HDDMKM.glb",
+   "image": "5a/5a73d3dc.jpg"
+  },
+  {
+   "id": "B07B78M186",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Alaina Upholstered Dining Room Kitchen Chairs, 20\"W, Set of 2, Navy Blue",
+   "extent": [
+    0.5077616572380066,
+    0.9522924423217773,
+    0.6547953188419342
+   ],
+   "vertices": 2088,
+   "faces": 3402,
+   "bytes": 1922884,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07B78M186.glb",
+   "image": "b1/b1643064.jpg"
+  },
+  {
+   "id": "B07B79WTSL",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Fir Mid-Century Modern Velvet Dining Kitchen Chair, 23.6\"W, Green",
+   "extent": [
+    0.682923436164856,
+    1.0805385112762451,
+    0.7939426898956299
+   ],
+   "vertices": 9954,
+   "faces": 18324,
+   "bytes": 2028572,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07B79WTSL.glb",
+   "image": "43/43acf886.jpg"
+  },
+  {
+   "id": "B07B7B244W",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Allie Leather Industrial Mid-Century Dining Room Kitchen Chair, 33\"H, Brown and Black",
+   "extent": [
+    0.5707797408103943,
+    0.8324792385101318,
+    0.6772418022155762
+   ],
+   "vertices": 6006,
+   "faces": 10610,
+   "bytes": 1464952,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07B7B244W.glb",
+   "image": "86/86bb70ad.jpg"
+  },
+  {
+   "id": "B07B7B3RVS",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Allie Velvet Industrial Mid-Century Dining Kitchen Chair, 33\"H, Grey and Antique Brass",
+   "extent": [
+    0.5782012641429901,
+    0.8425824046134949,
+    0.6821832358837128
+   ],
+   "vertices": 7360,
+   "faces": 9430,
+   "bytes": 2295700,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07B7B3RVS.glb",
+   "image": "0a/0a0aa317.jpg"
+  },
+  {
+   "id": "B07B7BDW51",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Allie Velvet Industrial Mid-Century Dining Kitchen Chair, 33\"H, Blue and Black",
+   "extent": [
+    0.5712140500545502,
+    0.8330027461051941,
+    0.677241712808609
+   ],
+   "vertices": 6114,
+   "faces": 10610,
+   "bytes": 2330788,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B7BDW51.glb",
+   "image": "17/1712273b.jpg"
+  },
+  {
+   "id": "B07BZPL164",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Rivet Modern Upholstered Orb Office Chair, 20\" H, Blue/Antique Bronze",
+   "extent": [
+    0.6233043968677521,
+    0.8524647951126099,
+    0.5733144134283066
+   ],
+   "vertices": 8760,
+   "faces": 15872,
+   "bytes": 2118084,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B07BZPL164.glb",
+   "image": "a3/a34d3b6f.jpg"
+  },
+  {
+   "id": "B07DBGPHG5",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Radford Modern Curved Accent Chair, 28.15\"W, Grey",
+   "extent": [
+    0.7150100469589233,
+    1.0165432691574097,
+    0.8903561234474182
+   ],
+   "vertices": 6302,
+   "faces": 10922,
+   "bytes": 1347352,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DBGPHG5.glb",
+   "image": "1c/1c413c58.jpg"
+  },
+  {
+   "id": "B07DBH52YB",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Eddison Modern Slope Accent Chair, 32\"W, Light Grey",
+   "extent": [
+    0.6886136531829834,
+    0.8864242434501648,
+    0.805610328912735
+   ],
+   "vertices": 3668,
+   "faces": 5956,
+   "bytes": 1065428,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07DBH52YB.glb",
+   "image": "44/44985021.jpg"
+  },
+  {
+   "id": "B07HSDY12Q",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Mid-Century Wishbone Dining Chair, 22.4\"W, White / Natural",
+   "extent": [
+    0.5332866907119751,
+    0.7355949878692627,
+    0.49971844255924225
+   ],
+   "vertices": 14102,
+   "faces": 25492,
+   "bytes": 1990716,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07HSDY12Q.glb",
+   "image": "eb/ebf00746.jpg"
+  },
+  {
+   "id": "B07HSL2HJZ",
+   "source": "abo",
+   "category": "chair",
+   "brand": "Rivet",
+   "name": "Rivet Modern Swivel Desk Chair 25.7”H, Adjustable Height, Gray",
+   "extent": [
+    0.7132859826087952,
+    0.8269116282463074,
+    0.6885863542556763
+   ],
+   "vertices": 12766,
+   "faces": 20274,
+   "bytes": 2059724,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B07HSL2HJZ.glb",
+   "image": "67/678ec9d2.jpg"
+  },
+  {
+   "id": "B075HR7DM7",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Angled Stoneware Vase, 5.25\"H, White",
+   "extent": [
+    0.14067044854164124,
+    0.15173311531543732,
+    0.1412706971168518
+   ],
+   "vertices": 5258,
+   "faces": 9616,
+   "bytes": 453660,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B075HR7DM7.glb",
+   "image": "cb/cbc43f2f.jpg"
+  },
+  {
+   "id": "B075HR7KY9",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Oval Pattern Decorative Stoneware Vase, 11.1 Inch Height, Off-White",
+   "extent": [
+    0.12693732976913452,
+    0.28189465403556824,
+    0.12745090574026108
+   ],
+   "vertices": 2532,
+   "faces": 4720,
+   "bytes": 836148,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B075HR7KY9.glb",
+   "image": "88/88f337df.jpg"
+  },
+  {
+   "id": "B075HR7LJG",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Oval Pattern Decorative Stoneware Vase, 8.75 Inch Height, Off-White",
+   "extent": [
+    0.16210820525884628,
+    0.22259365022182465,
+    0.16210821270942688
+   ],
+   "vertices": 2532,
+   "faces": 4720,
+   "bytes": 836148,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B075HR7LJG.glb",
+   "image": "bb/bb3895e5.jpg"
+  },
+  {
+   "id": "B075HWDT12",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Oval Pattern Decorative Stoneware Vase, 6.6 Inch Height, Off-White",
+   "extent": [
+    0.12825538218021393,
+    0.16687259078025818,
+    0.12825539708137512
+   ],
+   "vertices": 2534,
+   "faces": 4720,
+   "bytes": 837740,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B075HWDT12.glb",
+   "image": "1e/1efcaf29.jpg"
+  },
+  {
+   "id": "B075HWDT2Z",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Geometric Pattern Decorative Stoneware Vase, Large Centerpiece, 12.25\"H, White",
+   "extent": [
+    0.16738753020763397,
+    0.3281518220901489,
+    0.1660316288471222
+   ],
+   "vertices": 19250,
+   "faces": 34672,
+   "bytes": 1127104,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B075HWDT2Z.glb",
+   "image": "9d/9d73108f.jpg"
+  },
+  {
+   "id": "B075HWDTMM",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Angled Stoneware Home Decor Flower Vase - 12 Inch, White",
+   "extent": [
+    0.13319867104291916,
+    0.26317697763442993,
+    0.13319866359233856
+   ],
+   "vertices": 7592,
+   "faces": 14080,
+   "bytes": 518752,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B075HWDTMM.glb",
+   "image": "2e/2e8003e6.jpg"
+  },
+  {
+   "id": "B075HWK9QT",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Angled Stoneware Vase, 14.4\"H, White",
+   "extent": [
+    0.12163962051272392,
+    0.3294428288936615,
+    0.11592130362987518
+   ],
+   "vertices": 3522,
+   "faces": 6720,
+   "bytes": 344352,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075HWK9QT.glb",
+   "image": "c5/c5d89b7f.jpg"
+  },
+  {
+   "id": "B075HWMC6S",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Ceramic Home Decor Flower Vase With Geometric Pattern - 4 Inch, Brown and Grey",
+   "extent": [
+    0.06902388110756874,
+    0.08766540139913559,
+    0.06899761408567429
+   ],
+   "vertices": 7200,
+   "faces": 13600,
+   "bytes": 1170336,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B075HWMC6S.glb",
+   "image": "b2/b2601d39.jpg"
+  },
+  {
+   "id": "B075HWX46K",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Farmhouse Triangle Pattern Stoneware Home Decor Flower Vase - 9 x 6.6 Inches, Ecru White",
+   "extent": [
+    0.17451821267604828,
+    0.2304130494594574,
+    0.17417389899492264
+   ],
+   "vertices": 2244,
+   "faces": 4100,
+   "bytes": 1445308,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B075HWX46K.glb",
+   "image": "bb/bbcc6f20.jpg"
+  },
+  {
+   "id": "B075HWX46N",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Crosshatch Home Decor Flower Vase - 11 Inch, Blue",
+   "extent": [
+    0.12151207774877548,
+    0.28238168358802795,
+    0.12140807509422302
+   ],
+   "vertices": 3081,
+   "faces": 5456,
+   "bytes": 1626936,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B075HWX46N.glb",
+   "image": "fa/faf1db43.jpg"
+  },
+  {
+   "id": "B075HXLWT5",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Angled Stoneware Vase, 5.5\"H, White",
+   "extent": [
+    0.13769326359033585,
+    0.13405448198318481,
+    0.13902727514505386
+   ],
+   "vertices": 4852,
+   "faces": 9174,
+   "bytes": 521668,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B075HXLWT5.glb",
+   "image": "10/101ddf25.jpg"
+  },
+  {
+   "id": "B075HXPFTG",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Geometric Stoneware Home Decor Flower Vase - 6.9 Inch, White",
+   "extent": [
+    0.16236859560012817,
+    0.1850862056016922,
+    0.1635616049170494
+   ],
+   "vertices": 5551,
+   "faces": 6552,
+   "bytes": 754704,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B075HXPFTG.glb",
+   "image": "4d/4de86a34.jpg"
+  },
+  {
+   "id": "B078JFFX4L",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Round Ceramic Home Decor Flower Vase - 7 Inch, Coral White Tan",
+   "extent": [
+    0.1368170604109764,
+    0.17634646594524384,
+    0.1368170902132988
+   ],
+   "vertices": 4512,
+   "faces": 8320,
+   "bytes": 586912,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B078JFFX4L.glb",
+   "image": "19/194c7657.jpg"
+  },
+  {
+   "id": "B078JGHZT3",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Ceramic Home Decor Flower Vase - 7 Inch, Teal White Tan",
+   "extent": [
+    0.11610181629657745,
+    0.1792251318693161,
+    0.11598070710897446
+   ],
+   "vertices": 8020,
+   "faces": 14954,
+   "bytes": 733160,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B078JGHZT3.glb",
+   "image": "11/1126ac72.jpg"
+  },
+  {
+   "id": "B078JGLJMQ",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Ceramic Triangle Decor Planter Pot, 5 Inch, White and Terra Cotta",
+   "extent": [
+    0.13685186952352524,
+    0.12733346223831177,
+    0.13685186952352524
+   ],
+   "vertices": 5505,
+   "faces": 10368,
+   "bytes": 778076,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B078JGLJMQ.glb",
+   "image": "ea/ea251193.jpg"
+  },
+  {
+   "id": "B078JGRLCJ",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Round Ceramic Home Decor Flower Vase - 5 Inch, Blue and Green",
+   "extent": [
+    0.15390214323997498,
+    0.13317090272903442,
+    0.15390215069055557
+   ],
+   "vertices": 3936,
+   "faces": 7440,
+   "bytes": 723624,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B078JGRLCJ.glb",
+   "image": "84/84bb0ce6.jpg"
+  },
+  {
+   "id": "B078JGYJTG",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Ceramic Home Decor Flower Vase - 11.75 Inch, Coral White Tan",
+   "extent": [
+    0.14448410272598267,
+    0.29646551609039307,
+    0.14448407292366028
+   ],
+   "vertices": 14928,
+   "faces": 27648,
+   "bytes": 1167500,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B078JGYJTG.glb",
+   "image": "57/574568c6.jpg"
+  },
+  {
+   "id": "B078JJDPR2",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Ceramic Home Decor Flower Vase - 7 Inch, Teal White Tan",
+   "extent": [
+    0.10602502524852753,
+    0.19157323241233826,
+    0.10602503642439842
+   ],
+   "vertices": 4250,
+   "faces": 8000,
+   "bytes": 755300,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B078JJDPR2.glb",
+   "image": "37/3711eca6.jpg"
+  },
+  {
+   "id": "B078JMJC46",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Ceramic Spotted Decor Planter Pot - 11 Inch, White and Terra Cotta",
+   "extent": [
+    0.1332906186580658,
+    0.2818206548690796,
+    0.1332906186580658
+   ],
+   "vertices": 8224,
+   "faces": 15744,
+   "bytes": 1779160,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B078JMJC46.glb",
+   "image": "0a/0a2efe1f.jpg"
+  },
+  {
+   "id": "B078JMJC49",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Ceramic Home Decor Flower Vase - 12 Inch, Blue and Green",
+   "extent": [
+    0.13858970999717712,
+    0.3126097023487091,
+    0.13858970999717712
+   ],
+   "vertices": 2532,
+   "faces": 4720,
+   "bytes": 866632,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B078JMJC49.glb",
+   "image": "3a/3ae03d0d.jpg"
+  },
+  {
+   "id": "B07B8NZQ68",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Farmhouse Milk Jug Stoneware Home Decor Flower Vase - 6 x 9.25 Inches, Cream and Clay",
+   "extent": [
+    0.15837910026311874,
+    0.22821521759033203,
+    0.15837913751602173
+   ],
+   "vertices": 3565,
+   "faces": 6720,
+   "bytes": 1337412,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B07B8NZQ68.glb",
+   "image": "f2/f23f7e6e.jpg"
+  },
+  {
+   "id": "B07B8W8FBV",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Farmhouse Milk Jug Stoneware Home Decor Flower Vase - 6.25 x 5.75 Inches, Cream and Clay",
+   "extent": [
+    0.1527019441127777,
+    0.16731972992420197,
+    0.15270190685987473
+   ],
+   "vertices": 4486,
+   "faces": 8080,
+   "bytes": 1224704,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07B8W8FBV.glb",
+   "image": "a4/a4946ea3.jpg"
+  },
+  {
+   "id": "B07HSJVP5C",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Rustic Farmhouse Stoneware Jug Home Decor Vase - 14 x 6.5 x 7.5 Inches, Antique Finish",
+   "extent": [
+    0.20257601886987686,
+    0.3816659450531006,
+    0.18588389456272125
+   ],
+   "vertices": 6313,
+   "faces": 11952,
+   "bytes": 1056084,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B07HSJVP5C.glb",
+   "image": "67/67e37808.jpg"
+  },
+  {
+   "id": "B07HSLG6WR",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Westline Modern Indoor Outdoor Hand-Painted Stoneware Flower Vase, 9.5\"H, Red White Blue Black",
+   "extent": [
+    0.16924406588077545,
+    0.23674826353788375,
+    0.16924408078193665
+   ],
+   "vertices": 7677,
+   "faces": 14880,
+   "bytes": 690128,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07HSLG6WR.glb",
+   "image": "10/104e415f.jpg"
+  },
+  {
+   "id": "B07JLBDT51",
+   "source": "abo",
+   "category": "decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Westline Modern Indoor Outdoor Hand-Painted Stoneware Flower Vase, 9.5\"H, Teal White Blue Black",
+   "extent": [
+    0.16924405843019485,
+    0.24015021324157715,
+    0.16924408078193665
+   ],
+   "vertices": 7677,
+   "faces": 14880,
+   "bytes": 805440,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07JLBDT51.glb",
+   "image": "b8/b8b51aae.jpg"
+  },
+  {
+   "id": "B00QQNFJYC",
+   "source": "abo",
+   "category": "desk",
+   "brand": "KINGSWELL",
+   "name": "Jahnke Laptop Table Desk Cu Libre",
+   "extent": [
+    0.7619999667490384,
+    0.8001003420090995,
+    0.548639973874249
+   ],
+   "vertices": 2546,
+   "faces": 3463,
+   "bytes": 2533144,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B00QQNFJYC.glb",
+   "image": "00/006f1731.jpg"
+  },
+  {
+   "id": "B01DJH742M",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Office Hippo",
+   "name": "Office Hippo Heavy Duty 3 Drawer Desk High Pedestal, Pre-Assembled, Wood, White, 60 cm Deep",
+   "extent": [
+    0.4038600107329491,
+    0.7299978893996525,
+    0.5999479757715
+   ],
+   "vertices": 4399,
+   "faces": 6804,
+   "bytes": 2105140,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B01DJH742M.glb",
+   "image": "86/86054d88.jpg"
+  },
+  {
+   "id": "B06XZV3F8F",
+   "source": "abo",
+   "category": "desk",
+   "brand": "UMI",
+   "name": "UMI. by Amazon Computer Desk,Modern Simple Study Desk,Folding Laptop Table for Home Office,39.4 * 19.7 * 28.3 Inches",
+   "extent": [
+    1.0154885053634644,
+    0.7473622560501099,
+    0.5046403110027313
+   ],
+   "vertices": 4660,
+   "faces": 7184,
+   "bytes": 529820,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B06XZV3F8F.glb",
+   "image": "3e/3ea8f027.jpg"
+  },
+  {
+   "id": "B075Z6YS29",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Wood and Metal Hairpin Small Table Desk, 47.2\"W, Walnut",
+   "extent": [
+    1.199812889099121,
+    0.8536240458488464,
+    0.5653146505355835
+   ],
+   "vertices": 7689,
+   "faces": 13482,
+   "bytes": 2758644,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B075Z6YS29.glb",
+   "image": "4b/4b71c0f0.jpg"
+  },
+  {
+   "id": "B075Z7HQK5",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Cross Legged Home Office Computer Desk Console, 42\"W, White Gloss and Walnut",
+   "extent": [
+    1.0657569766044617,
+    0.7853715419769287,
+    0.4177419990301132
+   ],
+   "vertices": 7838,
+   "faces": 10422,
+   "bytes": 1717812,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B075Z7HQK5.glb",
+   "image": "3e/3e6c029b.jpg"
+  },
+  {
+   "id": "B075Z8629F",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Larson Industrial Wood & Metal Nesting Side End Tables, 24\"W, Set of 3, Walnut",
+   "extent": [
+    0.6076422035694122,
+    0.6157652139663696,
+    0.6600181460380554
+   ],
+   "vertices": 4398,
+   "faces": 7788,
+   "bytes": 1150484,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B075Z8629F.glb",
+   "image": "71/71fc0850.jpg"
+  },
+  {
+   "id": "B075Z8KXDK",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Avondale Wood and Metal Office Computer Desk, 60\"W, Walnut",
+   "extent": [
+    1.5381349325180054,
+    0.7529648542404175,
+    0.6167634725570679
+   ],
+   "vertices": 5178,
+   "faces": 7340,
+   "bytes": 2370676,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B075Z8KXDK.glb",
+   "image": "19/1998831f.jpg"
+  },
+  {
+   "id": "B075Z8KXG7",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern West Office Computer Desk with 5 Drawers, 58\"W, Oak",
+   "extent": [
+    1.479129433631897,
+    0.7615320682525635,
+    0.684260755777359
+   ],
+   "vertices": 9053,
+   "faces": 13142,
+   "bytes": 3032240,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B075Z8KXG7.glb",
+   "image": "b3/b39b783d.jpg"
+  },
+  {
+   "id": "B075Z93NKX",
+   "source": "abo",
+   "category": "desk",
+   "brand": null,
+   "name": "Stone & Beam Fern Hill 5-Drawer Office Desk, 32\"W, White and Natural Pine",
+   "extent": [
+    0.8138477802276611,
+    0.9807950258255005,
+    0.46226420998573303
+   ],
+   "vertices": 6823,
+   "faces": 9210,
+   "bytes": 2140300,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B075Z93NKX.glb",
+   "image": "56/56acaf07.jpg"
+  },
+  {
+   "id": "B075ZBVZST",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Curved Wood Table Home Office Computer Desk, 48.4\"L, Walnut",
+   "extent": [
+    1.2562350034713745,
+    0.8004717826843262,
+    0.48640210926532745
+   ],
+   "vertices": 6616,
+   "faces": 8426,
+   "bytes": 2060072,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075ZBVZST.glb",
+   "image": "e5/e5e2bf5b.jpg"
+  },
+  {
+   "id": "B075ZBW1SN",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Ventura Mid-Century Small Reversible Writing Home Office Computer Desk with File Drawer, 50\"W, Cherry",
+   "extent": [
+    1.2767298221588135,
+    0.7575531005859375,
+    0.6122378706932068
+   ],
+   "vertices": 3905,
+   "faces": 5494,
+   "bytes": 1224644,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B075ZBW1SN.glb",
+   "image": "57/57937f83.jpg"
+  },
+  {
+   "id": "B079HYXWPC",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Havel 1-Drawer Desk with Storage Compartment, 50 x 100 x 75cm, White",
+   "extent": [
+    0.9789118766784668,
+    0.7229915261268616,
+    0.49144336581230164
+   ],
+   "vertices": 4620,
+   "faces": 7452,
+   "bytes": 762372,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B079HYXWPC.glb",
+   "image": "e8/e8357a14.jpg"
+  },
+  {
+   "id": "B07B7DFS3S",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Industrial Metal Office Computer Desk, 60\"W, Power Sit to Standing Table, Brown/Black",
+   "extent": [
+    1.5429009199142456,
+    0.7252338528633118,
+    0.7835865616798401
+   ],
+   "vertices": 10507,
+   "faces": 12256,
+   "bytes": 2431740,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07B7DFS3S.glb",
+   "image": "e1/e11a023b.jpg"
+  },
+  {
+   "id": "B07B7DKRW4",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Anne Farmhouse French Wood Desk, 62\"W, Blue",
+   "extent": [
+    1.2885961532592773,
+    0.8605918884277344,
+    0.6298306882381439
+   ],
+   "vertices": 37877,
+   "faces": 36650,
+   "bytes": 2710312,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B07B7DKRW4.glb",
+   "image": "48/480983dd.jpg"
+  },
+  {
+   "id": "B07B7DL32P",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Anne Mid-Century Modern Wood Office Computer Desk, 62\"W, Walnut",
+   "extent": [
+    1.5748624801635742,
+    0.7618351578712463,
+    0.7244501113891602
+   ],
+   "vertices": 7150,
+   "faces": 8082,
+   "bytes": 2167736,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07B7DL32P.glb",
+   "image": "14/1478021a.jpg"
+  },
+  {
+   "id": "B07B7GNFYW",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Edgemont Contemporary Office Desk Swivel Chair, 24\"H, Zebra Chevron",
+   "extent": [
+    0.504429966211319,
+    0.8831300139427185,
+    0.5911918580532074
+   ],
+   "vertices": 4341,
+   "faces": 6639,
+   "bytes": 2686248,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07B7GNFYW.glb",
+   "image": "da/da2958cc.jpg"
+  },
+  {
+   "id": "B07B7GXKCN",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Hillsdale Gold Accent Office Desk",
+   "extent": [
+    1.5769773721694946,
+    1.0307581424713135,
+    0.734271913766861
+   ],
+   "vertices": 24690,
+   "faces": 25124,
+   "bytes": 2426128,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07B7GXKCN.glb",
+   "image": "57/57ea093b.jpg"
+  },
+  {
+   "id": "B07B7MWMCW",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Edgemont Contemporary Office Desk Swivel Chair, 24\"H, Blue Velvet",
+   "extent": [
+    0.5032940804958344,
+    0.8818987011909485,
+    0.5892176032066345
+   ],
+   "vertices": 7332,
+   "faces": 13031,
+   "bytes": 2639992,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07B7MWMCW.glb",
+   "image": "f2/f2740e11.jpg"
+  },
+  {
+   "id": "B07HSCYS4C",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern 3-Drawer Desk, 51.9\"W, White",
+   "extent": [
+    1.3132221698760986,
+    0.761614203453064,
+    0.5886384546756744
+   ],
+   "vertices": 3592,
+   "faces": 4234,
+   "bytes": 709032,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B07HSCYS4C.glb",
+   "image": "8c/8c3c1a73.jpg"
+  },
+  {
+   "id": "B07JGMW8DL",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Movian",
+   "name": "Amazon Marke - Movian Lek Schreibtisch, 158 x 76 x 67 cm, Weiß",
+   "extent": [
+    1.579879879951477,
+    0.7599680423736572,
+    0.669797956943512
+   ],
+   "vertices": 8642,
+   "faces": 13536,
+   "bytes": 957632,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07JGMW8DL.glb",
+   "image": "4d/4d52c2c9.jpg"
+  },
+  {
+   "id": "B07K6N5FVX",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Ohrid 1-Door 1-Drawer Desk, 120 x 55 x 76cm , White",
+   "extent": [
+    1.200000046888398,
+    0.7599999636795899,
+    0.5499999756457966
+   ],
+   "vertices": 16922,
+   "faces": 28576,
+   "bytes": 1084444,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B07K6N5FVX.glb",
+   "image": "de/dee78d86.jpg"
+  },
+  {
+   "id": "B07K7663DW",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Mjøsa Functional Standing Desk with 2-Door Storage, 39 x 86 x 122cm, White",
+   "extent": [
+    0.8499999135732679,
+    1.1899999564886086,
+    0.38999999225139553
+   ],
+   "vertices": 20274,
+   "faces": 22934,
+   "bytes": 1108712,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07K7663DW.glb",
+   "image": "bf/bfb41d33.jpg"
+  },
+  {
+   "id": "B07MFYVCJB",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Transitional Desk 42\"W, Black",
+   "extent": [
+    1.0571779012680054,
+    0.7803936004638672,
+    0.5245401263237
+   ],
+   "vertices": 3969,
+   "faces": 5540,
+   "bytes": 822736,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07MFYVCJB.glb",
+   "image": "6b/6b2350b6.jpg"
+  },
+  {
+   "id": "B07MQF767T",
+   "source": "abo",
+   "category": "desk",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Transitional Desk 42\"W, Black",
+   "extent": [
+    1.0571779012680054,
+    0.7803936004638672,
+    0.5042963325977325
+   ],
+   "vertices": 3321,
+   "faces": 4560,
+   "bytes": 796120,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07MQF767T.glb",
+   "image": "77/777e6a51.jpg"
+  },
+  {
+   "id": "B07PYT7NZ9",
+   "source": "abo",
+   "category": "desk",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Classic, Home Office Computer Desk With Shelves, White",
+   "extent": [
+    0.901700019836426,
+    0.7498080084407095,
+    0.4978401387299983
+   ],
+   "vertices": 7805,
+   "faces": 9120,
+   "bytes": 2916568,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07PYT7NZ9.glb",
+   "image": "9d/9d5b4ad0.jpg"
+  },
+  {
+   "id": "B0764TFM7L",
+   "source": "abo",
+   "category": "headboard",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Faux Linen Upholstered Tufted Headboard - Queen, Beige",
+   "extent": [
+    1.5516286492347717,
+    0.9378091096878052,
+    0.11485986784100533
+   ],
+   "vertices": 6056,
+   "faces": 10804,
+   "bytes": 1757956,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B0764TFM7L.glb",
+   "image": "0f/0f1f12f8.jpg"
+  },
+  {
+   "id": "B07374M818",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Table Desk Lamp With Light Bulb - 8 x 8 x 16 Inches, Marble and Brass",
+   "extent": [
+    0.20837031304836273,
+    0.40600845217704773,
+    0.20837032049894333
+   ],
+   "vertices": 7557,
+   "faces": 11122,
+   "bytes": 644884,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B07374M818.glb",
+   "image": "f4/f4abab47.jpg"
+  },
+  {
+   "id": "B073P2ZGMJ",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Rivet, Lámpara de Mesa Estilo Industrial, Bronze",
+   "extent": [
+    0.17454786598682404,
+    0.4688658118247986,
+    0.2979281023144722
+   ],
+   "vertices": 13578,
+   "faces": 22650,
+   "bytes": 1125872,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B073P2ZGMJ.glb",
+   "image": "e9/e9a00a39.jpg"
+  },
+  {
+   "id": "B073P3HHFS",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Rivet Pike Factory Industrial Table Lamp With Light Bulb - 6 x 13 x 19 Inches, Brushed Steel",
+   "extent": [
+    0.28609295189380646,
+    0.4560278654098511,
+    0.15337195992469788
+   ],
+   "vertices": 13481,
+   "faces": 23418,
+   "bytes": 1204676,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B073P3HHFS.glb",
+   "image": "9f/9f032f6f.jpg"
+  },
+  {
+   "id": "B073P3NL8C",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Rivet Harper Mid-Century Marble and Brass Floor Lamp, 71\"H, with Bulb",
+   "extent": [
+    0.2321111559867859,
+    1.8133561611175537,
+    0.2287624627351761
+   ],
+   "vertices": 9246,
+   "faces": 16832,
+   "bytes": 1122260,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B073P3NL8C.glb",
+   "image": "20/205f325b.jpg"
+  },
+  {
+   "id": "B073P3WGZZ",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Rivet Harper lámpara de pie de mármol y latón de medio siglo, Lámpara para mesa, Antique Brass",
+   "extent": [
+    0.18081386387348175,
+    0.6385760307312012,
+    0.18069592118263245
+   ],
+   "vertices": 7803,
+   "faces": 14072,
+   "bytes": 1059240,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B073P3WGZZ.glb",
+   "image": "82/82555e42.jpg"
+  },
+  {
+   "id": "B0742DNBGB",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Adesso",
+   "name": "Amazon Brand - Rivet Avery Marble y Latón Lámpara de mesa ajustable con foco, 22.5 pulgadas de alto",
+   "extent": [
+    0.14419323205947876,
+    0.6032570600509644,
+    0.4714745581150055
+   ],
+   "vertices": 5495,
+   "faces": 9166,
+   "bytes": 915756,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B0742DNBGB.glb",
+   "image": "f3/f389b531.jpg"
+  },
+  {
+   "id": "B0742DNY41",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Rivet Marble and Brass Floor Lamp, Avery, 63\"H, With Bulb",
+   "extent": [
+    0.19392210245132446,
+    1.5938721895217896,
+    0.6525824666023254
+   ],
+   "vertices": 5814,
+   "faces": 9476,
+   "bytes": 1136584,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B0742DNY41.glb",
+   "image": "55/552c9245.jpg"
+  },
+  {
+   "id": "B075X2XZDD",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Stone & Beam",
+   "name": "Iluminación moderna Stone & Beam, Lámpara de pie, Cepillado inoxidable",
+   "extent": [
+    0.22247642278671265,
+    1.2501654624938965,
+    0.4214664101600647
+   ],
+   "vertices": 5318,
+   "faces": 9530,
+   "bytes": 1140924,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B075X2XZDD.glb",
+   "image": "e8/e8261790.jpg"
+  },
+  {
+   "id": "B075X2XZDY",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Modern Brass Trimmed Table Lamp with LED Light Bulb, 26\"H, Clear",
+   "extent": [
+    0.2954822778701782,
+    0.6392945051193237,
+    0.2954823672771454
+   ],
+   "vertices": 17880,
+   "faces": 28760,
+   "bytes": 752816,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075X2XZDY.glb",
+   "image": "25/25fc07ae.jpg"
+  },
+  {
+   "id": "B07B4YHYR2",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Rivet Mid-Century Modern Task Lamp, 67\"H, with Bulb, Matte Black & Brushed Steel Accents",
+   "extent": [
+    0.43449239432811737,
+    1.7778265476226807,
+    0.25256386399269104
+   ],
+   "vertices": 15371,
+   "faces": 27144,
+   "bytes": 1175164,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B4YHYR2.glb",
+   "image": "3a/3a8bbfd1.jpg"
+  },
+  {
+   "id": "B07B4YY8H3",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Moderne Lampe Niet Mid-Century Schreibtischlampe Matte Black With Brushed Steel Accents",
+   "extent": [
+    0.10987367480993271,
+    0.46427223086357117,
+    0.3524095490574837
+   ],
+   "vertices": 6652,
+   "faces": 11818,
+   "bytes": 930320,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07B4YY8H3.glb",
+   "image": "37/37c51d5e.jpg"
+  },
+  {
+   "id": "B07B4YYC4V",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Rivet Modern Task Lamp, 15\"H, Matte Black & Antique Brass with Wireless Charging",
+   "extent": [
+    0.16157244890928268,
+    0.3849067986011505,
+    0.21761059015989304
+   ],
+   "vertices": 6370,
+   "faces": 11544,
+   "bytes": 740464,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07B4YYC4V.glb",
+   "image": "a8/a808c2ac.jpg"
+  },
+  {
+   "id": "B07B4Z9PL9",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Stone & Beam",
+   "name": "Stone & Beam Lámpara de pie moderna para sala de estar con luz LED integrada – 9 x 16 x 49 pulgadas, color negro mate",
+   "extent": [
+    0.2194499522447586,
+    1.2298439741134644,
+    0.4179243743419647
+   ],
+   "vertices": 6727,
+   "faces": 9862,
+   "bytes": 585616,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07B4Z9PL9.glb",
+   "image": "af/afdfc497.jpg"
+  },
+  {
+   "id": "B07DBCMTCS",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Classic Traditional Metallic Table Lamp with LED Light Bulb - 27.5 Inches, Brushed Nickel",
+   "extent": [
+    0.3308628052473068,
+    0.6984788179397583,
+    0.3308629095554352
+   ],
+   "vertices": 9976,
+   "faces": 15414,
+   "bytes": 950720,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07DBCMTCS.glb",
+   "image": "b6/b67a4a85.jpg"
+  },
+  {
+   "id": "B07DBCN3KB",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Torchiere Living Room Standing Floor Lamp with LED Light Bulbs - 69.75 Inches, Dark Bronze with Frosted Glass Shade",
+   "extent": [
+    0.40547096729278564,
+    1.7966152429580688,
+    0.4054710268974304
+   ],
+   "vertices": 9042,
+   "faces": 17500,
+   "bytes": 843676,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07DBCN3KB.glb",
+   "image": "8b/8b6b3fa7.jpg"
+  },
+  {
+   "id": "B07DBDV3FH",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Swing Arm Living Room Floor Lamp With LED Light Bulb - 58 Inches, Brushed Steel",
+   "extent": [
+    0.3554021418094635,
+    1.473101019859314,
+    0.35540229082107544
+   ],
+   "vertices": 11373,
+   "faces": 17102,
+   "bytes": 882088,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07DBDV3FH.glb",
+   "image": "98/981466b0.jpg"
+  },
+  {
+   "id": "B07DBHB6D4",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Metal Adjustable Pharmacy Table Desk Lamp With LED Light Bulb - 29.75 Inches, Brushed Nickel",
+   "extent": [
+    0.15860897302627563,
+    0.7079511284828186,
+    0.546076774597168
+   ],
+   "vertices": 16495,
+   "faces": 28313,
+   "bytes": 1042296,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B07DBHB6D4.glb",
+   "image": "b4/b4ac1f53.jpg"
+  },
+  {
+   "id": "B07DBHCKKD",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Classic Traditional Metallic Floor Lamp with LED Light Bulb, 58\"H, Brushed Nickel",
+   "extent": [
+    0.4312838613986969,
+    1.4876797199249268,
+    0.4312839061021805
+   ],
+   "vertices": 8826,
+   "faces": 14508,
+   "bytes": 942908,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07DBHCKKD.glb",
+   "image": "c5/c54605e0.jpg"
+  },
+  {
+   "id": "B07DBHCKML",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Traditional Standing Floor Lamp with Reading Light and LED Light Bulb - 69.75 Inches, Brushed Nickel with Frosted Glass",
+   "extent": [
+    0.5746358335018158,
+    1.7850971221923828,
+    0.4054710268974304
+   ],
+   "vertices": 13077,
+   "faces": 25118,
+   "bytes": 1059444,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07DBHCKML.glb",
+   "image": "70/708e411d.jpg"
+  },
+  {
+   "id": "B07DBHM1RK",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Traditional Metal Buffet Table Lamp With LED Light Bulb - 24.25 Inches, Brushed Nickel",
+   "extent": [
+    0.3283676952123642,
+    0.6118258237838745,
+    0.328367680311203
+   ],
+   "vertices": 10074,
+   "faces": 15144,
+   "bytes": 780208,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07DBHM1RK.glb",
+   "image": "c9/c94c0c4c.jpg"
+  },
+  {
+   "id": "B07DTFBDTL",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Gold Globe Table Lamp 22\" H, Integrated LED Light",
+   "extent": [
+    0.20652051270008087,
+    0.5587999820709229,
+    0.32351185381412506
+   ],
+   "vertices": 4847,
+   "faces": 8272,
+   "bytes": 818136,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07DTFBDTL.glb",
+   "image": "18/18caf37e.jpg"
+  },
+  {
+   "id": "B07DTLF7DN",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Gold Globe Floor Lamp 59.25\" H, Integrated LED light",
+   "extent": [
+    0.24858340620994568,
+    1.504949927330017,
+    0.47559817135334015
+   ],
+   "vertices": 5375,
+   "faces": 9184,
+   "bytes": 857732,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07DTLF7DN.glb",
+   "image": "a6/a645c7c6.jpg"
+  },
+  {
+   "id": "B07DTLKL7L",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Farmhouse Wood And Metal Frame Table Lamp With LED Light Bulb And White Shade - 13 x 13 x 23.25 Inches, Black",
+   "extent": [
+    0.3203112632036209,
+    0.5908536911010742,
+    0.3203112334012985
+   ],
+   "vertices": 5349,
+   "faces": 7331,
+   "bytes": 966692,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07DTLKL7L.glb",
+   "image": "2f/2f330dab.jpg"
+  },
+  {
+   "id": "B07GNNPB3M",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Round Ceramic Table Desk Lamp with Light Bulb - 11 x 11 x 20 Inches, Burnt Orange and White Shade",
+   "extent": [
+    0.24666400998830795,
+    0.3872697055339813,
+    0.24666403979063034
+   ],
+   "vertices": 5593,
+   "faces": 8458,
+   "bytes": 795976,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07GNNPB3M.glb",
+   "image": "ae/aec66d2c.jpg"
+  },
+  {
+   "id": "B0825F3GC7",
+   "source": "abo",
+   "category": "lamp",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Integrated-LED Metal Table Lamp with Adjustable Shade, LED Bulb Included, 22\"H, Matte Black",
+   "extent": [
+    0.19711238145828247,
+    0.5587073564529419,
+    0.3159555345773697
+   ],
+   "vertices": 11510,
+   "faces": 19146,
+   "bytes": 1124760,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B0825F3GC7.glb",
+   "image": "81/816ea46f.jpg"
+  },
+  {
+   "id": "B0718ZKMW1",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Wall Decor Mirror, 30\" x 40\", Champagne Gold",
+   "extent": [
+    0.7557826042175293,
+    1.0228880643844604,
+    0.03228075057268143
+   ],
+   "vertices": 17740,
+   "faces": 28536,
+   "bytes": 1951492,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B0718ZKMW1.glb",
+   "image": "4b/4b10a4ac.jpg"
+  },
+  {
+   "id": "B071HBC338",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Round Layered Rustic Wood Hanging Wall Mirror Decor, 42 Inch Height, Dark Wood Finish",
+   "extent": [
+    1.0769249200820923,
+    1.0769251585006714,
+    0.03632903963327405
+   ],
+   "vertices": 4162,
+   "faces": 6400,
+   "bytes": 2013508,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B071HBC338.glb",
+   "image": "2c/2c96baea.jpg"
+  },
+  {
+   "id": "B071KX42WG",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet 3x3 Tile Mirror Decor, 36 Inch Height, Gold Finish",
+   "extent": [
+    1.0105561017990112,
+    0.9263839721679688,
+    0.02317967638373375
+   ],
+   "vertices": 8931,
+   "faces": 13818,
+   "bytes": 1426548,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B071KX42WG.glb",
+   "image": "ff/ff8ae2e4.jpg"
+  },
+  {
+   "id": "B071NHXGFY",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Round Glass Hanging Wall Mirror, 30 Inch Height, Silver Finish",
+   "extent": [
+    0.5943569540977478,
+    0.7130208611488342,
+    0.02039594203233719
+   ],
+   "vertices": 5464,
+   "faces": 10240,
+   "bytes": 503892,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B071NHXGFY.glb",
+   "image": "5a/5a230c86.jpg"
+  },
+  {
+   "id": "B071V8H94C",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Round Distressed Rustic Wood Hanging Wall Mirror Decor, 23.4 Inch Height, Antiqued Finish",
+   "extent": [
+    0.5852709412574768,
+    0.585271418094635,
+    0.06085270881652827
+   ],
+   "vertices": 5802,
+   "faces": 11160,
+   "bytes": 1632064,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B071V8H94C.glb",
+   "image": "78/78f700a7.jpg"
+  },
+  {
+   "id": "B0722L1N3X",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Round Distressed Metal Mirror, 36\"H, Tin and Gold Finish",
+   "extent": [
+    0.9073388576507568,
+    0.9073388576507568,
+    0.11107047647237778
+   ],
+   "vertices": 7230,
+   "faces": 9488,
+   "bytes": 1871436,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B0722L1N3X.glb",
+   "image": "e7/e72af520.jpg"
+  },
+  {
+   "id": "B073WGMTB8",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Rotating Metal Hanging Wall Mirror, 18.25 Inch Height, Gold Finish",
+   "extent": [
+    0.4696372151374817,
+    0.46847406029701233,
+    0.04544966667890549
+   ],
+   "vertices": 8571,
+   "faces": 16112,
+   "bytes": 1564936,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B073WGMTB8.glb",
+   "image": "6d/6dbff8ad.jpg"
+  },
+  {
+   "id": "B073WGMTCC",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Industrial Hexagonal Floating Metal Wall Mirror, 13\"H, Black",
+   "extent": [
+    0.38045012950897217,
+    0.3337741643190384,
+    0.11903682351112366
+   ],
+   "vertices": 7746,
+   "faces": 14162,
+   "bytes": 1115396,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B073WGMTCC.glb",
+   "image": "5e/5e7973a3.jpg"
+  },
+  {
+   "id": "B073WGP8XN",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Geometric Metal Wall Mirror Decor, 47 Inch Height, Black with Gold Accents",
+   "extent": [
+    0.5646622180938721,
+    1.1922361850738525,
+    0.036746636033058167
+   ],
+   "vertices": 11552,
+   "faces": 18636,
+   "bytes": 1300156,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B073WGP8XN.glb",
+   "image": "a9/a951b42b.jpg"
+  },
+  {
+   "id": "B073WGP8YJ",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Curved Vintage-Look Wood Frame Wall Mirror - 28-Inch Height, White",
+   "extent": [
+    0.4033547043800354,
+    0.7173501253128052,
+    0.021732635209873508
+   ],
+   "vertices": 3151,
+   "faces": 6060,
+   "bytes": 813864,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B073WGP8YJ.glb",
+   "image": "65/659dbf9b.jpg"
+  },
+  {
+   "id": "B073WGQBPV",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Metal Lattice-Work Octagonal Hanging Wall Mirror 22.25 Inch Height, Gold Finish",
+   "extent": [
+    0.41697466373443604,
+    0.5655720233917236,
+    0.04247947782278061
+   ],
+   "vertices": 6340,
+   "faces": 10674,
+   "bytes": 1645452,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B073WGQBPV.glb",
+   "image": "67/67050f6d.jpg"
+  },
+  {
+   "id": "B073WGSN2W",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Industrial Square Floating Metal Wall Mirror, 12 Inch Height, Black",
+   "extent": [
+    0.30558398365974426,
+    0.3030519485473633,
+    0.10651671886444092
+   ],
+   "vertices": 4837,
+   "faces": 8612,
+   "bytes": 953392,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B073WGSN2W.glb",
+   "image": "be/bece77a1.jpg"
+  },
+  {
+   "id": "B073WH17GB",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Curved Iron Mirror with Wood Shelf, 24\"H, Gold Finish",
+   "extent": [
+    0.3227250576019287,
+    0.6131212711334229,
+    0.09562996029853821
+   ],
+   "vertices": 6080,
+   "faces": 10586,
+   "bytes": 1420452,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B073WH17GB.glb",
+   "image": "3b/3b0fd012.jpg"
+  },
+  {
+   "id": "B073WH6N3R",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Vintage-Look Square Hanging Wall Mirror, 39.5 Inch Height, Tan and White",
+   "extent": [
+    0.804328441619873,
+    0.8043283820152283,
+    0.061168916523456573
+   ],
+   "vertices": 5893,
+   "faces": 10658,
+   "bytes": 1164416,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B073WH6N3R.glb",
+   "image": "0c/0c1cdf47.jpg"
+  },
+  {
+   "id": "B073WH7PZ7",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Antique-Style Metal Frame Hanging Wall Mirror Decor, 32 Inch Height, Brown",
+   "extent": [
+    0.461749792098999,
+    0.8111583888530731,
+    0.06571569293737411
+   ],
+   "vertices": 5954,
+   "faces": 9808,
+   "bytes": 1010256,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B073WH7PZ7.glb",
+   "image": "83/83e5d5db.jpg"
+  },
+  {
+   "id": "B073WHB42L",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Diamond Shape Metal Frame Hanging Decorative Wall Mirror, 34.25 Inch Height, Gold Finish",
+   "extent": [
+    0.5721659660339355,
+    0.8699052333831787,
+    0.05098344385623932
+   ],
+   "vertices": 4518,
+   "faces": 6872,
+   "bytes": 723828,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B073WHB42L.glb",
+   "image": "62/62ab6cf2.jpg"
+  },
+  {
+   "id": "B073WHB435",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern 3-D Star Shaped Metal Mirror Home Decor, 22.5 Inch Height, Gold Finish",
+   "extent": [
+    0.4982679784297943,
+    0.5814531445503235,
+    0.062188491225242615
+   ],
+   "vertices": 9776,
+   "faces": 17070,
+   "bytes": 1209612,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B073WHB435.glb",
+   "image": "a9/a9f40706.jpg"
+  },
+  {
+   "id": "B073WHB43V",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Metal Floral Pattern Round Hanging Wall Mirror, 30.5 Inch Height, Black",
+   "extent": [
+    0.7972851395606995,
+    0.7747723460197449,
+    0.028381961137056377
+   ],
+   "vertices": 17958,
+   "faces": 27598,
+   "bytes": 1665884,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B073WHB43V.glb",
+   "image": "b4/b42944cb.jpg"
+  },
+  {
+   "id": "B073WHKXD4",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Round Arc Iron Hanging Wall Mirror With Shelf, 30 Inch Height, Dark Bronze",
+   "extent": [
+    0.5098673105239868,
+    0.7696009874343872,
+    0.13744521141052246
+   ],
+   "vertices": 4690,
+   "faces": 8560,
+   "bytes": 1391880,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B073WHKXD4.glb",
+   "image": "85/853f4aac.jpg"
+  },
+  {
+   "id": "B073WHYS32",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Round Iron Circle Metal Hanging Wall Mirror, 27.75\" Diameter, Gold Finish",
+   "extent": [
+    0.7029857635498047,
+    0.703152596950531,
+    0.06703754514455795
+   ],
+   "vertices": 10467,
+   "faces": 15632,
+   "bytes": 1227080,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B073WHYS32.glb",
+   "image": "d7/d7bd1432.jpg"
+  },
+  {
+   "id": "B073WHZKBK",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Double-Layer Metal Frame Hanging Wall Mirror, 30 Inch Height, Brass Finish",
+   "extent": [
+    0.46784988045692444,
+    0.7683879733085632,
+    0.08215138584375392
+   ],
+   "vertices": 3563,
+   "faces": 6140,
+   "bytes": 1175308,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B073WHZKBK.glb",
+   "image": "d0/d02ce449.jpg"
+  },
+  {
+   "id": "B07B8NW6GG",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Rustic Farmhouse Round Wood Iron Mirror with Faux Leather Strap - 22 Inch, Black Metal",
+   "extent": [
+    0.35487228631973267,
+    0.5678236484527588,
+    0.04233385622501373
+   ],
+   "vertices": 19102,
+   "faces": 31448,
+   "bytes": 1949612,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07B8NW6GG.glb",
+   "image": "23/23b0cd12.jpg"
+  },
+  {
+   "id": "B07B92C9WT",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Glass Mirror, 42\"H, Black",
+   "extent": [
+    0.7242990136146545,
+    1.0748339891433716,
+    0.037205801139276296
+   ],
+   "vertices": 5880,
+   "faces": 10500,
+   "bytes": 1689024,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07B92C9WT.glb",
+   "image": "0c/0cb89f2a.jpg"
+  },
+  {
+   "id": "B07HSGPJLM",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Vintage Window Mirror -28 Inch, Antique Grey Blue",
+   "extent": [
+    0.46110931038856506,
+    0.712705135345459,
+    0.02430422231554985
+   ],
+   "vertices": 7412,
+   "faces": 13948,
+   "bytes": 940916,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07HSGPJLM.glb",
+   "image": "3b/3b3de1fc.jpg"
+  },
+  {
+   "id": "B07HSLG6XK",
+   "source": "abo",
+   "category": "mirror",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Rustic Mirror Wall Shelf, 24\"H, White",
+   "extent": [
+    0.8060134649276733,
+    0.8069015145301819,
+    0.15785579388985183
+   ],
+   "vertices": 2478,
+   "faces": 3468,
+   "bytes": 1953572,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07HSLG6XK.glb",
+   "image": "a2/a26e2c41.jpg"
+  },
+  {
+   "id": "B075HWDSFH",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Pyramid-Shaped Wall Planter, 7.5\"H, Modern Earthenware, Aqua",
+   "extent": [
+    0.16359324753284454,
+    0.19745638966560364,
+    0.0792142003774643
+   ],
+   "vertices": 2565,
+   "faces": 4506,
+   "bytes": 389888,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B075HWDSFH.glb",
+   "image": "25/257644c0.jpg"
+  },
+  {
+   "id": "B075HWDSZ1",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Rustic Stoneware Crosshatch Indoor Outdoor Flower Plant Pot, 5\"H, Bronze, Small Planter",
+   "extent": [
+    0.10871390253305435,
+    0.09590139985084534,
+    0.10871388018131256
+   ],
+   "vertices": 4151,
+   "faces": 7600,
+   "bytes": 1684956,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B075HWDSZ1.glb",
+   "image": "df/dfbe78b4.jpg"
+  },
+  {
+   "id": "B075HWDSZY",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Rustic Stoneware Indoor Outdoor Flower Plant Home Decor Tall Cylinder Vase, 11\"H, Bronze",
+   "extent": [
+    0.09896788001060486,
+    0.277768075466156,
+    0.09896788001060486
+   ],
+   "vertices": 4124,
+   "faces": 7520,
+   "bytes": 1575708,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075HWDSZY.glb",
+   "image": "80/80d784b0.jpg"
+  },
+  {
+   "id": "B075HWTX99",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Triangular Wall Mount Vase, 8.75\"H, Modern Earthenware, White",
+   "extent": [
+    0.14293992519378662,
+    0.33835646510124207,
+    0.0647815639153122
+   ],
+   "vertices": 2573,
+   "faces": 4856,
+   "bytes": 603644,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B075HWTX99.glb",
+   "image": "d0/d046d17b.jpg"
+  },
+  {
+   "id": "B075HX9TCW",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Triangle Wall Mount Vase, 7\"H, Modern Earthenware, Aqua",
+   "extent": [
+    0.07999645918607712,
+    0.1779262125492096,
+    0.06397365778684616
+   ],
+   "vertices": 4038,
+   "faces": 7228,
+   "bytes": 482796,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B075HX9TCW.glb",
+   "image": "09/09199aab.jpg"
+  },
+  {
+   "id": "B075HXBYCT",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Triangular Wall Mount Planter, 7\"H, Modern Earthenware, White",
+   "extent": [
+    0.14973460137844086,
+    0.19722604751586914,
+    0.060412390679120964
+   ],
+   "vertices": 2693,
+   "faces": 4722,
+   "bytes": 377072,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075HXBYCT.glb",
+   "image": "a2/a2f7d229.jpg"
+  },
+  {
+   "id": "B075HXLWRM",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Rounded Wall Mount Planter, 6.25\"H, Modern Earthenware, Aqua",
+   "extent": [
+    0.18858399987220764,
+    0.16356278955936432,
+    0.0730439883470535
+   ],
+   "vertices": 9464,
+   "faces": 18286,
+   "bytes": 683704,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B075HXLWRM.glb",
+   "image": "6c/6c7697b9.jpg"
+  },
+  {
+   "id": "B075HXLWRN",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Rounded Wall Mount Planter, 6.25\"H, Modern Earthenware, Grey",
+   "extent": [
+    0.18954120576381683,
+    0.16378608345985413,
+    0.07302220910787582
+   ],
+   "vertices": 4124,
+   "faces": 7702,
+   "bytes": 831712,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B075HXLWRN.glb",
+   "image": "38/380049d9.jpg"
+  },
+  {
+   "id": "B075HXLWS3",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Hexagonal Wall Mount Planter, 7.7\"H, Modern Earthenware, Aqua",
+   "extent": [
+    0.16925811767578125,
+    0.20676439255475998,
+    0.07766422098502512
+   ],
+   "vertices": 4028,
+   "faces": 7176,
+   "bytes": 386908,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B075HXLWS3.glb",
+   "image": "83/83cff263.jpg"
+  },
+  {
+   "id": "B075HXQJYB",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Cone-Shaped Wall Mount Vase, 10.4\"H, Modern Earthenware, Aqua",
+   "extent": [
+    0.053976695984601974,
+    0.26811525225639343,
+    0.05504146829247469
+   ],
+   "vertices": 2886,
+   "faces": 5196,
+   "bytes": 522680,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B075HXQJYB.glb",
+   "image": "f5/f5552ffe.jpg"
+  },
+  {
+   "id": "B078JG4N1G",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Ceramic Planter with Leather Strap, 5.3\"H, Modern, Blue and Ivory",
+   "extent": [
+    0.15682348608970642,
+    0.7530931830406189,
+    0.15280842781066895
+   ],
+   "vertices": 8350,
+   "faces": 14640,
+   "bytes": 1485856,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B078JG4N1G.glb",
+   "image": "ca/caa1808d.jpg"
+  },
+  {
+   "id": "B078JGHZSZ",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Ceramic Planter with Leather Strap, 3.5\"H, Modern, Blue and Ivory",
+   "extent": [
+    0.1657252311706543,
+    0.75136798620224,
+    0.16583381593227386
+   ],
+   "vertices": 8113,
+   "faces": 14156,
+   "bytes": 1512080,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B078JGHZSZ.glb",
+   "image": "37/37e07fb0.jpg"
+  },
+  {
+   "id": "B078JJHJFX",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Ceramic Indoor Window Sill Planter Box Pot - 3 x 12 x 3 Inch, Green and Blue",
+   "extent": [
+    0.27537277340888977,
+    0.07214930653572083,
+    0.07203469425439835
+   ],
+   "vertices": 2262,
+   "faces": 4032,
+   "bytes": 1679560,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B078JJHJFX.glb",
+   "image": "9c/9c954dba.jpg"
+  },
+  {
+   "id": "B078JK89KM",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Modern Ceramic and Bamboo Planter Flower Pot with Stand,14.5\"H, Red and Orange",
+   "extent": [
+    0.26911085844039917,
+    0.37864115834236145,
+    0.26911747455596924
+   ],
+   "vertices": 5802,
+   "faces": 9908,
+   "bytes": 1146180,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B078JK89KM.glb",
+   "image": "ea/eaa78956.jpg"
+  },
+  {
+   "id": "B078JLC1LC",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Ceramic and Bamboo Planter Flower Pot with Stand - 10.25 Inch, Red and Orange",
+   "extent": [
+    0.19896788895130157,
+    0.26839497685432434,
+    0.19897271692752838
+   ],
+   "vertices": 5798,
+   "faces": 9908,
+   "bytes": 1211548,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B078JLC1LC.glb",
+   "image": "d7/d7a13c39.jpg"
+  },
+  {
+   "id": "B07BZB3HN7",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Ceramic Planter with Stand, 14\"H, Salmon",
+   "extent": [
+    0.2349279299378395,
+    0.35368987917900085,
+    0.2510647475719452
+   ],
+   "vertices": 2980,
+   "faces": 4724,
+   "bytes": 1484696,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07BZB3HN7.glb",
+   "image": "37/373ec88f.jpg"
+  },
+  {
+   "id": "B07BZR1KV6",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Ceramic Planter with Stand, 18.9\"H, Dark Brown",
+   "extent": [
+    0.3452102243900299,
+    0.4648072421550751,
+    0.3538367748260498
+   ],
+   "vertices": 2846,
+   "faces": 4244,
+   "bytes": 1539132,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07BZR1KV6.glb",
+   "image": "18/183381f1.jpg"
+  },
+  {
+   "id": "B07CBNZ6R9",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Ceramic Planter with Stand, 18.9\"H, Salmon",
+   "extent": [
+    0.3452102243900299,
+    0.4648072421550751,
+    0.3538367748260498
+   ],
+   "vertices": 2790,
+   "faces": 4324,
+   "bytes": 1235884,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07CBNZ6R9.glb",
+   "image": "b2/b2dbb6c1.jpg"
+  },
+  {
+   "id": "B07CBP4FG7",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Ceramic Planter with Stand, 17\"H, White",
+   "extent": [
+    0.3349207043647766,
+    0.42250144481658936,
+    0.31321945786476135
+   ],
+   "vertices": 3357,
+   "faces": 4736,
+   "bytes": 1560924,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07CBP4FG7.glb",
+   "image": "83/8325ab43.jpg"
+  },
+  {
+   "id": "B07HSGPBPR",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Surrey Modern Ceramic Planter Pot with Wood Plant Stand, 17\"H, White",
+   "extent": [
+    0.4170566499233246,
+    0.6702663898468018,
+    0.417056605219841
+   ],
+   "vertices": 3651,
+   "faces": 5768,
+   "bytes": 1663332,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07HSGPBPR.glb",
+   "image": "ea/ea49b9f9.jpg"
+  },
+  {
+   "id": "B07HSKBHBT",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Westline Modern Indoor Outdoor Hand Painted Stoneware Planter Flower Pot, 10\"H, Red White Blue Black",
+   "extent": [
+    0.26836492121219635,
+    0.2698301672935486,
+    0.26836495101451874
+   ],
+   "vertices": 5089,
+   "faces": 9760,
+   "bytes": 637008,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07HSKBHBT.glb",
+   "image": "00/00d9ac29.jpg"
+  },
+  {
+   "id": "B07JM6HFVP",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Westline Modern Indoor Outdoor Hand-Painted Stoneware Planter Flower Pot, 8\"H, Teal White Blue Black",
+   "extent": [
+    0.20365844666957855,
+    0.21420666575431824,
+    0.20365846157073975
+   ],
+   "vertices": 5089,
+   "faces": 9760,
+   "bytes": 590584,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07JM6HFVP.glb",
+   "image": "c8/c8db8a9b.jpg"
+  },
+  {
+   "id": "B07JM6HFW3",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Surrey Modern Ceramic Planter Pot with Wood Plant Stand, 13.6\"H, White",
+   "extent": [
+    0.22401456534862518,
+    0.3575528562068939,
+    0.22401458024978638
+   ],
+   "vertices": 3664,
+   "faces": 6112,
+   "bytes": 1517376,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07JM6HFW3.glb",
+   "image": "c7/c747a56d.jpg"
+  },
+  {
+   "id": "B07JM8R7VW",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Westline Modern Indoor Outdoor Hand-Painted Stoneware Planter Flower Pot, 8\"H, Yellow White Blue Black",
+   "extent": [
+    0.194955512881279,
+    0.21361401677131653,
+    0.19495555758476257
+   ],
+   "vertices": 5089,
+   "faces": 9760,
+   "bytes": 794744,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07JM8R7VW.glb",
+   "image": "5e/5e062b16.jpg"
+  },
+  {
+   "id": "B07QB748ZB",
+   "source": "abo",
+   "category": "planter",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Ceramic Planter with Iron Stand, 17\"H, Black and White",
+   "extent": [
+    0.30989983677864075,
+    0.432007372379303,
+    0.3100399672985077
+   ],
+   "vertices": 5476,
+   "faces": 10053,
+   "bytes": 862220,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07QB748ZB.glb",
+   "image": "9f/9feb7d4b.jpg"
+  },
+  {
+   "id": "B071777YL9",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Diamond Trellis Tassel Wool Rug, 5' x 8', Ivory",
+   "extent": [
+    2.7545350790023804,
+    0.021268511191010475,
+    1.52382230758667
+   ],
+   "vertices": 27039,
+   "faces": 28876,
+   "bytes": 3956820,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B071777YL9.glb",
+   "image": "0b/0b802d13.jpg"
+  },
+  {
+   "id": "B071SHHZVZ",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Traditional Detailed Diamond Rug, 5' x 7'5\", Rust",
+   "extent": [
+    2.2859063148498535,
+    0.025616509839892387,
+    1.5210855603218079
+   ],
+   "vertices": 2778,
+   "faces": 5000,
+   "bytes": 2880636,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B071SHHZVZ.glb",
+   "image": "97/976a1018.jpg"
+  },
+  {
+   "id": "B0732FTB3W",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Braided Jute Area Rug, 5 x 8 Foot, Smoke",
+   "extent": [
+    2.4384586811065674,
+    0.034058119803667075,
+    1.5212042331695557
+   ],
+   "vertices": 4949,
+   "faces": 9500,
+   "bytes": 3728108,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B0732FTB3W.glb",
+   "image": "5b/5b60202c.jpg"
+  },
+  {
+   "id": "B0735SF34N",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Contemporary Doily Wool Farmhouse Area Rug, 5 x 8 Foot, Ivory",
+   "extent": [
+    2.4335891008377075,
+    0.023417560383677483,
+    1.5176711678504944
+   ],
+   "vertices": 2778,
+   "faces": 5000,
+   "bytes": 2274812,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B0735SF34N.glb",
+   "image": "46/4613cc19.jpg"
+  },
+  {
+   "id": "B0735SFWJZ",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Multi-Colored Stripe Runner Rug, 2' 6\" x 8', Sun Multi",
+   "extent": [
+    2.4443925619125366,
+    0.03015591949224472,
+    0.7985959351062775
+   ],
+   "vertices": 2298,
+   "faces": 3918,
+   "bytes": 3777820,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B0735SFWJZ.glb",
+   "image": "d1/d11b60aa.jpg"
+  },
+  {
+   "id": "B0735VV7ZJ",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Kelsea Vintage-Inspired, Tassled Wool Area Rug, 5 x 8 Foot, Beige and Grey",
+   "extent": [
+    2.464717984199524,
+    0.02274509333074093,
+    1.618820071220398
+   ],
+   "vertices": 4882,
+   "faces": 9208,
+   "bytes": 3686060,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B0735VV7ZJ.glb",
+   "image": "23/2316b926.jpg"
+  },
+  {
+   "id": "B0735W9DK3",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Lottie Traditional Wool Runner Rug, 2' 6\" x 8', Beige",
+   "extent": [
+    2.4380271434783936,
+    0.020663127303123474,
+    0.7288239002227783
+   ],
+   "vertices": 8172,
+   "faces": 12184,
+   "bytes": 3904928,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B0735W9DK3.glb",
+   "image": "21/21452449.jpg"
+  },
+  {
+   "id": "B07B4SDWVF",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Runner Rug, 7' 6\" x 2' 3\", Aquamarine",
+   "extent": [
+    2.320161461830139,
+    0.03199958801269531,
+    0.6917689442634583
+   ],
+   "vertices": 5195,
+   "faces": 9468,
+   "bytes": 4207668,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07B4SDWVF.glb",
+   "image": "5e/5e30847f.jpg"
+  },
+  {
+   "id": "B07B4SDWZ2",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Area Rug, 7' 5\" x 5' 3\", Seafoam",
+   "extent": [
+    2.305378794670105,
+    0.029483294114470482,
+    1.5934285521507263
+   ],
+   "vertices": 5193,
+   "faces": 9472,
+   "bytes": 4097504,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B4SDWZ2.glb",
+   "image": "78/78e10eb3.jpg"
+  },
+  {
+   "id": "B07B4WGJPR",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Casual Geometric Cotton Area Rug, 5 x 8 Foot, Flatweave, Grey, Orange, Blue",
+   "extent": [
+    2.4393348693847656,
+    0.029369549825787544,
+    1.5365089178085327
+   ],
+   "vertices": 4686,
+   "faces": 8704,
+   "bytes": 3214080,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07B4WGJPR.glb",
+   "image": "af/af464783.jpg"
+  },
+  {
+   "id": "B07B4WGZ7W",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Area Rug, 7' 5\" x 5' 3\", Aquamarine",
+   "extent": [
+    2.3383508920669556,
+    0.02990497089922428,
+    1.616218090057373
+   ],
+   "vertices": 5200,
+   "faces": 9472,
+   "bytes": 4324556,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07B4WGZ7W.glb",
+   "image": "83/83f19766.jpg"
+  },
+  {
+   "id": "B07B4WH25P",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Rug, 13' x 9' 3\", Aquamarine",
+   "extent": [
+    2.3414664268493652,
+    0.03672971948981285,
+    0.6749212443828583
+   ],
+   "vertices": 5214,
+   "faces": 9468,
+   "bytes": 4165784,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07B4WH25P.glb",
+   "image": "a3/a3a499a3.jpg"
+  },
+  {
+   "id": "B07B4WH7YL",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Area Rug, 5' 9\" x 3' 9\", Aquamarine",
+   "extent": [
+    1.8528568744659424,
+    0.021721359342336655,
+    1.1739338636398315
+   ],
+   "vertices": 5195,
+   "faces": 9472,
+   "bytes": 4343028,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07B4WH7YL.glb",
+   "image": "83/83f19766.jpg"
+  },
+  {
+   "id": "B07B4WKMB1",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Area Rug, 5' 9\" x 3' 9\", Oatmeal",
+   "extent": [
+    1.791627287864685,
+    0.021359547972679138,
+    1.1543796062469482
+   ],
+   "vertices": 5208,
+   "faces": 9472,
+   "bytes": 4388364,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4WKMB1.glb",
+   "image": "d9/d910a666.jpg"
+  },
+  {
+   "id": "B07B4ZNV87",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Rug, 13' x 9' 3\", Linen",
+   "extent": [
+    2.8691872358322144,
+    0.03760543838143349,
+    2.0323909521102905
+   ],
+   "vertices": 5200,
+   "faces": 9472,
+   "bytes": 4136232,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07B4ZNV87.glb",
+   "image": "1a/1a52b9ad.jpg"
+  },
+  {
+   "id": "B07B4ZR4QK",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Runner Rug, 7' 6\" x 2' 3\", Linen",
+   "extent": [
+    2.282783627510071,
+    0.029538040980696678,
+    1.5963874459266663
+   ],
+   "vertices": 5199,
+   "faces": 9472,
+   "bytes": 4328232,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07B4ZR4QK.glb",
+   "image": "81/8167643a.jpg"
+  },
+  {
+   "id": "B07B515Q7N",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striated Jute Area Rug, 7' 5\" x 5' 3\", Linen",
+   "extent": [
+    2.3460888862609863,
+    0.029121460393071178,
+    1.573873221874237
+   ],
+   "vertices": 5197,
+   "faces": 9472,
+   "bytes": 4325548,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07B515Q7N.glb",
+   "image": "aa/aa56b785.jpg"
+  },
+  {
+   "id": "B07B51QMFH",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Casual Geometric Cotton Area Rug, 5 x 8 Foot, Flatweave, Grey, Orange, Blue",
+   "extent": [
+    2.4187896251678467,
+    0.021523118019104004,
+    0.7436359226703644
+   ],
+   "vertices": 2782,
+   "faces": 5232,
+   "bytes": 3175848,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07B51QMFH.glb",
+   "image": "19/1991e03d.jpg"
+  },
+  {
+   "id": "B07HSF7YHH",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Moroccan Inspired Area Rug, 5 x 8 Foot, Multicolor Red Accent",
+   "extent": [
+    2.6715524196624756,
+    0.06643375754356384,
+    1.7413975596427917
+   ],
+   "vertices": 38438,
+   "faces": 43418,
+   "bytes": 3952460,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07HSF7YHH.glb",
+   "image": "36/3639ad73.jpg"
+  },
+  {
+   "id": "B07HSFBRWL",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Area Rug, 5' 3\" x 7' 7\", Off White",
+   "extent": [
+    2.3071935176849365,
+    0.0306415855884552,
+    1.4935331344604492
+   ],
+   "vertices": 13656,
+   "faces": 21316,
+   "bytes": 4000676,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07HSFBRWL.glb",
+   "image": "8d/8dc3cbf4.jpg"
+  },
+  {
+   "id": "B07HSHMPZP",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Polyester Area Rug, 5 x 8 Foot, Silver, Grey, White",
+   "extent": [
+    2.4438955783843994,
+    0.023011300712823868,
+    1.5314191579818726
+   ],
+   "vertices": 2981,
+   "faces": 5238,
+   "bytes": 3486792,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07HSHMPZP.glb",
+   "image": "90/9014e4e0.jpg"
+  },
+  {
+   "id": "B07HSHMQ52",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Textured Area Rug, 4 x 6 Foot, Grey, White",
+   "extent": [
+    2.0207079648971558,
+    0.027039216831326485,
+    1.2238394021987915
+   ],
+   "vertices": 34244,
+   "faces": 38916,
+   "bytes": 4139664,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07HSHMQ52.glb",
+   "image": "c9/c9977bf3.jpg"
+  },
+  {
+   "id": "B07HSHMVNF",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Moroccan Inspired Area Rug, 4 x 6 Foot, Multicolor Red Accent",
+   "extent": [
+    2.069232940673828,
+    0.06698282808065414,
+    1.443681538105011
+   ],
+   "vertices": 38424,
+   "faces": 43418,
+   "bytes": 3952012,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07HSHMVNF.glb",
+   "image": "7a/7a02d286.jpg"
+  },
+  {
+   "id": "B07HSN8CV8",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Jute Area Rug, 4 x 6 Foot, Nuetral Multicolor",
+   "extent": [
+    2.0847071409225464,
+    0.02703922614455223,
+    1.2238394021987915
+   ],
+   "vertices": 34244,
+   "faces": 38916,
+   "bytes": 4256348,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B07HSN8CV8.glb",
+   "image": "43/43d17a90.jpg"
+  },
+  {
+   "id": "B07HSS5RNL",
+   "source": "abo",
+   "category": "rug",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Textured Area Rug, 5 x 8 Foot, Grey, White",
+   "extent": [
+    2.5230785608291626,
+    0.03376146778464317,
+    1.5280990600585938
+   ],
+   "vertices": 34708,
+   "faces": 38916,
+   "bytes": 4062560,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B07HSS5RNL.glb",
+   "image": "a6/a6aa41af.jpg"
+  },
+  {
+   "id": "B071FMSY5S",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Revolve Modern Upholstered Loveseat Sofa, 56\"W, Denim Blue",
+   "extent": [
+    1.517953634262085,
+    0.9295791983604431,
+    0.999102771282196
+   ],
+   "vertices": 12393,
+   "faces": 22524,
+   "bytes": 1993296,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B071FMSY5S.glb",
+   "image": "6f/6fcbe9a8.jpg"
+  },
+  {
+   "id": "B071SLGYB3",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Dalton Sectional Sofa Couch, 91.5\"W, Sand",
+   "extent": [
+    2.0877387523651123,
+    0.8621388077735901,
+    0.9353644251823425
+   ],
+   "vertices": 12071,
+   "faces": 19128,
+   "bytes": 2999524,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B071SLGYB3.glb",
+   "image": "51/515b3f3e.jpg"
+  },
+  {
+   "id": "B072635G66",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Emerly Modern Loveseat Sofa, 63\"W, Ecru",
+   "extent": [
+    1.7389148473739624,
+    0.9947148561477661,
+    0.9058180153369904
+   ],
+   "vertices": 19263,
+   "faces": 35020,
+   "bytes": 3128184,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B072635G66.glb",
+   "image": "e0/e025bdd8.jpg"
+  },
+  {
+   "id": "B072C8Q9S8",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand - Rivet Revolve Modern Upholstered Sofa Bed, 70\"W, Denim Blue",
+   "extent": [
+    1.6587706804275513,
+    0.9065982103347778,
+    0.9991028010845184
+   ],
+   "vertices": 9393,
+   "faces": 16340,
+   "bytes": 2391372,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B072C8Q9S8.glb",
+   "image": "89/898e7f8b.jpg"
+  },
+  {
+   "id": "B072C8QG7V",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet North End Modern Wood Accent Sectional Sofa Couch, 78.3\"W, Grey Weave",
+   "extent": [
+    1.9001694917678833,
+    0.8652939200401306,
+    0.8769870698451996
+   ],
+   "vertices": 11744,
+   "faces": 20622,
+   "bytes": 3213708,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B072C8QG7V.glb",
+   "image": "21/21cf2859.jpg"
+  },
+  {
+   "id": "B072FVHS93",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Midtown Contemporary Upholstered Loveseat Sofa, 68.5\"W, Cream",
+   "extent": [
+    1.7758986949920654,
+    0.8358214497566223,
+    0.9701382219791412
+   ],
+   "vertices": 4426,
+   "faces": 7024,
+   "bytes": 1630384,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B072FVHS93.glb",
+   "image": "92/92e0c588.jpg"
+  },
+  {
+   "id": "B072PZC1L3",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Cove Modern Tufted Loveseat with Tapered Legs, Mid-Century, 56\"W, Light Grey",
+   "extent": [
+    1.4067602157592773,
+    0.9071131944656372,
+    0.8422077894210815
+   ],
+   "vertices": 10686,
+   "faces": 16770,
+   "bytes": 3290228,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B072PZC1L3.glb",
+   "image": "80/802b829e.jpg"
+  },
+  {
+   "id": "B075X4F5T8",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam St. Cloud Modern Armless Straight Back Settee, 49\"W, Berry",
+   "extent": [
+    1.2422963380813599,
+    0.9764631828665813,
+    0.9460878670215607
+   ],
+   "vertices": 14097,
+   "faces": 26144,
+   "bytes": 2751208,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B075X4F5T8.glb",
+   "image": "bf/bf129f94.jpg"
+  },
+  {
+   "id": "B075X4T46Q",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Leila Tufted Sofa, 69\" W, Hunter Green",
+   "extent": [
+    1.732563316822052,
+    0.8547617197036743,
+    0.9411623477935791
+   ],
+   "vertices": 19898,
+   "faces": 35798,
+   "bytes": 3103064,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B075X4T46Q.glb",
+   "image": "aa/aa9b2a7a.jpg"
+  },
+  {
+   "id": "B075X543RT",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Leila Tufted Living Room Loveseat Sofa Couch, 69\"W, Sandstone",
+   "extent": [
+    1.732563316822052,
+    0.8547617197036743,
+    0.9411623477935791
+   ],
+   "vertices": 20500,
+   "faces": 36830,
+   "bytes": 3267024,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075X543RT.glb",
+   "image": "a9/a9f7a51e.jpg"
+  },
+  {
+   "id": "B07B4D86J6",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Kaden Mid-Century Modern Adjustable Headrest Leather Loveseat Sofa, 77.5\"W, Black Leather",
+   "extent": [
+    2.0692601203918457,
+    0.9565844535827637,
+    0.8560783863067627
+   ],
+   "vertices": 10729,
+   "faces": 18848,
+   "bytes": 3091732,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07B4D86J6.glb",
+   "image": "93/939beb01.jpg"
+  },
+  {
+   "id": "B07B4FW7H5",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Studio Sofa Couch, 78\"W, Driftwood Leather",
+   "extent": [
+    1.97090744972229,
+    0.8625962734222412,
+    0.9226414263248444
+   ],
+   "vertices": 21023,
+   "faces": 39012,
+   "bytes": 2735784,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07B4FW7H5.glb",
+   "image": "38/3885f4a1.jpg"
+  },
+  {
+   "id": "B07B4GSN3N",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Modern Loveseat Sofa, 67\"W, Light Blue",
+   "extent": [
+    1.8838306665420532,
+    0.9630358815193176,
+    0.9503245055675507
+   ],
+   "vertices": 13395,
+   "faces": 24312,
+   "bytes": 3304184,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07B4GSN3N.glb",
+   "image": "8b/8b5b5afe.jpg"
+  },
+  {
+   "id": "B07B4GSN5K",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Leather Loveseat Sofa, 67\"W, Charcoal",
+   "extent": [
+    1.882939636707306,
+    0.932515561580658,
+    0.9514190852642059
+   ],
+   "vertices": 13403,
+   "faces": 24312,
+   "bytes": 3277816,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07B4GSN5K.glb",
+   "image": "49/49b03ea1.jpg"
+  },
+  {
+   "id": "B07B4H26MQ",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Kaden Mid-Century Modern Adjustable Headrest Leather Loveseat Sofa, 61.8\"W, Black Leather",
+   "extent": [
+    1.5958186984062195,
+    0.9204894304275513,
+    0.9584736227989197
+   ],
+   "vertices": 10224,
+   "faces": 18708,
+   "bytes": 3245448,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07B4H26MQ.glb",
+   "image": "0f/0f253c77.jpg"
+  },
+  {
+   "id": "B07B4L6C7R",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Leather Loveseat Sofa, 67\"W, Saddle Brown",
+   "extent": [
+    1.97090744972229,
+    0.8625962734222412,
+    0.9226414263248444
+   ],
+   "vertices": 21028,
+   "faces": 39012,
+   "bytes": 2934976,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07B4L6C7R.glb",
+   "image": "87/874e87ba.jpg"
+  },
+  {
+   "id": "B07B4M6BS1",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Edgewest Low Back Modern Loveseat, 65\"W, Eclipse Blue",
+   "extent": [
+    1.7164931297302246,
+    0.8624772429466248,
+    0.8657379150390625
+   ],
+   "vertices": 11129,
+   "faces": 19812,
+   "bytes": 1422624,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4M6BS1.glb",
+   "image": "41/416f7aa6.jpg"
+  },
+  {
+   "id": "B07B4M6CN1",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Berkshire Mid-Century Modern Sofa Couch, 82.6\"W, Grey",
+   "extent": [
+    2.022260904312134,
+    0.8327822089195251,
+    0.8086754679679871
+   ],
+   "vertices": 6749,
+   "faces": 12284,
+   "bytes": 3037968,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4M6CN1.glb",
+   "image": "14/14066731.jpg"
+  },
+  {
+   "id": "B07B4MGRHY",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Studio Sofa Couch, 78\"W, Charcoal Leather",
+   "extent": [
+    1.97090744972229,
+    0.8625962734222412,
+    0.9326614141464233
+   ],
+   "vertices": 21028,
+   "faces": 39012,
+   "bytes": 2600188,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07B4MGRHY.glb",
+   "image": "33/3347108e.jpg"
+  },
+  {
+   "id": "B07B4ML4BY",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Edgewest Low Back Modern Loveseat, 65\"W, Grey Linen",
+   "extent": [
+    1.6818082928657532,
+    0.839859664440155,
+    0.8750403225421906
+   ],
+   "vertices": 9068,
+   "faces": 16132,
+   "bytes": 3251800,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07B4ML4BY.glb",
+   "image": "3e/3e086205.jpg"
+  },
+  {
+   "id": "B07B4MM4HS",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Edgewest Modern Sofa, Leather, 87\"W, Charcoal",
+   "extent": [
+    2.02850341796875,
+    0.8054518699645996,
+    0.747871071100235
+   ],
+   "vertices": 20811,
+   "faces": 37398,
+   "bytes": 3287172,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07B4MM4HS.glb",
+   "image": "9b/9b3a895a.jpg"
+  },
+  {
+   "id": "B07B4MMV3N",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Modern Sofa Couch, 78\"W, Dark Tan",
+   "extent": [
+    1.8838306665420532,
+    0.9630358815193176,
+    0.9503245055675507
+   ],
+   "vertices": 13415,
+   "faces": 24312,
+   "bytes": 3179024,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07B4MMV3N.glb",
+   "image": "90/90573643.jpg"
+  },
+  {
+   "id": "B07HZ5RT3Y",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Blaine Modern Loveseat Sofa, 55.9\"W, Light Grey",
+   "extent": [
+    1.503348708152771,
+    0.9807462096214294,
+    0.9854057133197784
+   ],
+   "vertices": 21411,
+   "faces": 37436,
+   "bytes": 2528904,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07HZ5RT3Y.glb",
+   "image": "34/343df84a.jpg"
+  },
+  {
+   "id": "B07HZ73RX2",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Dalton Loveseat, 63.5\"W, Charcoal",
+   "extent": [
+    1.5341957807540894,
+    0.8870255947113037,
+    0.9739599227905273
+   ],
+   "vertices": 9225,
+   "faces": 14964,
+   "bytes": 3111252,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07HZ73RX2.glb",
+   "image": "80/80e52001.jpg"
+  },
+  {
+   "id": "B07HZ7TL95",
+   "source": "abo",
+   "category": "sofa",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Genesse Loveseat Sofa Couch, 64\"W, Smokey Blue",
+   "extent": [
+    1.5889608263969421,
+    0.9212942123413086,
+    0.9868936836719513
+   ],
+   "vertices": 12850,
+   "faces": 23216,
+   "bytes": 1672200,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07HZ7TL95.glb",
+   "image": "6a/6acfa9bf.jpg"
+  },
+  {
+   "id": "B071PDYXKC",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Ava Mid-Century Modern Upholstered Ottoman, 25.6\"W, Light Grey",
+   "extent": [
+    0.6554636359214783,
+    0.39856189489364624,
+    0.6481668949127197
+   ],
+   "vertices": 2992,
+   "faces": 5262,
+   "bytes": 1568356,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B071PDYXKC.glb",
+   "image": "e7/e7daaf2e.jpg"
+  },
+  {
+   "id": "B071W5VJ93",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Emerly Modern Ottoman, 33\"W, Ecru",
+   "extent": [
+    0.8345018029212952,
+    0.49677175283432007,
+    0.580918163061142
+   ],
+   "vertices": 5543,
+   "faces": 9744,
+   "bytes": 1741436,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B071W5VJ93.glb",
+   "image": "83/83321608.jpg"
+  },
+  {
+   "id": "B072Y2MRY2",
+   "source": "abo",
+   "category": "stool",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Multi-Purpose Drafting Spa Bar Stool with Wheels - Black",
+   "extent": [
+    0.6726442575454712,
+    0.5756842494010925,
+    0.6381684243679047
+   ],
+   "vertices": 17363,
+   "faces": 27488,
+   "bytes": 1459608,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B072Y2MRY2.glb",
+   "image": "b3/b3566754.jpg"
+  },
+  {
+   "id": "B073G856G3",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Truve Modern Studded Ottoman, 19\"W, Merlot",
+   "extent": [
+    0.5072916150093079,
+    0.47471022605895996,
+    0.49709177017211914
+   ],
+   "vertices": 12799,
+   "faces": 20894,
+   "bytes": 1579232,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B073G856G3.glb",
+   "image": "70/70ffc6e8.jpg"
+  },
+  {
+   "id": "B073GC43LG",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Truve Modern Studded Ottoman, 19\"W, Sea Blue",
+   "extent": [
+    0.5072916150093079,
+    0.47471022605895996,
+    0.49709177017211914
+   ],
+   "vertices": 12797,
+   "faces": 20894,
+   "bytes": 1840352,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B073GC43LG.glb",
+   "image": "02/029e5df4.jpg"
+  },
+  {
+   "id": "B075YPTF1L",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Industrial Wood and Metal Kitchen Counter Bar Stool, 25.6\"H, Oak, Black",
+   "extent": [
+    0.4801194369792938,
+    0.6787668466567993,
+    0.4010743349790573
+   ],
+   "vertices": 11996,
+   "faces": 21616,
+   "bytes": 2055412,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B075YPTF1L.glb",
+   "image": "be/beb28641.jpg"
+  },
+  {
+   "id": "B07B4D89MZ",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Isabel Traditional Small Storage Ottoman, 24\"W, Tan",
+   "extent": [
+    0.613303154706955,
+    0.43782904744148254,
+    0.6159580945968628
+   ],
+   "vertices": 6914,
+   "faces": 12552,
+   "bytes": 875356,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B07B4D89MZ.glb",
+   "image": "ef/ef0f4088.jpg"
+  },
+  {
+   "id": "B07B4GSNB1",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Modern Rectangle Ottoman, 32\"W, Linen",
+   "extent": [
+    0.8184252679347992,
+    0.48506608605384827,
+    0.6341717839241028
+   ],
+   "vertices": 3832,
+   "faces": 6656,
+   "bytes": 1979004,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4GSNB1.glb",
+   "image": "6b/6b561f25.jpg"
+  },
+  {
+   "id": "B07B4L5BSH",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Slipcover Ottoman, 32\"W, Stone Fabric",
+   "extent": [
+    0.8328742980957031,
+    0.4923182427883148,
+    0.6519919335842133
+   ],
+   "vertices": 17388,
+   "faces": 33132,
+   "bytes": 1927696,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07B4L5BSH.glb",
+   "image": "88/88efb4dc.jpg"
+  },
+  {
+   "id": "B07B4MH5Q1",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Andover Modern Rectangle Ottoman, 32\"W, Pewter",
+   "extent": [
+    0.8387320935726166,
+    0.46440932154655457,
+    0.6389327645301819
+   ],
+   "vertices": 7610,
+   "faces": 14208,
+   "bytes": 1130024,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4MH5Q1.glb",
+   "image": "fe/fe8db5bc.jpg"
+  },
+  {
+   "id": "B07B4MRKSC",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Edgewest Modern Ottoman, 32\"W, Blue",
+   "extent": [
+    0.8312486112117767,
+    0.5332610011100769,
+    0.6948319375514984
+   ],
+   "vertices": 5178,
+   "faces": 9010,
+   "bytes": 1809540,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B07B4MRKSC.glb",
+   "image": "36/36fe7c19.jpg"
+  },
+  {
+   "id": "B07B8445B5",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Rivet Stevie Mid-Century Modern Bar Stool, 30\"H, Pack of 2, Yellow",
+   "extent": [
+    0.4380141943693161,
+    0.595387876033783,
+    0.47187887132167816
+   ],
+   "vertices": 5896,
+   "faces": 10300,
+   "bytes": 1916504,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07B8445B5.glb",
+   "image": "0c/0cfdcf0a.jpg"
+  },
+  {
+   "id": "B07B8F6V9M",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Rivet Stevie Mid-Century Modern Bar Stool, 30\"H, Pack of 2, Red",
+   "extent": [
+    0.45706817507743835,
+    0.5931412577629089,
+    0.42131441831588745
+   ],
+   "vertices": 5896,
+   "faces": 10300,
+   "bytes": 1915040,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07B8F6V9M.glb",
+   "image": "34/34ddd3fa.jpg"
+  },
+  {
+   "id": "B07B8F76PH",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Rivet Stevie Mid-Century Modern Bar Stool, 30\"H, Pack of 2, Grey",
+   "extent": [
+    0.45706817507743835,
+    0.5379278063774109,
+    0.42290326952934265
+   ],
+   "vertices": 5415,
+   "faces": 9436,
+   "bytes": 1890016,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07B8F76PH.glb",
+   "image": "95/95e5d73e.jpg"
+  },
+  {
+   "id": "B07B8JBR7N",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Rivet",
+   "name": "Rivet Stevie Mid-Century Modern Bar Stool, 30\"H, Pack of 2, Green",
+   "extent": [
+    0.45706817507743835,
+    0.595387876033783,
+    0.4300074577331543
+   ],
+   "vertices": 5896,
+   "faces": 10300,
+   "bytes": 1921188,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07B8JBR7N.glb",
+   "image": "e5/e5e72cd6.jpg"
+  },
+  {
+   "id": "B07DB8XFGM",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Decorah Stackable Metal Kitchen Counter Bar Stools, 24\"H, Matte Black, Set of 4",
+   "extent": [
+    0.45503565669059753,
+    0.6091257929801941,
+    0.4233965277671814
+   ],
+   "vertices": 10459,
+   "faces": 18294,
+   "bytes": 1811744,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07DB8XFGM.glb",
+   "image": "3a/3a9a2fdd.jpg"
+  },
+  {
+   "id": "B07DBB1GX5",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Decorah Stackable Metal Kitchen Counter Bar Stools, 24\"H, Yellow, Set of 4",
+   "extent": [
+    0.3593667149543762,
+    0.6091257929801941,
+    0.3990746736526489
+   ],
+   "vertices": 11920,
+   "faces": 19371,
+   "bytes": 1074052,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DBB1GX5.glb",
+   "image": "4e/4e521361.jpg"
+  },
+  {
+   "id": "B07DBD3G32",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Decorah Stackable Metal Kitchen Counter Bar Stools, 24\"H, Blue, Set of 4",
+   "extent": [
+    0.40964093804359436,
+    0.6082395911216736,
+    0.4098859429359436
+   ],
+   "vertices": 9369,
+   "faces": 16544,
+   "bytes": 1483196,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07DBD3G32.glb",
+   "image": "c1/c13af81c.jpg"
+  },
+  {
+   "id": "B07DBD9VY1",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Decorah Stackable Metal Kitchen Counter Bar Stools, 24\"H, Nickle, Set of 4",
+   "extent": [
+    0.40964093804359436,
+    0.6082395911216736,
+    0.4098859429359436
+   ],
+   "vertices": 9447,
+   "faces": 16622,
+   "bytes": 1396908,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07DBD9VY1.glb",
+   "image": "79/79ec7a38.jpg"
+  },
+  {
+   "id": "B07DBDT68B",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Decorah Stackable Metal Kitchen Counter Bar Stools, 24\"H, Light Green, Set of 4",
+   "extent": [
+    0.39819785952568054,
+    0.6091257929801941,
+    0.3583793044090271
+   ],
+   "vertices": 10782,
+   "faces": 18834,
+   "bytes": 1887636,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07DBDT68B.glb",
+   "image": "f3/f341a92b.jpg"
+  },
+  {
+   "id": "B07DBDZ2PV",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Decorah Stackable Metal Kitchen Counter Bar Stools, 24\"H, Gloss Black, Set of 4",
+   "extent": [
+    0.3990746736526489,
+    0.6091257929801941,
+    0.3593667149543762
+   ],
+   "vertices": 11698,
+   "faces": 19210,
+   "bytes": 1039928,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07DBDZ2PV.glb",
+   "image": "66/66c1272f.jpg"
+  },
+  {
+   "id": "B07GNCVKSG",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Pioneer Square",
+   "name": "Pioneer Square BT3503-24-WH Counter Stool, 24\", White",
+   "extent": [
+    0.40640005469322205,
+    0.6095999479293823,
+    0.40640002489089966
+   ],
+   "vertices": 8174,
+   "faces": 13992,
+   "bytes": 1006072,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07GNCVKSG.glb",
+   "image": "69/6982fbc0.jpg"
+  },
+  {
+   "id": "B07HZ6YWZY",
+   "source": "abo",
+   "category": "stool",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Blaine Modern Ottoman, 36.2\"W, Navy Blue",
+   "extent": [
+    0.8850958049297333,
+    0.4380635619163513,
+    0.5700189471244812
+   ],
+   "vertices": 10284,
+   "faces": 18500,
+   "bytes": 1511992,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07HZ6YWZY.glb",
+   "image": "de/de5d0cbe.jpg"
+  },
+  {
+   "id": "B07L6BMW6Q",
+   "source": "abo",
+   "category": "stool",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Classic Solid Wood Saddle-Seat Kitchen Counter Stool with Foot Plate 24 Inch, White, Set of 2",
+   "extent": [
+    0.4056296944618225,
+    0.6095948219299316,
+    0.32209670543670654
+   ],
+   "vertices": 8316,
+   "faces": 14348,
+   "bytes": 1275120,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07L6BMW6Q.glb",
+   "image": "58/58707131.jpg"
+  },
+  {
+   "id": "B07L6LL293",
+   "source": "abo",
+   "category": "stool",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Classic Solid Wood Saddle-Seat Kitchen Counter Stool with Foot Plate 24 Inch, Walnut, Set of 2",
+   "extent": [
+    0.4056296944618225,
+    0.6095948219299316,
+    0.32209670543670654
+   ],
+   "vertices": 8312,
+   "faces": 14348,
+   "bytes": 1759712,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07L6LL293.glb",
+   "image": "ba/bade4811.jpg"
+  },
+  {
+   "id": "B00NUS53CY",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Amazonベーシック(AmazonBasics)",
+   "name": "Amazon Basics 4 Tier Assembled Shelf, Chrome",
+   "extent": [
+    0.9071819186210632,
+    1.3597058057785034,
+    0.3518269956111908
+   ],
+   "vertices": 20016,
+   "faces": 28976,
+   "bytes": 1591784,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B00NUS53CY.glb",
+   "image": "d0/d00397e5.jpg"
+  },
+  {
+   "id": "B01LYBQXRH",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Amazonベーシック(AmazonBasics)",
+   "name": "Amazon Basic 4-Tier Unit Shelf Metal Wire Rack, Black",
+   "extent": [
+    0.9071819186210632,
+    1.3613423109054565,
+    0.3518269956111908
+   ],
+   "vertices": 20118,
+   "faces": 29296,
+   "bytes": 1639360,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B01LYBQXRH.glb",
+   "image": "49/49dcf006.jpg"
+  },
+  {
+   "id": "B075YQ46KX",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Industrial Modern Console Table, 47.25\"W, Walnut Wood, Metal",
+   "extent": [
+    1.203935444355011,
+    0.7403326034545898,
+    0.40775343775749207
+   ],
+   "vertices": 2856,
+   "faces": 3168,
+   "bytes": 1030548,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B075YQ46KX.glb",
+   "image": "f6/f6c27e8c.jpg"
+  },
+  {
+   "id": "B077NZFT6C",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Stylistics",
+   "name": "Stylistics Campaign White With Gold Accents Dresser Chest of Drawers, 40\" x 18\" x 35\", White",
+   "extent": [
+    1.0224063396453857,
+    0.8906501531600952,
+    0.46018457412719727
+   ],
+   "vertices": 6092,
+   "faces": 6532,
+   "bytes": 949616,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B077NZFT6C.glb",
+   "image": "3c/3ceb02d8.jpg"
+  },
+  {
+   "id": "B07B7JY9C5",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Anne Mid-Century Modern Wood Filing Cabinet with Wheels, 20\"W, Walnut",
+   "extent": [
+    0.40188249945640564,
+    0.4550583064556122,
+    0.5004233121871948
+   ],
+   "vertices": 7400,
+   "faces": 11874,
+   "bytes": 1092640,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07B7JY9C5.glb",
+   "image": "a0/a0382e73.jpg"
+  },
+  {
+   "id": "B07B8CX5W5",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Metal Kitchen Rolling Bar Cart with Wheels, 30\" Inch Height, Gold",
+   "extent": [
+    0.48286983370780945,
+    0.7606721520423889,
+    0.33244243264198303
+   ],
+   "vertices": 16433,
+   "faces": 21328,
+   "bytes": 1445520,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07B8CX5W5.glb",
+   "image": "c4/c47fc5e9.jpg"
+  },
+  {
+   "id": "B07B8P1JCT",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Metal Shelf, 24\"W, Black",
+   "extent": [
+    0.6051701307296753,
+    0.05290313437581062,
+    0.10159670904045925
+   ],
+   "vertices": 3645,
+   "faces": 6816,
+   "bytes": 1599912,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07B8P1JCT.glb",
+   "image": "b8/b8775076.jpg"
+  },
+  {
+   "id": "B07B8PXMQT",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Rivet Modern Metal Shelf, 36\"W, Black",
+   "extent": [
+    0.9240896105766296,
+    0.048940982669591904,
+    0.09202794572338469
+   ],
+   "vertices": 10345,
+   "faces": 19840,
+   "bytes": 1609492,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07B8PXMQT.glb",
+   "image": "c4/c4b233cb.jpg"
+  },
+  {
+   "id": "B07B8PXQ49",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Decorative Marble Jewelry Box - 4 x 2 Inch, Blue",
+   "extent": [
+    0.10137180984020233,
+    0.06290481239557266,
+    0.10137183964252472
+   ],
+   "vertices": 2976,
+   "faces": 5480,
+   "bytes": 890816,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07B8PXQ49.glb",
+   "image": "d4/d4e10186.jpg"
+  },
+  {
+   "id": "B07DB92J86",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Sobaski Wood Shoe Storage Rack Organizer, 48\"W, black",
+   "extent": [
+    1.1202309131622314,
+    0.5312707424163818,
+    0.32435570657253265
+   ],
+   "vertices": 3998,
+   "faces": 4887,
+   "bytes": 400016,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DB92J86.glb",
+   "image": "66/666620ca.jpg"
+  },
+  {
+   "id": "B07DBB76JV",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Sobaski Wood Shoe Storage Rack Organizer, 48\"W, Black",
+   "extent": [
+    1.2514689564704895,
+    0.5935105085372925,
+    0.3623548448085785
+   ],
+   "vertices": 3998,
+   "faces": 4887,
+   "bytes": 802472,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07DBB76JV.glb",
+   "image": "d6/d637794b.jpg"
+  },
+  {
+   "id": "B07DBB76MF",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Peterson Modern Glass Cabinet Storage TV Media Entertainment Stand, 46\"W, White",
+   "extent": [
+    1.1673295497894287,
+    0.6034010648727417,
+    0.5659647583961487
+   ],
+   "vertices": 8645,
+   "faces": 14280,
+   "bytes": 568616,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07DBB76MF.glb",
+   "image": "df/dfea69c9.jpg"
+  },
+  {
+   "id": "B07DBDSGD6",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Sobaski Wood Shoe Storage Rack Organizer, 48\"W, Black",
+   "extent": [
+    1.219221830368042,
+    0.5562677383422852,
+    0.40642936527729034
+   ],
+   "vertices": 4744,
+   "faces": 6976,
+   "bytes": 466564,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBDSGD6.glb",
+   "image": "8e/8e0d4224.jpg"
+  },
+  {
+   "id": "B07DBF3VHW",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Westly Corner Glass Storage TV Media Entertainment Cabinet Stand, 52\"W, White",
+   "extent": [
+    1.0720986127853394,
+    0.6136780381202698,
+    0.4768383055925369
+   ],
+   "vertices": 15988,
+   "faces": 24198,
+   "bytes": 1124376,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07DBF3VHW.glb",
+   "image": "ce/ce702c54.jpg"
+  },
+  {
+   "id": "B07DBFFHXP",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Peterson Modern Glass Cabinet Storage TV Media Entertainment Console Stand, 46\"W, Grey",
+   "extent": [
+    1.1673295497894287,
+    0.6034010648727417,
+    0.3444953113794327
+   ],
+   "vertices": 9817,
+   "faces": 16248,
+   "bytes": 615060,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07DBFFHXP.glb",
+   "image": "52/5255123f.jpg"
+  },
+  {
+   "id": "B07GFFPKFV",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Inari Modern 2-Door 2-Drawer Wardrobe, 100 x 57 x 180 cm, White",
+   "extent": [
+    0.9905312657356262,
+    1.8083062171936035,
+    0.5769868493080139
+   ],
+   "vertices": 7024,
+   "faces": 12492,
+   "bytes": 517256,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07GFFPKFV.glb",
+   "image": "c0/c0eae26a.jpg"
+  },
+  {
+   "id": "B07GFG6JMM",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Adour Oval Coffee Table, 55 x 110 x 39cm, Light Brown Oak-Effect",
+   "extent": [
+    1.0831761360168457,
+    0.38996562361717224,
+    0.5415880084037781
+   ],
+   "vertices": 5477,
+   "faces": 9800,
+   "bytes": 1016744,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07GFG6JMM.glb",
+   "image": "fe/fe801607.jpg"
+  },
+  {
+   "id": "B07GG2X2MX",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian Idro 4-Door Shoe Cabinet/Cupboard/Organizer, 25 x 52 x 163cm, White",
+   "extent": [
+    0.5199379324913025,
+    1.6299179792404175,
+    0.25548693537712097
+   ],
+   "vertices": 2780,
+   "faces": 3932,
+   "bytes": 719532,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B07GG2X2MX.glb",
+   "image": "28/28c08aa4.jpg"
+  },
+  {
+   "id": "B07H8T8ZS7",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Movian",
+   "name": "Movian Moselle.",
+   "extent": [
+    1.1100000143051147,
+    1.8500003814697266,
+    0.40000422298908234
+   ],
+   "vertices": 19674,
+   "faces": 29644,
+   "bytes": 809096,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07H8T8ZS7.glb",
+   "image": "f4/f4d01fe8.jpg"
+  },
+  {
+   "id": "B07HSG85ZR",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Arlington Contemporary Bookcase, 31.49\"W, Wood and Dark Metal",
+   "extent": [
+    1.1486276388168335,
+    0.7117902040481567,
+    0.3913549780845642
+   ],
+   "vertices": 8214,
+   "faces": 10974,
+   "bytes": 1243408,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07HSG85ZR.glb",
+   "image": "31/3198a191.jpg"
+  },
+  {
+   "id": "B07HSGPG2D",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Round Floating Iron 4 Shelf Wall Unit - 29.72\" W, Natural Wood and Silver",
+   "extent": [
+    0.8882849216461182,
+    0.8875105977058411,
+    0.20244442164897913
+   ],
+   "vertices": 9648,
+   "faces": 13406,
+   "bytes": 957112,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07HSGPG2D.glb",
+   "image": "5e/5e5793c6.jpg"
+  },
+  {
+   "id": "B07HSJYKXY",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Rustic Round Wood 2-Tier Shelf Floating Hanging Wall Unit- 30 Inch, Whitewashed Fir Veneer",
+   "extent": [
+    0.6011735200881958,
+    0.7253102660179138,
+    0.124862439930439
+   ],
+   "vertices": 2926,
+   "faces": 5106,
+   "bytes": 1257096,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07HSJYKXY.glb",
+   "image": "45/45a43b66.jpg"
+  },
+  {
+   "id": "B07HSMVFJW",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Rustic Ladder Display Rack Storage Shelf - 63 Inches, White and Natural Wood",
+   "extent": [
+    0.45368140935897827,
+    1.5999246835708618,
+    0.14096692949533463
+   ],
+   "vertices": 6035,
+   "faces": 9712,
+   "bytes": 1317932,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07HSMVFJW.glb",
+   "image": "21/2164ce59.jpg"
+  },
+  {
+   "id": "B07JGPK68C",
+   "source": "abo",
+   "category": "storage",
+   "brand": "Movian",
+   "name": "Marchio Amazon - Movian, credenza a 2 sportelli e 2 cassetti modello Lek, 100 x 119 x 40 cm, colore bianco",
+   "extent": [
+    0.9999979138374329,
+    1.1899899244308472,
+    0.3997960537672043
+   ],
+   "vertices": 5864,
+   "faces": 8704,
+   "bytes": 845056,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B07JGPK68C.glb",
+   "image": "c4/c4152985.jpg"
+  },
+  {
+   "id": "B07PPNNCM2",
+   "source": "abo",
+   "category": "storage",
+   "brand": "AmazonBasics",
+   "name": "AmazonBasics Modern 5-Tier Ladder Bookshelf Organizer with Solid Rubber Wood Frame, White",
+   "extent": [
+    0.6359989047050476,
+    1.7794554233551025,
+    0.34133994579315186
+   ],
+   "vertices": 11549,
+   "faces": 15748,
+   "bytes": 1124648,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07PPNNCM2.glb",
+   "image": "9c/9c1e8c8a.jpg"
+  },
+  {
+   "id": "B072ZMHBKQ",
+   "source": "abo",
+   "category": "table",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Modern Lacquer Side End Table Nightstand, Grey and Walnut",
+   "extent": [
+    0.3700000047683716,
+    0.5077966451644897,
+    0.28813834488391876
+   ],
+   "vertices": 6638,
+   "faces": 9800,
+   "bytes": 918272,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B072ZMHBKQ.glb",
+   "image": "8e/8eb95ea0.jpg"
+  },
+  {
+   "id": "B074KKMQHB",
+   "source": "abo",
+   "category": "table",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Hourglass White Marble Top and Metal Side End Table Nightstand, 17.9\"W, Silver Finish",
+   "extent": [
+    0.5141447186470032,
+    0.42644351720809937,
+    0.5127324461936951
+   ],
+   "vertices": 11233,
+   "faces": 15944,
+   "bytes": 783224,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B074KKMQHB.glb",
+   "image": "37/373acfff.jpg"
+  },
+  {
+   "id": "B075X3WD5T",
+   "source": "abo",
+   "category": "table",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid-Century Modern Leonard 2-Tone Nightstand Table, 22\"W, Walnut, Birch Finish",
+   "extent": [
+    0.5642635226249695,
+    0.5841723084449768,
+    0.4414522796869278
+   ],
+   "vertices": 2780,
+   "faces": 3272,
+   "bytes": 380592,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075X3WD5T.glb",
+   "image": "e4/e44d54d5.jpg"
+  },
+  {
+   "id": "B075Z8FV7N",
+   "source": "abo",
+   "category": "table",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Culver Reclaimed Wood Round Side End Table, 23.6\"D, Natural and Steel",
+   "extent": [
+    0.5572700798511505,
+    0.4374004006385803,
+    0.5572699904441833
+   ],
+   "vertices": 2694,
+   "faces": 4224,
+   "bytes": 633932,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B075Z8FV7N.glb",
+   "image": "fc/fc4ceee9.jpg"
+  },
+  {
+   "id": "B079VNL3GM",
+   "source": "abo",
+   "category": "table",
+   "brand": "Movian",
+   "name": "Amazon Brand - Movian High Gloss 2 Drawer Bedside Cabinet, White, 47 x 40 x 36 cm",
+   "extent": [
+    0.3999999761581421,
+    0.4700000584125519,
+    0.3600000739097595
+   ],
+   "vertices": 7250,
+   "faces": 11740,
+   "bytes": 564812,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B079VNL3GM.glb",
+   "image": "3f/3f8d3954.jpg"
+  },
+  {
+   "id": "B07B7BX336",
+   "source": "abo",
+   "category": "table",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Boundary Mid-Century Modern Dining Kitchen Wood Bench, 18 Inch Height, Brown",
+   "extent": [
+    1.1833282709121704,
+    0.4582560360431671,
+    0.4580449163913727
+   ],
+   "vertices": 5066,
+   "faces": 4740,
+   "bytes": 748356,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07B7BX336.glb",
+   "image": "10/10226886.jpg"
+  },
+  {
+   "id": "B07B7J5XSQ",
+   "source": "abo",
+   "category": "table",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Round Metal Side End Accent Table, 15\"W, Black",
+   "extent": [
+    0.4026716351509094,
+    0.5483300685882568,
+    0.41465799510478973
+   ],
+   "vertices": 4965,
+   "faces": 8780,
+   "bytes": 411128,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07B7J5XSQ.glb",
+   "image": "12/124281e6.jpg"
+  },
+  {
+   "id": "B07DBB7831",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Angela Modern Turned Wood Leg Side Table Nightstand, 20\"W, Grey",
+   "extent": [
+    0.5051743388175964,
+    0.5546959042549133,
+    0.4594089388847351
+   ],
+   "vertices": 9792,
+   "faces": 14932,
+   "bytes": 731596,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07DBB7831.glb",
+   "image": "f2/f20024e0.jpg"
+  },
+  {
+   "id": "B07DBDPMRS",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Angela Modern Turned Leg Console Entry Table, 47.2\"W, Grey",
+   "extent": [
+    1.1972142457962036,
+    0.8082652688026428,
+    0.3839685767889023
+   ],
+   "vertices": 12488,
+   "faces": 19002,
+   "bytes": 718476,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07DBDPMRS.glb",
+   "image": "46/46e68dc4.jpg"
+  },
+  {
+   "id": "B07DBDPMWN",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Naomi 3-Drawer Storage End Table Nightstand, 17.7\"W, Grey",
+   "extent": [
+    0.435006707906723,
+    0.6803365349769592,
+    0.3477950245141983
+   ],
+   "vertices": 4430,
+   "faces": 6722,
+   "bytes": 415188,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07DBDPMWN.glb",
+   "image": "37/37ee7b65.jpg"
+  },
+  {
+   "id": "B07DBDWZ61",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Angela Modern Turned Leg Wood Shelf Storage Coffee Table, 44\"W, Black",
+   "extent": [
+    1.106902301311493,
+    0.5104762315750122,
+    0.549901157617569
+   ],
+   "vertices": 9192,
+   "faces": 14180,
+   "bytes": 805664,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07DBDWZ61.glb",
+   "image": "c7/c70a6363.jpg"
+  },
+  {
+   "id": "B07DBDX5WF",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Priscilla Modern X-Frame End Table Nightstand, 18.9\"W, White",
+   "extent": [
+    0.4792681038379669,
+    0.6229343414306641,
+    0.40209613740444183
+   ],
+   "vertices": 11902,
+   "faces": 20542,
+   "bytes": 757612,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07DBDX5WF.glb",
+   "image": "2a/2a656a21.jpg"
+  },
+  {
+   "id": "B07DBDZC9N",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Naomi 3-Drawer Storage Side End Table Nightstand, 17.7\"W, White",
+   "extent": [
+    0.435006707906723,
+    0.6808273196220398,
+    0.3512062430381775
+   ],
+   "vertices": 4450,
+   "faces": 6762,
+   "bytes": 403252,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07DBDZC9N.glb",
+   "image": "be/befccc09.jpg"
+  },
+  {
+   "id": "B07DBDZMSS",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Angela Modern Turned Leg Side Table, 20\"W, White",
+   "extent": [
+    0.4878383278846741,
+    0.564993679523468,
+    0.44207292795181274
+   ],
+   "vertices": 9696,
+   "faces": 14820,
+   "bytes": 825976,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07DBDZMSS.glb",
+   "image": "fc/fc4b0af6.jpg"
+  },
+  {
+   "id": "B07DBFG16Z",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Anne Marie Wood Round Shelf Storage Curved Leg Entry Table, 36\"W, White",
+   "extent": [
+    0.9102506041526794,
+    0.45719340443611145,
+    0.9102505445480347
+   ],
+   "vertices": 9931,
+   "faces": 18112,
+   "bytes": 617792,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B07DBFG16Z.glb",
+   "image": "ec/eca098bf.jpg"
+  },
+  {
+   "id": "B07DBFQV23",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Parker Coffee Table, 47.2\"W, Marble &amp; Gold",
+   "extent": [
+    1.1972030401229858,
+    0.4053809642791748,
+    0.5772459506988525
+   ],
+   "vertices": 5985,
+   "faces": 7712,
+   "bytes": 849260,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07DBFQV23.glb",
+   "image": "bc/bc220405.jpg"
+  },
+  {
+   "id": "B07DBFT2YG",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Angela Modern Turned Leg Wood Shelf Storage Coffee Table, 44\"W, Grey",
+   "extent": [
+    1.1094783544540405,
+    0.5057643055915833,
+    0.5511353015899658
+   ],
+   "vertices": 9456,
+   "faces": 14292,
+   "bytes": 670600,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07DBFT2YG.glb",
+   "image": "e0/e0f6cb9c.jpg"
+  },
+  {
+   "id": "B07DBG4PPP",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Angela Modern Turned Wood Leg Console Entry Table, 47.2\"W, Black",
+   "extent": [
+    1.1905500292778015,
+    0.819200873374939,
+    0.3859270364046097
+   ],
+   "vertices": 12540,
+   "faces": 19480,
+   "bytes": 724056,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07DBG4PPP.glb",
+   "image": "be/be4f71bf.jpg"
+  },
+  {
+   "id": "B07DBGHSN7",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Anne Marie Small Curved Leg Shelf Storage Side End Table, 20\"W, White",
+   "extent": [
+    0.5023064017295837,
+    0.43754512071609497,
+    0.45143942534923553
+   ],
+   "vertices": 4288,
+   "faces": 7040,
+   "bytes": 371160,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07DBGHSN7.glb",
+   "image": "5a/5a4f28e9.jpg"
+  },
+  {
+   "id": "B07DBGJ5PM",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Angela Modern Turned Wood Leg Console Entryway Table, 47.2\"W, White",
+   "extent": [
+    1.1905500292778015,
+    0.814311683177948,
+    0.3859270364046097
+   ],
+   "vertices": 12545,
+   "faces": 19480,
+   "bytes": 724092,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07DBGJ5PM.glb",
+   "image": "12/127dae7d.jpg"
+  },
+  {
+   "id": "B07DBHF15B",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Amazon Brand – Ravenna Home Morley Classic Round Pedestal Accent Side End Table Nightstand, 20\"W, White",
+   "extent": [
+    0.5126081705093384,
+    0.6531063914299011,
+    0.5126082599163055
+   ],
+   "vertices": 7314,
+   "faces": 11416,
+   "bytes": 594916,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07DBHF15B.glb",
+   "image": "84/84d24cbf.jpg"
+  },
+  {
+   "id": "B07DVVKD85",
+   "source": "abo",
+   "category": "table",
+   "brand": "Ravenna Home",
+   "name": "Ravenna Home Naomi 3-Drawer Storage Side End Table Nightstand, 17.7\"W",
+   "extent": [
+    0.4495706558227539,
+    0.6803365349769592,
+    0.3501029759645462
+   ],
+   "vertices": 4702,
+   "faces": 7290,
+   "bytes": 899804,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DVVKD85.glb",
+   "image": "37/37ee7b65.jpg"
+  },
+  {
+   "id": "B07HSMYNYF",
+   "source": "abo",
+   "category": "table",
+   "brand": "Stone & Beam",
+   "name": "Stone & Beam Rylee Modern Coffee Table 19.69\"H, Mixed Gray",
+   "extent": [
+    1.6194767355918884,
+    0.5306351184844971,
+    0.9179009795188904
+   ],
+   "vertices": 2688,
+   "faces": 3232,
+   "bytes": 721536,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07HSMYNYF.glb",
+   "image": "5b/5bde5e5c.jpg"
+  },
+  {
+   "id": "B07JGZP163",
+   "source": "abo",
+   "category": "table",
+   "brand": "Movian",
+   "name": "Marca Amazon - Movian Lek - Mueble para TV, 165 x 42 x 39 cm (blanco)",
+   "extent": [
+    1.6499839425086975,
+    0.41986197233200073,
+    0.3898899704217911
+   ],
+   "vertices": 6062,
+   "faces": 9004,
+   "bytes": 865132,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07JGZP163.glb",
+   "image": "f6/f668bf3d.jpg"
+  },
+  {
+   "id": "B07QPZK6MJ",
+   "source": "abo",
+   "category": "table",
+   "brand": "Movian",
+   "name": "Marque Amazon - Movian Ritom - Table de chevet, 35 x 45 x 59 cm (longueur x largeur x hauteur), Blanc brillant",
+   "extent": [
+    0.4499999907259206,
+    0.5899999386072171,
+    0.3499999752034577
+   ],
+   "vertices": 3904,
+   "faces": 5744,
+   "bytes": 375900,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B07QPZK6MJ.glb",
+   "image": "fa/fa94b5b6.jpg"
+  },
+  {
+   "id": "B073NZWZBT",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Purple Floral Print, White Frame, 31.75\" x 41.75\"",
+   "extent": [
+    0.8047345280647278,
+    1.055909514427185,
+    0.04166072607040405
+   ],
+   "vertices": 4467,
+   "faces": 7550,
+   "bytes": 1166252,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B073NZWZBT.glb",
+   "image": "d4/d4937f73.jpg"
+  },
+  {
+   "id": "B073P13J4K",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Splattered Green and Turqoise Blue Paradise Leaves Print, 20\" x 17\"",
+   "extent": [
+    0.5073080062866211,
+    0.4348343312740326,
+    0.04095342323184015
+   ],
+   "vertices": 8014,
+   "faces": 11552,
+   "bytes": 1204556,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B073P13J4K.glb",
+   "image": "87/8787b908.jpg"
+  },
+  {
+   "id": "B073P19S6V",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Splattered Green and Turqoise Blue Paradise Leaves Print, 28\" x 24\"",
+   "extent": [
+    0.711197018623352,
+    0.6095959544181824,
+    0.04321530029177667
+   ],
+   "vertices": 8013,
+   "faces": 11552,
+   "bytes": 1220028,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B073P19S6V.glb",
+   "image": "c9/c9c5fae0.jpg"
+  },
+  {
+   "id": "B073P19TNN",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Abstract Black, Silver, Pink Canvas Wall Art Print, 10\" x 15\"",
+   "extent": [
+    0.25232940912246704,
+    0.38095274567604065,
+    0.039133451879024506
+   ],
+   "vertices": 7429,
+   "faces": 11504,
+   "bytes": 2012364,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B073P19TNN.glb",
+   "image": "84/84505a4f.jpg"
+  },
+  {
+   "id": "B073P1BJS9",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Metallic Bronze Mandala Print, 24\" x 24\"",
+   "extent": [
+    0.6089165806770325,
+    0.6130449175834656,
+    0.04088924914598463
+   ],
+   "vertices": 2584,
+   "faces": 4022,
+   "bytes": 1276436,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B073P1BJS9.glb",
+   "image": "48/48973cac.jpg"
+  },
+  {
+   "id": "B073P1BVBS",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Side View Black, White and Gold Floral Canvas Print Wall Art Decor, 24\" x 24\"",
+   "extent": [
+    0.6103512048721313,
+    0.6111384630203247,
+    0.04267054662108416
+   ],
+   "vertices": 13857,
+   "faces": 23676,
+   "bytes": 1899316,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B073P1BVBS.glb",
+   "image": "2d/2d92308d.jpg"
+  },
+  {
+   "id": "B073P1CKFP",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Aerial View Black, White and Gold Floral Canvas Print Wall Art, 24\" x 24\"",
+   "extent": [
+    0.6103512048721313,
+    0.6111384630203247,
+    0.04075642675161362
+   ],
+   "vertices": 13859,
+   "faces": 23676,
+   "bytes": 1901420,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B073P1CKFP.glb",
+   "image": "34/342e1041.jpg"
+  },
+  {
+   "id": "B073P1D981",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Contemporary Blue and White Mandala Print Wall Art on Canvas, 24\" x 16\"",
+   "extent": [
+    0.6084011197090149,
+    0.4060157537460327,
+    0.030071644112467766
+   ],
+   "vertices": 8385,
+   "faces": 13274,
+   "bytes": 1828880,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B073P1D981.glb",
+   "image": "a4/a4ecef1d.jpg"
+  },
+  {
+   "id": "B073P1H6C6",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Turquoise Blue Crystal Kaleidoscope Canvas Print Wall Art, 20\" x 20\"",
+   "extent": [
+    0.5071569681167603,
+    0.5078111290931702,
+    0.03751188562942501
+   ],
+   "vertices": 11331,
+   "faces": 19252,
+   "bytes": 1376268,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B073P1H6C6.glb",
+   "image": "ed/ed091314.jpg"
+  },
+  {
+   "id": "B073P1H6CF",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Abstract Brushed Blue and Yellow Canvas Print Wall Art, 36\" x 24\"",
+   "extent": [
+    0.9126021265983582,
+    0.6092407703399658,
+    0.04021593928337097
+   ],
+   "vertices": 11336,
+   "faces": 19252,
+   "bytes": 1939872,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B073P1H6CF.glb",
+   "image": "af/af043a22.jpg"
+  },
+  {
+   "id": "B073P1H7MS",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Metallic Bronze Mandala Print Wall Art, 30\" x 30\"",
+   "extent": [
+    0.7565850019454956,
+    0.7617144584655762,
+    0.028444137424230576
+   ],
+   "vertices": 2584,
+   "faces": 4022,
+   "bytes": 1276416,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B073P1H7MS.glb",
+   "image": "2e/2e995b33.jpg"
+  },
+  {
+   "id": "B073P1HZPF",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Side View Black, White and Gold Floral Canvas Print Wall Art Decor, 16\" x 16\"",
+   "extent": [
+    0.40627196431159973,
+    0.4065418243408203,
+    0.04145771771669393
+   ],
+   "vertices": 13855,
+   "faces": 23676,
+   "bytes": 1894048,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B073P1HZPF.glb",
+   "image": "2d/2d92308d.jpg"
+  },
+  {
+   "id": "B073P1JGPN",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Turquoise Blue Crystal Kaleidoscope Canvas Print Wall Art, 12\" x 12\"",
+   "extent": [
+    0.31303083896636963,
+    0.31343458592891693,
+    0.033367447555065155
+   ],
+   "vertices": 11336,
+   "faces": 19252,
+   "bytes": 1376412,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B073P1JGPN.glb",
+   "image": "b2/b214f651.jpg"
+  },
+  {
+   "id": "B073P1JNL5",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Contemporary Blue and White Mandala Print Wall Art on Canvas, 36\" x 24\"",
+   "extent": [
+    0.9113972187042236,
+    0.6082199215888977,
+    0.057480715215206146
+   ],
+   "vertices": 8447,
+   "faces": 13386,
+   "bytes": 1831536,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B073P1JNL5.glb",
+   "image": "22/227bfb46.jpg"
+  },
+  {
+   "id": "B073P1N3BY",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Persian-Style Print on Canvas, 16\" x 24\"",
+   "extent": [
+    0.39672598242759705,
+    0.5989546179771423,
+    0.02006927624344823
+   ],
+   "vertices": 7427,
+   "faces": 11504,
+   "bytes": 1645220,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B073P1N3BY.glb",
+   "image": "65/65751307.jpg"
+  },
+  {
+   "id": "B073P23TT3",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern Persian-Style Print on Canvas, 24\" x 36\"",
+   "extent": [
+    0.5988702774047852,
+    0.9041407108306885,
+    0.030295199975371334
+   ],
+   "vertices": 7428,
+   "faces": 11504,
+   "bytes": 1648600,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B073P23TT3.glb",
+   "image": "3e/3ef9908b.jpg"
+  },
+  {
+   "id": "B073P6HGVC",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Modern 9-Piece Mural of White Paris Building on Wood, 48\" x 48\"",
+   "extent": [
+    1.2212635278701782,
+    1.2182780504226685,
+    0.024286726489663124
+   ],
+   "vertices": 13905,
+   "faces": 18000,
+   "bytes": 1689664,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B073P6HGVC.glb",
+   "image": "25/25fec161.jpg"
+  },
+  {
+   "id": "B075HWHVN6",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Abstract Mountain Landscape Wall Art Decor on Canvas - 36 x 48 Inches",
+   "extent": [
+    1.219211459159851,
+    0.9121798276901245,
+    0.04211389273405075
+   ],
+   "vertices": 19856,
+   "faces": 34114,
+   "bytes": 1796712,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B075HWHVN6.glb",
+   "image": "8f/8f8c7573.jpg"
+  },
+  {
+   "id": "B075HWJ4MF",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Geometric Abstract Mt. Ranier Wall Art Decor on Canvas - 18\" x 24\"",
+   "extent": [
+    0.45458874106407166,
+    0.6129658222198486,
+    0.0373778595030308
+   ],
+   "vertices": 1910,
+   "faces": 6096,
+   "bytes": 1005616,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B075HWJ4MF.glb",
+   "image": "17/17c13588.jpg"
+  },
+  {
+   "id": "B075HXBCMC",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Mid Century Modern Abstract Mountain Landscape Wall Art Decor on Canvas - 24 x 36 Inches",
+   "extent": [
+    0.9191552400588989,
+    0.6077142953872681,
+    0.04799366742372513
+   ],
+   "vertices": 2496,
+   "faces": 3364,
+   "bytes": 1274992,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B075HXBCMC.glb",
+   "image": "8f/8f8c7573.jpg"
+  },
+  {
+   "id": "B075YLTF49",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Rustic Buffalo Bison Silhouette Print Wall Art Decor - 15\" x 15\" Frame, Wood Grain",
+   "extent": [
+    0.3800372779369354,
+    0.38033367693424225,
+    0.022080757394433048
+   ],
+   "vertices": 4817,
+   "faces": 8306,
+   "bytes": 1669700,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B075YLTF49.glb",
+   "image": "6f/6f55588d.jpg"
+  },
+  {
+   "id": "B075YM2V3Y",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Stone & Beam",
+   "name": "Amazon Brand – Stone & Beam Couple with Red Umbrella Print, Black Frame, 37\" x 47\"",
+   "extent": [
+    0.9501891732215881,
+    1.1936724185943604,
+    0.05256632199019806
+   ],
+   "vertices": 8380,
+   "faces": 16128,
+   "bytes": 1108868,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075YM2V3Y.glb",
+   "image": "cc/cc0b1b18.jpg"
+  },
+  {
+   "id": "B075YM2VXJ",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Modern Black and White Floating Woman Photo Print Framed Wall Art Decor - 13 x 15 Inch Frame, Silver",
+   "extent": [
+    0.3084283173084259,
+    0.3786817193031311,
+    0.030238169580698027
+   ],
+   "vertices": 2308,
+   "faces": 3916,
+   "bytes": 1063628,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B075YM2VXJ.glb",
+   "image": "7c/7c69912f.jpg"
+  },
+  {
+   "id": "B07HSLTFY3",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striped Print with Sand Texture Wall Art Decor on Canvas - 30 x 40 Inch, Pink and Blue",
+   "extent": [
+    0.7613105773925781,
+    1.0156004428863525,
+    0.038512608110904734
+   ],
+   "vertices": 7714,
+   "faces": 11504,
+   "bytes": 1055080,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07HSLTFY3.glb",
+   "image": "db/db6a6992.jpg"
+  },
+  {
+   "id": "B07HSMVFLD",
+   "source": "abo",
+   "category": "wall_decor",
+   "brand": "Rivet",
+   "name": "Amazon Brand – Rivet Contemporary Striped Print with Sand Texture Wall Art Decor on Canvas - 36 x 24 Inch, Pink and Blue",
+   "extent": [
+    0.6095279157161713,
+    0.9143100380897522,
+    0.03809614539146422
+   ],
+   "vertices": 7618,
+   "faces": 11424,
+   "bytes": 1051532,
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07HSMVFLD.glb",
+   "image": "24/24c1dfbb.jpg"
+  }
+ ]
+}

@@ -9,3 +9,6 @@ __pycache__/
 .venv/
 .pytest_cache/
 .DS_Store
+
+# 手元で組んだテンプレート。成果物が決まったら catalog/ へ移す
+templates/

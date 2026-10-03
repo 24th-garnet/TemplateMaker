@@ -1,7 +1,7 @@
 # TemplateMaker
 
-部屋の内装テンプレートを組み立てるための**サンプル家具セット**を、公開されて
-いる 3D アセットから作る。
+公開されている 3D アセットから**サンプル家具セット**を集め、「オフィスセット
+A」のような**名前のついた家具のまとまり**を組むための道具。
 
 ```bash
 uv run templatemaker catalog                      # カタログを引く（90MB）
@@ -9,7 +9,28 @@ uv run templatemaker survey                       # 基準をかけた残りを�
 uv run templatemaker select --tier a              # マニフェストを書く
 uv run templatemaker fetch catalog/abo.tier-a.json  # GLB を引く
 uv run templatemaker notice catalog/abo.tier-a.json # 帰属表記を書く
+uv run templatemaker web                            # http://localhost:3000/
 ```
+
+取得中の様子は別の端末から見られる。
+
+```bash
+uv run templatemaker status catalog/abo.tier-b.json -w
+```
+
+```
+  ████████████████████████▉░░░░░░░░░░░  69.3%
+  227/376 体   0.64 GB/0.92 GB   取得中 10 体   4.2 MB/s
+
+  ✓ bed            ████████████████   25/25    0.14 GB
+    lamp           ███▏░░░░░░░░░░░░    5/25    0.00 GB
+```
+
+**状態はファイルの有無と大きさだけから作る。** 走っている `fetch` とは一切
+やりとりしない。取得は中断して再開できるので、進捗の持ち主をプロセスにすると
+再開したとき行方不明になる。ファイルから作れば、別の端末からでも、何度中断
+しても同じものが見える。取得途中のものは `.part` のまま置かれ、終わってから
+置き換わるので、半端なファイルを掴むこともない。
 
 ## 何を持ち、何を持たないか
 
@@ -26,7 +47,10 @@ uv run templatemaker notice catalog/abo.tier-a.json # 帰属表記を書く
 | `sources/abo.py` | ABO 固有。カタログ取得・語彙の対応づけ・URL 規約 |
 | `category.py` | 品目の語彙。**出どころに依存しない** |
 | `select.py` | 取捨選択の基準。純関数だけ |
-| `manifest.py` | マニフェストの読み書きと帰属表記 |
+| `manifest.py` | マニフェストの読み書き・取得状況・帰属表記 |
+| `asset.py` | GLB の外形。**頂点を読まない** |
+| `template.py` | 家具テンプレート。まとまりの外形・回転・検証 |
+| `webapp.py` + `web/` | 組むための手元サーバ。three.js は CDN から |
 
 ## 選定と取得を分ける
 
@@ -43,6 +67,71 @@ uv run templatemaker notice catalog/abo.tier-a.json # 帰属表記を書く
 集合の外に置かないため——基準を書き換えた後で古いマニフェストを読んでも、何で
 選ばれたのかがそのファイルの中で分かる。
 
+## テンプレートを組む
+
+```bash
+uv run templatemaker web            # http://localhost:3000/
+```
+
+左の一覧から 3D へ**ドラッグして置く**。落とした場所がそのまま置き場所になる
+ので、どこへ出るかをアプリが決めずに済む。落ちる前に床へ実寸の枠が出る——
+奥行のある視点では、カーソルの画面上の位置だけでは着地点が読めない。
+
+| | |
+|---|---|
+| 一覧からドラッグ | 追加（ダブルクリックで視点の中心へ） |
+| 家具をドラッグ | 移動（5mm 刻み） |
+| **つまみをドラッグ** | 回転。既定 15 度、Shift で 1 度 |
+| `Q` `E` | 15 度ずつ回転 |
+| `F` / `Backspace` / `Esc` | 寄る / 削除 / 選択解除 |
+
+選択すると足元に目盛り付きの輪と、`+Z` を指すつまみが出る。**ABO には正面の
+情報が無い**ので向きは目で決めるしかなく、何を基準に回っているかが見えないと
+決められない（ソファは背もたれの偏りで 100% 当たるが、椅子は 52% で当たらない）。
+
+### テンプレートの形
+
+```json
+{
+ "schema_version": "tm-template-1",
+ "id": "a-eaaf0c5", "name": "オフィスセットA",
+ "items": [
+  { "asset_id": "B06XZV3F8F", "category": "desk",
+    "translation": [0.57, 0.0, -0.296], "rotation": 0 }
+ ]
+}
+```
+
+Habitat の scene instance に倣い、素材（マニフェスト）と配置（ここ）を分ける。
+**素材そのものは入らない**ので 1KB 以下で、GLB を差し替えても壊れない。
+
+**テンプレートはそれ自体が 1 つの家具。** Sweet Home 3D の `HomeFurnitureGroup`
+が `HomePieceOfFurniture` を継承しているのと同じで、外形は子から出し、動かせば
+子が同じだけ動き、回せば子がまとめて回る。置く側がセットと単品を区別せずに済む。
+
+保存時に中心が原点へ寄る。どの部屋のどこへでも置ける形にするため。
+
+回転は鉛直軸まわりだけ持つ。家具は倒れない。Sweet Home 3D は 20 年運用した末に
+`horizontallyRotatable` を足しているが、それは例外を表す旗で、既定は鉛直軸
+まわりのまま。最初から 3 軸を持つと、使われない自由度のために置く側の処理が
+重くなる。
+
+### 素材の原点
+
+```
+units: m   origin: bottom-center   up: +Y
+```
+
+Room Studio (Apache-2.0) の asset manifest と同じ規約に揃える。**ABO はこれを
+満たしていない**——実測で X 中心が 97%、下端 Y=0 が 77%、Z 中心が 57% しか
+揃っておらず、376 体中 186 体に補正が要った（最大 1170mm）。
+
+素材そのものは書き換えず、外形から出した `offset` を一覧に載せて置く側で
+揃える。測ったものと直したものを別に保つ——スキャンを変形させないのと同じ。
+
+外形はアクセサの `min`/`max` とノード変換だけで出す。**頂点を読まない**ので、
+376 体 938MB でも一覧の組み立ては一瞬で終わる。
+
 ## 出どころ
 
 [Amazon Berkeley Objects][abo]。Amazon の実商品 7,953 点の glTF 2.0 が、ASIN
@@ -51,6 +140,10 @@ CC BY 4.0 へ変わっており、帰属表記だけで商用に使える。**
 
 ブランドは Stone & Beam / Rivet / Ravenna Home / AmazonBasics / Movian と、
 ほぼ Amazon のプライベートブランド。第三者デザイナー家具の意匠権が絡まない。
+
+商品写真も引ける（`images/small`、1 枚 10KB ほど）。376 体で 3.3MB にしか
+ならないので `fetch` が GLB より**先に**取る。写真が揃えば GLB を待たずに
+選び始められる。名前と寸法だけで 376 体から選ぶのは実際には無理だった。
 
 [abo]: https://registry.opendata.aws/amazon-berkeley-objects/
 
@@ -111,6 +204,16 @@ Tier A の 76 体で `assets.read_glb` の出力をカタログの `extent_x/y/z
 
 なお ABO の平たいヘッドボードはほぼ北米の king / queen 幅で、日本の寸法を通る
 のは 1 体だけ。この品目は別の出どころから採るしかない。
+
+## 参考にしたもの
+
+| | ライセンス | 借りたもの |
+|---|---|---|
+| [Room Studio](https://github.com/achieve0410/room-studio) | Apache-2.0 | 素材の規約（`origin` / `up` / W,D,H を明示する） |
+| [Sweet Home 3D](https://sweethome3d.org/) | GPLv2 | **設計のみ。** まとまりがそれ自体 1 つの家具であること |
+| [Habitat](https://aihabitat.org/docs/habitat-sim/attributesJSON.html) | MIT | 素材と配置を分ける形 |
+
+Sweet Home 3D は GPL なのでコードは流用していない。アイデアに著作権は無い。
 
 ## ライセンス
 

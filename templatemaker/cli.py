@@ -210,12 +210,25 @@ def cmd_status(a: argparse.Namespace) -> int:
 
 def cmd_web(a: argparse.Namespace) -> int:
     """テンプレートを組むサーバを立てる。既定で localhost だけに開く。"""
+    if not a.manifest.exists():
+        print(f"マニフェストが無い: {a.manifest}", file=sys.stderr)
+        print(f"  同梱されているもの: "
+              + ", ".join(str(p) for p in sorted(a.catalog.glob('*.json')))
+              or "  （catalog/ が空）", file=sys.stderr)
+        return 2
     srv, lib = webapp.serve(a.manifest, a.into, a.templates, a.host, a.port,
                             a.read_only)
     host = "127.0.0.1" if a.host in ("", "0.0.0.0") else a.host
     print(f"素材 {len(lib['items'])} 体"
           + (f"（実体が無いもの {lib['missing']} 体）" if lib["missing"] else "")
           + f" / {lib['license']}", file=sys.stderr)
+    # **何をすれば良いかまで言う。** 初回は素材が手元に無いのが普通で、
+    # 「0 体」とだけ出しても次の一手が分からない
+    if lib["missing"]:
+        print(f"\n  実体を取るには:  uv run templatemaker fetch {a.manifest}",
+              file=sys.stderr)
+        if not lib["items"]:
+            print("  取得まで一覧は空のままです。", file=sys.stderr)
     print(f"テンプレート: {a.templates}/", file=sys.stderr)
     print(f"\n  http://{host}:{srv.server_address[1]}/\n", file=sys.stderr)
     if a.host not in ("127.0.0.1", "localhost"):
@@ -283,6 +296,7 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--host", default="127.0.0.1")
     s.add_argument("-p", "--port", type=int, default=3000)
     s.add_argument("--read-only", action="store_true")
+    s.add_argument("--catalog", type=Path, default=CATALOG)
     s.set_defaults(fn=cmd_web)
 
     s = sub.add_parser("notice", help="CC BY の帰属表記を書き出す")

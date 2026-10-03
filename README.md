@@ -4,12 +4,22 @@
 A」のような**名前のついた家具のまとまり**を組むための道具。
 
 ```bash
-uv run templatemaker catalog                      # カタログを引く（90MB）
-uv run templatemaker survey                       # 基準をかけた残りを見る
-uv run templatemaker select --tier a              # マニフェストを書く
-uv run templatemaker fetch catalog/abo.tier-a.json  # GLB を引く
-uv run templatemaker notice catalog/abo.tier-a.json # 帰属表記を書く
-uv run templatemaker web                            # http://localhost:3000/
+uv sync
+uv run templatemaker fetch catalog/abo.tier-b.json   # 素材を引く（923MB・数分）
+uv run templatemaker web                             # http://localhost:3000/
+```
+
+**マニフェストは同梱してある**ので、カタログを引き直す必要はない。急ぐなら
+`catalog/abo.tier-a.json`（76 体・83MB・30 秒ほど）でも動く——その場合は
+`web catalog/abo.tier-a.json` と渡す。
+
+素材を選び直すところからやるなら:
+
+```bash
+uv run templatemaker catalog            # ABO のカタログを引く（90MB）
+uv run templatemaker survey             # 基準をかけた残りを見る
+uv run templatemaker select --tier c    # 広げる
+uv run templatemaker notice catalog/abo.tier-b.json   # 帰属表記を書く
 ```
 
 取得中の様子は別の端末から見られる。

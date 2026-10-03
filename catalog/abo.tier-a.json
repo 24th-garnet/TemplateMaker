@@ -4,7 +4,7 @@
  "license": "CC BY 4.0",
  "license_url": "https://creativecommons.org/licenses/by/4.0/",
  "attribution": "Amazon Berkeley Objects (ABO)",
- "generated_at": "2026-10-02T17:41:30Z",
+ "generated_at": "2026-10-03T16:28:58Z",
  "criteria": {
   "tier": "a",
   "per_category": 5,
@@ -112,7 +112,8 @@
    "vertices": 9204,
    "faces": 13640,
    "bytes": 2039264,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B0718WYQ8D.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B0718WYQ8D.glb",
+   "image": "1e/1e9f5de3.jpg"
   },
   {
    "id": "B071H75K71",
@@ -128,7 +129,8 @@
    "vertices": 10128,
    "faces": 15016,
    "bytes": 2056744,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B071H75K71.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B071H75K71.glb",
+   "image": "20/20d9ed6f.jpg"
   },
   {
    "id": "B073WQ8JLT",
@@ -144,7 +146,8 @@
    "vertices": 25452,
    "faces": 33318,
    "bytes": 1509988,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B073WQ8JLT.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B073WQ8JLT.glb",
+   "image": "b6/b6da0eb0.jpg"
   },
   {
    "id": "B07B51H792",
@@ -160,7 +163,8 @@
    "vertices": 10024,
    "faces": 17216,
    "bytes": 1327036,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B51H792.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B51H792.glb",
+   "image": "75/75347621.jpg"
   },
   {
    "id": "B07H8PWFFS",
@@ -176,7 +180,8 @@
    "vertices": 9271,
    "faces": 14154,
    "bytes": 2228616,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07H8PWFFS.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07H8PWFFS.glb",
+   "image": "49/49179ec7.jpg"
   },
   {
    "id": "B07B4SC9RP",
@@ -192,7 +197,8 @@
    "vertices": 8827,
    "faces": 14168,
    "bytes": 1859588,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07B4SC9RP.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07B4SC9RP.glb",
+   "image": "0f/0f5b0e6a.jpg"
   },
   {
    "id": "B07DBB7FN6",
@@ -208,7 +214,8 @@
    "vertices": 6572,
    "faces": 6108,
    "bytes": 851612,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBB7FN6.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBB7FN6.glb",
+   "image": "5a/5a5afb4e.jpg"
   },
   {
    "id": "B07DBDTCTY",
@@ -224,7 +231,8 @@
    "vertices": 7626,
    "faces": 13096,
    "bytes": 1144508,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07DBDTCTY.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B07DBDTCTY.glb",
+   "image": "82/82b1d300.jpg"
   },
   {
    "id": "B07DBDZ4SG",
@@ -240,7 +248,8 @@
    "vertices": 10350,
    "faces": 17778,
    "bytes": 1149780,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07DBDZ4SG.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07DBDZ4SG.glb",
+   "image": "76/76d4c0db.jpg"
   },
   {
    "id": "B07DBGHYG6",
@@ -256,7 +265,8 @@
    "vertices": 4581,
    "faces": 5902,
    "bytes": 689656,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBGHYG6.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBGHYG6.glb",
+   "image": "5f/5f71f2f6.jpg"
   },
   {
    "id": "B07376VCCS",
@@ -272,7 +282,8 @@
    "vertices": 9149,
    "faces": 16416,
    "bytes": 815580,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07376VCCS.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B07376VCCS.glb",
+   "image": "39/39152046.jpg"
   },
   {
    "id": "B07B4VSTG2",
@@ -288,7 +299,8 @@
    "vertices": 9417,
    "faces": 15626,
    "bytes": 835268,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B4VSTG2.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/2/B07B4VSTG2.glb",
+   "image": "c9/c9ab4c88.jpg"
   },
   {
    "id": "B07B4YVX5Q",
@@ -304,7 +316,8 @@
    "vertices": 7013,
    "faces": 11966,
    "bytes": 700448,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07B4YVX5Q.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07B4YVX5Q.glb",
+   "image": "aa/aa26c8a0.jpg"
   },
   {
    "id": "B07DBHC39X",
@@ -320,7 +333,8 @@
    "vertices": 4736,
    "faces": 8640,
    "bytes": 837944,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B07DBHC39X.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/X/B07DBHC39X.glb",
+   "image": "56/56ba597b.jpg"
   },
   {
    "id": "B07DBJYDLK",
@@ -336,7 +350,8 @@
    "vertices": 10160,
    "faces": 18310,
    "bytes": 815020,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07DBJYDLK.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07DBJYDLK.glb",
+   "image": "e2/e20101ca.jpg"
   },
   {
    "id": "B075YMJ254",
@@ -352,7 +367,8 @@
    "vertices": 5688,
    "faces": 10016,
    "bytes": 1145620,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B075YMJ254.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/4/B075YMJ254.glb",
+   "image": "82/825982fa.jpg"
   },
   {
    "id": "B076HDDMKM",
@@ -368,7 +384,8 @@
    "vertices": 3177,
    "faces": 5795,
    "bytes": 1090100,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B076HDDMKM.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B076HDDMKM.glb",
+   "image": "5a/5a73d3dc.jpg"
   },
   {
    "id": "B07B7B244W",
@@ -384,7 +401,8 @@
    "vertices": 6006,
    "faces": 10610,
    "bytes": 1464952,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07B7B244W.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B07B7B244W.glb",
+   "image": "86/86bb70ad.jpg"
   },
   {
    "id": "B07DBGPHG5",
@@ -400,7 +418,8 @@
    "vertices": 6302,
    "faces": 10922,
    "bytes": 1347352,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DBGPHG5.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DBGPHG5.glb",
+   "image": "1c/1c413c58.jpg"
   },
   {
    "id": "B07DBH52YB",
@@ -416,7 +435,8 @@
    "vertices": 3668,
    "faces": 5956,
    "bytes": 1065428,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07DBH52YB.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07DBH52YB.glb",
+   "image": "44/44985021.jpg"
   },
   {
    "id": "B075HR7DM7",
@@ -432,7 +452,8 @@
    "vertices": 5258,
    "faces": 9616,
    "bytes": 453660,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B075HR7DM7.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B075HR7DM7.glb",
+   "image": "cb/cbc43f2f.jpg"
   },
   {
    "id": "B075HWDTMM",
@@ -448,7 +469,8 @@
    "vertices": 7592,
    "faces": 14080,
    "bytes": 518752,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B075HWDTMM.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B075HWDTMM.glb",
+   "image": "2e/2e8003e6.jpg"
   },
   {
    "id": "B075HWK9QT",
@@ -464,7 +486,8 @@
    "vertices": 3522,
    "faces": 6720,
    "bytes": 344352,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075HWK9QT.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075HWK9QT.glb",
+   "image": "c5/c5d89b7f.jpg"
   },
   {
    "id": "B075HXLWT5",
@@ -480,7 +503,8 @@
    "vertices": 4852,
    "faces": 9174,
    "bytes": 521668,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B075HXLWT5.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B075HXLWT5.glb",
+   "image": "10/101ddf25.jpg"
   },
   {
    "id": "B078JFFX4L",
@@ -496,7 +520,8 @@
    "vertices": 4512,
    "faces": 8320,
    "bytes": 586912,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B078JFFX4L.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B078JFFX4L.glb",
+   "image": "19/194c7657.jpg"
   },
   {
    "id": "B06XZV3F8F",
@@ -512,7 +537,8 @@
    "vertices": 4660,
    "faces": 7184,
    "bytes": 529820,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B06XZV3F8F.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B06XZV3F8F.glb",
+   "image": "3e/3ea8f027.jpg"
   },
   {
    "id": "B079HYXWPC",
@@ -528,7 +554,8 @@
    "vertices": 4620,
    "faces": 7452,
    "bytes": 762372,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B079HYXWPC.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B079HYXWPC.glb",
+   "image": "e8/e8357a14.jpg"
   },
   {
    "id": "B07HSCYS4C",
@@ -544,7 +571,8 @@
    "vertices": 3592,
    "faces": 4234,
    "bytes": 709032,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B07HSCYS4C.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/C/B07HSCYS4C.glb",
+   "image": "8c/8c3c1a73.jpg"
   },
   {
    "id": "B07MFYVCJB",
@@ -560,7 +588,8 @@
    "vertices": 3969,
    "faces": 5540,
    "bytes": 822736,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07MFYVCJB.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B07MFYVCJB.glb",
+   "image": "6b/6b2350b6.jpg"
   },
   {
    "id": "B07MQF767T",
@@ -576,7 +605,8 @@
    "vertices": 3321,
    "faces": 4560,
    "bytes": 796120,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07MQF767T.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B07MQF767T.glb",
+   "image": "77/777e6a51.jpg"
   },
   {
    "id": "B0764TFM7L",
@@ -592,7 +622,8 @@
    "vertices": 6056,
    "faces": 10804,
    "bytes": 1757956,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B0764TFM7L.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B0764TFM7L.glb",
+   "image": "0f/0f1f12f8.jpg"
   },
   {
    "id": "B07374M818",
@@ -608,7 +639,8 @@
    "vertices": 7557,
    "faces": 11122,
    "bytes": 644884,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B07374M818.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B07374M818.glb",
+   "image": "f4/f4abab47.jpg"
   },
   {
    "id": "B075X2XZDY",
@@ -624,7 +656,8 @@
    "vertices": 17880,
    "faces": 28760,
    "bytes": 752816,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075X2XZDY.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075X2XZDY.glb",
+   "image": "25/25fc07ae.jpg"
   },
   {
    "id": "B07B4YYC4V",
@@ -640,7 +673,8 @@
    "vertices": 6370,
    "faces": 11544,
    "bytes": 740464,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07B4YYC4V.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07B4YYC4V.glb",
+   "image": "a8/a808c2ac.jpg"
   },
   {
    "id": "B07B4Z9PL9",
@@ -656,7 +690,8 @@
    "vertices": 6727,
    "faces": 9862,
    "bytes": 585616,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07B4Z9PL9.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/9/B07B4Z9PL9.glb",
+   "image": "af/afdfc497.jpg"
   },
   {
    "id": "B07DBHM1RK",
@@ -672,7 +707,8 @@
    "vertices": 10074,
    "faces": 15144,
    "bytes": 780208,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07DBHM1RK.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/K/B07DBHM1RK.glb",
+   "image": "c9/c94c0c4c.jpg"
   },
   {
    "id": "B071NHXGFY",
@@ -688,7 +724,8 @@
    "vertices": 5464,
    "faces": 10240,
    "bytes": 503892,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B071NHXGFY.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B071NHXGFY.glb",
+   "image": "5a/5a230c86.jpg"
   },
   {
    "id": "B073WGP8YJ",
@@ -704,7 +741,8 @@
    "vertices": 3151,
    "faces": 6060,
    "bytes": 813864,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B073WGP8YJ.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B073WGP8YJ.glb",
+   "image": "65/659dbf9b.jpg"
   },
   {
    "id": "B073WGSN2W",
@@ -720,7 +758,8 @@
    "vertices": 4837,
    "faces": 8612,
    "bytes": 953392,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B073WGSN2W.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B073WGSN2W.glb",
+   "image": "be/bece77a1.jpg"
   },
   {
    "id": "B073WHB42L",
@@ -736,7 +775,8 @@
    "vertices": 4518,
    "faces": 6872,
    "bytes": 723828,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B073WHB42L.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/L/B073WHB42L.glb",
+   "image": "62/62ab6cf2.jpg"
   },
   {
    "id": "B07HSGPJLM",
@@ -752,7 +792,8 @@
    "vertices": 7412,
    "faces": 13948,
    "bytes": 940916,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07HSGPJLM.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/M/B07HSGPJLM.glb",
+   "image": "3b/3b3de1fc.jpg"
   },
   {
    "id": "B075HWDSFH",
@@ -768,7 +809,8 @@
    "vertices": 2565,
    "faces": 4506,
    "bytes": 389888,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B075HWDSFH.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B075HWDSFH.glb",
+   "image": "25/257644c0.jpg"
   },
   {
    "id": "B075HX9TCW",
@@ -784,7 +826,8 @@
    "vertices": 4038,
    "faces": 7228,
    "bytes": 482796,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B075HX9TCW.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/W/B075HX9TCW.glb",
+   "image": "09/09199aab.jpg"
   },
   {
    "id": "B075HXBYCT",
@@ -800,7 +843,8 @@
    "vertices": 2693,
    "faces": 4722,
    "bytes": 377072,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075HXBYCT.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075HXBYCT.glb",
+   "image": "a2/a2f7d229.jpg"
   },
   {
    "id": "B075HXLWS3",
@@ -816,7 +860,8 @@
    "vertices": 4028,
    "faces": 7176,
    "bytes": 386908,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B075HXLWS3.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B075HXLWS3.glb",
+   "image": "83/83cff263.jpg"
   },
   {
    "id": "B075HXQJYB",
@@ -832,7 +877,8 @@
    "vertices": 2886,
    "faces": 5196,
    "bytes": 522680,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B075HXQJYB.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/B/B075HXQJYB.glb",
+   "image": "f5/f5552ffe.jpg"
   },
   {
    "id": "B071SHHZVZ",
@@ -848,7 +894,8 @@
    "vertices": 2778,
    "faces": 5000,
    "bytes": 2880636,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B071SHHZVZ.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B071SHHZVZ.glb",
+   "image": "97/976a1018.jpg"
   },
   {
    "id": "B0735SF34N",
@@ -864,7 +911,8 @@
    "vertices": 2778,
    "faces": 5000,
    "bytes": 2274812,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B0735SF34N.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B0735SF34N.glb",
+   "image": "46/4613cc19.jpg"
   },
   {
    "id": "B07B4WGJPR",
@@ -880,7 +928,8 @@
    "vertices": 4686,
    "faces": 8704,
    "bytes": 3214080,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07B4WGJPR.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/R/B07B4WGJPR.glb",
+   "image": "af/af464783.jpg"
   },
   {
    "id": "B07B51QMFH",
@@ -896,7 +945,8 @@
    "vertices": 2782,
    "faces": 5232,
    "bytes": 3175848,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07B51QMFH.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/H/B07B51QMFH.glb",
+   "image": "19/1991e03d.jpg"
   },
   {
    "id": "B07HSHMPZP",
@@ -912,7 +962,8 @@
    "vertices": 2981,
    "faces": 5238,
    "bytes": 3486792,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07HSHMPZP.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07HSHMPZP.glb",
+   "image": "90/9014e4e0.jpg"
   },
   {
    "id": "B071FMSY5S",
@@ -928,7 +979,8 @@
    "vertices": 12393,
    "faces": 22524,
    "bytes": 1993296,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B071FMSY5S.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/S/B071FMSY5S.glb",
+   "image": "6f/6fcbe9a8.jpg"
   },
   {
    "id": "B072C8Q9S8",
@@ -944,7 +996,8 @@
    "vertices": 9393,
    "faces": 16340,
    "bytes": 2391372,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B072C8Q9S8.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/8/B072C8Q9S8.glb",
+   "image": "89/898e7f8b.jpg"
   },
   {
    "id": "B072FVHS93",
@@ -960,7 +1013,8 @@
    "vertices": 4426,
    "faces": 7024,
    "bytes": 1630384,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B072FVHS93.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B072FVHS93.glb",
+   "image": "92/92e0c588.jpg"
   },
   {
    "id": "B07B4M6BS1",
@@ -976,7 +1030,8 @@
    "vertices": 11129,
    "faces": 19812,
    "bytes": 1422624,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4M6BS1.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4M6BS1.glb",
+   "image": "41/416f7aa6.jpg"
   },
   {
    "id": "B07HZ7TL95",
@@ -992,7 +1047,8 @@
    "vertices": 12850,
    "faces": 23216,
    "bytes": 1672200,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07HZ7TL95.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07HZ7TL95.glb",
+   "image": "6a/6acfa9bf.jpg"
   },
   {
    "id": "B07B4D89MZ",
@@ -1008,7 +1064,8 @@
    "vertices": 6914,
    "faces": 12552,
    "bytes": 875356,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B07B4D89MZ.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Z/B07B4D89MZ.glb",
+   "image": "ef/ef0f4088.jpg"
   },
   {
    "id": "B07B4MH5Q1",
@@ -1024,7 +1081,8 @@
    "vertices": 7610,
    "faces": 14208,
    "bytes": 1130024,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4MH5Q1.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/1/B07B4MH5Q1.glb",
+   "image": "fe/fe8db5bc.jpg"
   },
   {
    "id": "B07DBB1GX5",
@@ -1040,7 +1098,8 @@
    "vertices": 11920,
    "faces": 19371,
    "bytes": 1074052,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DBB1GX5.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/5/B07DBB1GX5.glb",
+   "image": "4e/4e521361.jpg"
   },
   {
    "id": "B07DBDZ2PV",
@@ -1056,7 +1115,8 @@
    "vertices": 11698,
    "faces": 19210,
    "bytes": 1039928,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07DBDZ2PV.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07DBDZ2PV.glb",
+   "image": "66/66c1272f.jpg"
   },
   {
    "id": "B07GNCVKSG",
@@ -1072,7 +1132,8 @@
    "vertices": 8174,
    "faces": 13992,
    "bytes": 1006072,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07GNCVKSG.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/G/B07GNCVKSG.glb",
+   "image": "69/6982fbc0.jpg"
   },
   {
    "id": "B07DB92J86",
@@ -1088,7 +1149,8 @@
    "vertices": 3998,
    "faces": 4887,
    "bytes": 400016,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DB92J86.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DB92J86.glb",
+   "image": "66/666620ca.jpg"
   },
   {
    "id": "B07DBB76MF",
@@ -1104,7 +1166,8 @@
    "vertices": 8645,
    "faces": 14280,
    "bytes": 568616,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07DBB76MF.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B07DBB76MF.glb",
+   "image": "df/dfea69c9.jpg"
   },
   {
    "id": "B07DBDSGD6",
@@ -1120,7 +1183,8 @@
    "vertices": 4744,
    "faces": 6976,
    "bytes": 466564,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBDSGD6.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/6/B07DBDSGD6.glb",
+   "image": "8e/8e0d4224.jpg"
   },
   {
    "id": "B07DBFFHXP",
@@ -1136,7 +1200,8 @@
    "vertices": 9817,
    "faces": 16248,
    "bytes": 615060,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07DBFFHXP.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/P/B07DBFFHXP.glb",
+   "image": "52/5255123f.jpg"
   },
   {
    "id": "B07GFFPKFV",
@@ -1152,7 +1217,8 @@
    "vertices": 7024,
    "faces": 12492,
    "bytes": 517256,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07GFFPKFV.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/V/B07GFFPKFV.glb",
+   "image": "c0/c0eae26a.jpg"
   },
   {
    "id": "B075X3WD5T",
@@ -1168,7 +1234,8 @@
    "vertices": 2780,
    "faces": 3272,
    "bytes": 380592,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075X3WD5T.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/T/B075X3WD5T.glb",
+   "image": "e4/e44d54d5.jpg"
   },
   {
    "id": "B07B7J5XSQ",
@@ -1184,7 +1251,8 @@
    "vertices": 4965,
    "faces": 8780,
    "bytes": 411128,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07B7J5XSQ.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Q/B07B7J5XSQ.glb",
+   "image": "12/124281e6.jpg"
   },
   {
    "id": "B07DBDZC9N",
@@ -1200,7 +1268,8 @@
    "vertices": 4450,
    "faces": 6762,
    "bytes": 403252,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07DBDZC9N.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/N/B07DBDZC9N.glb",
+   "image": "be/befccc09.jpg"
   },
   {
    "id": "B07DBGHSN7",
@@ -1216,7 +1285,8 @@
    "vertices": 4288,
    "faces": 7040,
    "bytes": 371160,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07DBGHSN7.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/7/B07DBGHSN7.glb",
+   "image": "5a/5a4f28e9.jpg"
   },
   {
    "id": "B07QPZK6MJ",
@@ -1232,7 +1302,8 @@
    "vertices": 3904,
    "faces": 5744,
    "bytes": 375900,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B07QPZK6MJ.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B07QPZK6MJ.glb",
+   "image": "fa/fa94b5b6.jpg"
   },
   {
    "id": "B075HWJ4MF",
@@ -1248,7 +1319,8 @@
    "vertices": 1910,
    "faces": 6096,
    "bytes": 1005616,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B075HWJ4MF.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/F/B075HWJ4MF.glb",
+   "image": "17/17c13588.jpg"
   },
   {
    "id": "B075YM2V3Y",
@@ -1264,7 +1336,8 @@
    "vertices": 8380,
    "faces": 16128,
    "bytes": 1108868,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075YM2V3Y.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/Y/B075YM2V3Y.glb",
+   "image": "cc/cc0b1b18.jpg"
   },
   {
    "id": "B075YM2VXJ",
@@ -1280,7 +1353,8 @@
    "vertices": 2308,
    "faces": 3916,
    "bytes": 1063628,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B075YM2VXJ.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/J/B075YM2VXJ.glb",
+   "image": "7c/7c69912f.jpg"
   },
   {
    "id": "B07HSLTFY3",
@@ -1296,7 +1370,8 @@
    "vertices": 7714,
    "faces": 11504,
    "bytes": 1055080,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07HSLTFY3.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/3/B07HSLTFY3.glb",
+   "image": "db/db6a6992.jpg"
   },
   {
    "id": "B07HSMVFLD",
@@ -1312,7 +1387,8 @@
    "vertices": 7618,
    "faces": 11424,
    "bytes": 1051532,
-   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07HSMVFLD.glb"
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/D/B07HSMVFLD.glb",
+   "image": "24/24c1dfbb.jpg"
   }
  ]
 }

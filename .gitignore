@@ -1,0 +1,11 @@
+# 取得したカタログの素データ。再取得できるので持たない
+.cache/
+
+# GLB の実体。マニフェストから再取得できる
+library/
+
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store

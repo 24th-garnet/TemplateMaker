@@ -11,6 +11,24 @@
   "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
 } }
 </script>
+<script>
+// **落ちたことを黙らない。** モジュールが評価できないと画面は静かに空のまま
+// になり、何が起きたか誰にも分からない。module スクリプトより前に置く
+// **capture で拾う。** 読み込みの失敗は bubble しないので、ここを
+// 取りこぼすと「CDN に届かない」が無言の空白画面になる
+addEventListener('error', (e) => {
+  if (e.target && e.target !== window && (e.target.src || e.target.href))
+    return window.__crash('読み込めない: ' + (e.target.src || e.target.href));
+  window.__crash(e.message, e.filename, e.lineno);
+}, true);
+addEventListener('unhandledrejection', (e) => window.__crash(String(e.reason)));
+window.__crash = (msg, file, line) => {
+  const el = document.getElementById('crash') || document.body.appendChild(
+    Object.assign(document.createElement('div'), { id: 'crash' }));
+  el.textContent = `${msg}${file ? `\n${file.replace(location.origin, '')}:${line}` : ''}`;
+  el.hidden = false;
+};
+</script>
 </head>
 <body>
 <header>
@@ -35,6 +53,7 @@
   <div id="view"><canvas id="c"></canvas>
     <div id="hint">左の一覧から家具をここへドラッグしてください</div>
     <div id="angle" hidden></div>
+    <pre id="crash" hidden></pre>
   </div>
 
   <aside id="right">

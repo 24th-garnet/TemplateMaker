@@ -14,10 +14,14 @@ import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from . import asset, manifest, template
+from . import asset, category, manifest, template
 
 WEB = Path(__file__).parent / "web"
 _SAFE = re.compile(r"^[A-Za-z0-9_-]+$")
+#: ブラウザへ渡す静的ファイル。**スラッシュを許さない。**
+#: 一覧で許可すると分けるたびにここを直すことになるが、経路を組み立ててから
+#: 正規化で弾くより、組み立てる前に字種で縛る方が抜けが無い（`_SAFE` と同じ方針）
+_ASSET = re.compile(r"^[A-Za-z0-9_-]+\.(js|css)$")
 _TYPES = {".html": "text/html; charset=utf-8", ".js": "text/javascript",
           ".css": "text/css; charset=utf-8", ".json": "application/json",
           ".glb": "model/gltf-binary", ".jpg": "image/jpeg"}
@@ -58,7 +62,10 @@ def build_library(man: dict, lib: Path) -> dict:
 
 
 def _head(it: dict) -> dict:
+    # `placement` を載せるのは、置き方が品目から決まるため。壁に付くもの・
+    # 床に敷くものを、ブラウザ側が品目名を知らずに扱えるようにする
     return {"id": it["id"], "category": it["category"],
+            "placement": category.placement(it["category"]),
             "name": it.get("name") or it["id"], "brand": it.get("brand") or "",
             "faces": it.get("faces", 0), "bytes": it.get("bytes", 0)}
 
@@ -102,7 +109,7 @@ def make_handler(library: dict, lib_dir: Path, tpl_dir: Path, read_only: bool):
             path = self.path.split("?", 1)[0]
             if path == "/":
                 return self._file(WEB / "index.html")
-            if path in ("/app.js", "/style.css"):
+            if _ASSET.match(path.lstrip("/")):
                 return self._file(WEB / path.lstrip("/"))
             if path == "/api/library":
                 return self._json(library)

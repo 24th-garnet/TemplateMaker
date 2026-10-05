@@ -144,3 +144,33 @@ def test_写真は作り直されないので持たせてよい(site):
 def test_写真も経路をずらせない(site, path):
     base, _, _ = site
     assert get(base + path)[0] in (400, 404)
+
+
+def test_品目から置き方が引ける(site):
+    base, library, _ = site
+    assert library["items"][0]["placement"] == "floor"
+    lib = json.loads(get(base + "/api/library")[1])
+    assert all("placement" in a for a in lib["items"])
+
+
+def test_indexが参照するファイルが全部配信される(site):
+    """**分割したときに壊れる回帰をここで止める。**
+
+    index.html が読む js/css が増えたとき、配信の許可を直し忘れると
+    ブラウザで初めて気づくことになる。
+    """
+    import re as _re
+    base, _, _ = site
+    html = get(base + "/")[1].decode()
+    refs = _re.findall(r'(?:src|href)="(/[^"]+\.(?:js|css))"', html)
+    assert refs, "index.html が js/css を 1 つも読んでいない"
+    for r in refs:
+        assert get(base + r)[0] == 200, f"配信されていない: {r}"
+
+
+def test_配信するのは平たい名前のjsとcssだけ(site):
+    base, _, _ = site
+    assert get(base + "/app.js")[0] == 200
+    for bad in ("/web/app.js", "/sub/dir/app.js", "/app.py", "/../webapp.py",
+                "/app.js.map"):
+        assert get(base + bad)[0] == 404, bad

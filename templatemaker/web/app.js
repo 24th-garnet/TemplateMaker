@@ -7,6 +7,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import * as G from './geom.js';
+import { createHistory } from './history.js';
 
 const $ = (s) => document.querySelector(s);
 const fmt = (v) => v.toFixed(2);
@@ -212,6 +213,9 @@ function setAngle(rec, deg) {
 async function add(id, at = { x: 0, z: 0 }, rot = 0, y = 0) {
   const a = sizes[id];
   if (!a) return null;
+  // **足す前に写しを取る。** 後だと新しい体が写しに入ってしまい、
+  // 取り消しても消えない
+  const before = history.begin();
   const holder = new THREE.Group();
   scene.add(holder);
   const rec = { uid: ++uidSeq, asset_id: id, category: a.category, holder,
@@ -229,20 +233,67 @@ async function add(id, at = { x: 0, z: 0 }, rot = 0, y = 0) {
     remove(rec);
     return null;
   }
-  mark(true); select(rec); redrawAll();
+  // **モデルが届いてから積む。** 読み込みに失敗したら履歴を残さない
+  history.commit(before, '追加');
+  select(rec); redrawAll();
   return rec;
 }
 
 function remove(rec) {
   scene.remove(rec.holder);
-  // dispose しない。中身は原本からの借り物（`model` を見よ）
+  // dispose せず預ける。取り消しで scene.add するだけで戻せる
+  grave.set(rec.uid, rec);
   items = items.filter((x) => x !== rec);
   setSelection(selection.filter((r) => r !== rec));
-  mark(true); redrawAll();
+  redrawAll();
 }
 
 function handleWorld() {
   return handle.getWorldPosition(new THREE.Vector3());
+}
+
+// --- 履歴 ---------------------------------------------------------------
+// 消した記録は捨てずに預ける。holder ごと取っておけば、取り消しは scene.add
+// だけで**同期的に**戻る——GLB を読み直さないので瞬きもしない。
+// 借り物を dispose しないようにしてあるから成立する（`model` を見よ）
+const grave = new Map();
+
+function snapshot() {
+  return items.map((r) => ({ uid: r.uid, asset_id: r.asset_id,
+    category: r.category, translation: [...r.translation], rotation: r.rotation }));
+}
+
+function restore(snap) {
+  const live = new Map(items.map((r) => [r.uid, r]));
+  const keep = new Set(snap.map((x) => x.uid));
+  for (const r of items)
+    if (!keep.has(r.uid)) { scene.remove(r.holder); grave.set(r.uid, r); }
+  items = snap.map((x) => {
+    let r = live.get(x.uid);
+    if (!r) { r = grave.get(x.uid); grave.delete(x.uid); scene.add(r.holder); }
+    r.translation = [...x.translation]; r.rotation = x.rotation;
+    apply(r);
+    return r;
+  });
+  setSelection(selection);        // もう無い記録はここで落ちる
+  redrawAll();
+}
+
+const history = createHistory({
+  snapshot, restore,
+  onChange: () => {
+    mark(history.dirty);
+    // 履歴から消えた体は墓場からも落とす。dispose はしない（借り物）
+    const alive = history.liveUids(items.map((r) => r.uid));
+    for (const uid of [...grave.keys()]) if (!alive.has(uid)) grave.delete(uid);
+  },
+});
+
+/** 1 つの操作として積む。中で何度動かしても 1 段。 */
+function step(label, fn) {
+  const b = history.begin();
+  fn();
+  history.commit(b, label);
 }
 
 // --- まとまりの外形 -----------------------------------------------------
@@ -369,7 +420,8 @@ renderer.domElement.addEventListener('pointerdown', (ev) => {
     const sel = primary();
     const a = angleAt(ev, sel.holder.position.x, sel.holder.position.z);
     if (a !== null) {
-      spin = { rec: sel, from: a, start: sel.holder.rotation.y };
+      spin = { rec: sel, from: a, start: sel.holder.rotation.y,
+               before: history.begin() };
       guide.visible = true;
       controls.enabled = false;
       renderer.domElement.setPointerCapture(ev.pointerId);
@@ -383,7 +435,7 @@ renderer.domElement.addEventListener('pointerdown', (ev) => {
   plane.constant = -rec.holder.position.y;
   if (ray.ray.intersectPlane(plane, hit)) {
     drag = { rec, dx: rec.holder.position.x - hit.x,
-             dz: rec.holder.position.z - hit.z };
+             dz: rec.holder.position.z - hit.z, before: history.begin() };
     controls.enabled = false;
     renderer.domElement.setPointerCapture(ev.pointerId);
   }
@@ -413,8 +465,13 @@ renderer.domElement.addEventListener('pointermove', (ev) => {
 });
 
 const endDrag = () => {
-  drag = null;
-  if (spin) { spin = null; guide.visible = false; hideAngle(); }
+  // **区切りは指を離したとき。** 途中経過を積むと、1 回動かすのに
+  // 何十回も取り消すことになる
+  if (drag) { history.commit(drag.before, '移動'); drag = null; }
+  if (spin) {
+    history.commit(spin.before, '回転');
+    spin = null; guide.visible = false; hideAngle();
+  }
   controls.enabled = true;
 };
 
@@ -455,15 +512,33 @@ function focusOn(rec) {
 addEventListener('keydown', (ev) => {
   if (ev.target.tagName === 'INPUT' || ev.target.tagName === 'SELECT') return;
   if (ev.key === 'Escape') return select(null);
+
+  // **何も選んでいなくても効く必要がある**ので、選択の判定より前に置く。
+  // macOS の Cmd+Shift+Z は key が 'Z' で来るため小文字に寄せる
+  const meta = ev.metaKey || ev.ctrlKey;
+  if (meta && ev.key.toLowerCase() === 'z') {
+    ev.preventDefault();
+    if (drag || spin) return;     // 掴んでいる最中に足元を入れ替えない
+    return void (ev.shiftKey ? history.redo() : history.undo());
+  }
+  if (meta && ev.key.toLowerCase() === 'y') {
+    ev.preventDefault();
+    if (!drag && !spin) history.redo();
+    return;
+  }
+
   if (!selection.length) return;
   if (ev.key === 'f' || ev.key === 'F') return focusOn(primary());
-  const step = ev.shiftKey ? 1 : 15;
+  const turn = ev.shiftKey ? 1 : 15;
   if (ev.key.toLowerCase() === 'q') {
-    selection.forEach((r) => setAngle(r, snapDeg(r.rotation + step, ev.shiftKey)));
+    step('回転', () => selection.forEach(
+      (r) => setAngle(r, snapDeg(r.rotation + turn, ev.shiftKey))));
   } else if (ev.key.toLowerCase() === 'e') {
-    selection.forEach((r) => setAngle(r, snapDeg(r.rotation - step, ev.shiftKey)));
+    step('回転', () => selection.forEach(
+      (r) => setAngle(r, snapDeg(r.rotation - turn, ev.shiftKey))));
   } else if (ev.key === 'Backspace' || ev.key === 'Delete') {
-    ev.preventDefault(); [...selection].forEach(remove);
+    ev.preventDefault();
+    step('削除', () => [...selection].forEach(remove));
   }
 });
 
@@ -546,14 +621,16 @@ $('#deg').addEventListener('change', () => {
   const sel = primary();
   if (!sel) return;
   const v = parseFloat($('#deg').value);
-  if (Number.isFinite(v)) selection.forEach((r) => setAngle(r, v));
+  if (Number.isFinite(v)) step('向き', () => selection.forEach((r) => setAngle(r, v)));
   else $('#deg').value = Math.round(sel.rotation);
 });
 for (const b of document.querySelectorAll('#rot [data-turn]')) {
-  b.onclick = () => selection.forEach((r) => setAngle(r, r.rotation + (+b.dataset.turn)));
+  b.onclick = () => step('回転',
+    () => selection.forEach((r) => setAngle(r, r.rotation + (+b.dataset.turn))));
 }
 for (const b of document.querySelectorAll('#rot [data-face]')) {
-  b.onclick = () => selection.forEach((r) => setAngle(r, +b.dataset.face));
+  b.onclick = () => step('向き',
+    () => selection.forEach((r) => setAngle(r, +b.dataset.face)));
 }
 
 function mark(d) { dirty = d; note(d ? '未保存' : ''); }
@@ -612,6 +689,7 @@ async function refreshList() {
 
 function clearAll() {
   for (const it of [...items]) scene.remove(it.holder);
+  items.forEach((r) => grave.set(r.uid, r));
   items = []; setSelection([]); redrawAll();
 }
 
@@ -635,14 +713,17 @@ $('#save').onclick = async () => {
   });
   const j = await r.json();
   if (!r.ok) return note(j.error || '保存できない', true);
-  mark(false); note(`保存しました（${j.count} 体）`);
+  history.savePoint();          // ここまで戻れば「未保存」は消える
+  note(`保存しました（${j.count} 体）`);
   await refreshList();
   $('#open').value = j.id;
 };
 
 $('#new').onclick = () => {
   if (dirty && !confirm('保存していない変更があります。新規にしますか。')) return;
-  clearAll(); $('#name').value = ''; $('#open').value = ''; mark(false);
+  clearAll(); $('#name').value = ''; $('#open').value = '';
+  // **跨いで戻れないようにする。** 別の書類の記録が蘇ると辻褄が合わない
+  grave.clear(); history.reset();
 };
 
 $('#open').onchange = async (ev) => {
@@ -653,13 +734,17 @@ $('#open').onchange = async (ev) => {
   }
   const t = await fetch(`/api/templates/${id}`).then((x) => x.json());
   if (t.error) return note(t.error, true);
-  clearAll();
-  $('#name').value = t.name;
-  for (const it of t.items) {
-    await add(it.asset_id, { x: it.translation[0], z: it.translation[2] },
-              it.rotation, it.translation[1]);
-  }
-  select(null); mark(false); note(`${t.items.length} 体を読み込みました`);
+  // 読み込みは履歴に残さない。30 体が 30 段になっても誰も得をしない
+  await history.freeze(async () => {
+    clearAll();
+    $('#name').value = t.name;
+    for (const it of t.items) {
+      await add(it.asset_id, { x: it.translation[0], z: it.translation[2] },
+                it.rotation, it.translation[1]);
+    }
+  });
+  grave.clear(); history.reset();
+  select(null); note(`${t.items.length} 体を読み込みました`);
 };
 
 addEventListener('beforeunload', (e) => { if (dirty) e.preventDefault(); });

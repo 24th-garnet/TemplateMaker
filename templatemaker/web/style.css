@@ -90,3 +90,7 @@ kbd{background:#23262e;border:1px solid var(--line);border-bottom-width:2px;
 #crash{position:absolute;left:16px;right:16px;top:16px;margin:0;z-index:9;
   background:#3a1f1f;border:1px solid #7a3b3b;color:#ffd9d9;border-radius:6px;
   padding:10px 12px;font:11px/1.6 ui-monospace,monospace;white-space:pre-wrap}
+
+#room{flex:1;min-width:0}
+#roomsize input{flex:1;min-width:0;text-align:right;
+  font-variant-numeric:tabular-nums}

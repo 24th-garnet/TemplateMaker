@@ -8,6 +8,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import * as G from './geom.js';
 import { createHistory } from './history.js';
 import { createView } from './view.js';
+import { createRoom } from './room.js';
+import { PRESETS, defaultY } from './spec.js';
 
 const $ = (s) => document.querySelector(s);
 const fmt = (v) => v.toFixed(2);
@@ -140,6 +142,42 @@ function placeDial() {
   dial.scale.setScalar(V.is2D
     ? Math.max(1, 40 * V.mpp() / dialRadius) : 1);
   handle.scale.setScalar(dialHot ? 1.25 : 1);
+}
+
+// --- 参照用の部屋 --------------------------------------------------------
+// `items` に混ぜない。これだけで clearAll も外形も保存経路も無変更で正しく
+// なる——「テンプレートに保存しない」が構造で保証される
+const room = createRoom(scene);
+
+function applyRoom(preset, w, d) {
+  const custom = preset === 'カスタム';
+  $('#roomsize').hidden = !custom;
+  const wd = custom ? [w, d] : PRESETS[preset];
+  const got = room.set(wd);
+  if (got) { $('#roomw').value = got.w; $('#roomd').value = got.d; }
+  // 作業環境の設定なので localStorage に残す。履歴の対象外
+  try {
+    localStorage.setItem('tm.room', JSON.stringify({ preset, w: got?.w, d: got?.d }));
+  } catch { /* 私用窓では黙って諦める */ }
+  want({ scene: true });
+}
+
+function setupRoom() {
+  const sel = $('#room');
+  for (const k of [...Object.keys(PRESETS), 'カスタム']) {
+    const o = document.createElement('option');
+    o.value = k; o.textContent = k || 'なし';
+    sel.append(o);
+  }
+  const read = () => applyRoom(sel.value, +$('#roomw').value, +$('#roomd').value);
+  sel.onchange = read;
+  $('#roomw').onchange = read;
+  $('#roomd').onchange = read;
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem('tm.room') || 'null'); } catch { /* */ }
+  sel.value = saved?.preset ?? '6畳';
+  if (saved?.w) { $('#roomw').value = saved.w; $('#roomd').value = saved.d; }
+  read();
 }
 
 // --- 2D の重ね描き -------------------------------------------------------
@@ -287,9 +325,12 @@ function setAngle(rec, deg) {
   apply(rec); touch();
 }
 
-async function add(id, at = { x: 0, z: 0 }, rot = 0, y = 0) {
+async function add(id, at = { x: 0, z: 0 }, rot = 0, y = null) {
   const a = sizes[id];
   if (!a) return null;
+  // 壁掛けや天井吊りは、床に置いても意味がない。品目から既定の高さを決める。
+  // 読み込みは必ず明示して渡すので、ここは新規に置くときだけ効く
+  if (y === null) y = defaultY(a.placement, a.category, a.height);
   // **足す前に写しを取る。** 後だと新しい体が写しに入ってしまい、
   // 取り消しても消えない
   const before = history.begin();
@@ -850,6 +891,7 @@ addEventListener('beforeunload', (e) => { if (dirty) e.preventDefault(); });
   }
   c.onchange = paintAssets;
   $('#find').oninput = paintAssets;
+  setupRoom();
   paintAssets();
   await refreshList();
   resize(); redrawAll();

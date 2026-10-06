@@ -61,6 +61,17 @@ window.__crash = (msg, file, line) => {
   </div>
 
   <aside id="right">
+    <h2>部屋（目安）</h2>
+    <div class="row">
+      <select id="room"></select>
+    </div>
+    <div class="row" id="roomsize" hidden>
+      <input id="roomw" type="number" step="0.01" min="0.5" max="20" title="幅 m">
+      <span class="unit">×</span>
+      <input id="roomd" type="number" step="0.01" min="0.5" max="20" title="奥行 m">
+      <span class="unit">m</span>
+    </div>
+
     <h2>まとまり</h2>
     <table id="group"></table>
     <h2>置いたもの <span id="count"></span></h2>

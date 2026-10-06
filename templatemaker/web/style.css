@@ -105,3 +105,6 @@ kbd{background:#23262e;border:1px solid var(--line);border-bottom-width:2px;
 .check input{accent-color:var(--accent);margin:0}
 #labels .badge.tight{background:var(--warn);color:#1a1408;border-color:var(--warn);
   font-weight:600}
+
+#band{position:absolute;border:1px solid var(--accent);background:#7fb8ff22;
+  pointer-events:none;z-index:3;border-radius:2px}

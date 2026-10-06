@@ -11,6 +11,7 @@ import { createView } from './view.js';
 import { createRoom } from './room.js';
 import { PRESETS, defaultY } from './spec.js';
 import { snapMove } from './snap.js';
+import { alignDelta, spreadDelta, rotateAround } from './arrange.js';
 import { overlapping, gaps } from './clearance.js';
 import { TUCK, pairKey } from './spec.js';
 
@@ -58,12 +59,15 @@ function paintSelection() {
 
 // 選んだ順の配列。**主は最後に触れたもの**——いま触ったものが調整の対象
 let selection = [];
+//: まとめて回した量（ラジアン）。**選び直すとゼロに戻る**——つまみが飛ばない
+let groupAngle = 0;
 const primary = () => selection.at(-1) ?? null;
 const isSel = (rec) => selection.includes(rec);
 
 // 唯一の入口。重複と、もう無い記録をここで落とす
 function setSelection(list) {
   selection = [...new Set(list)].filter((r) => items.includes(r));
+  groupAngle = 0;
   want({ panel: true, scene: true });
 }
 const select = (rec) => setSelection(rec ? [rec] : []);
@@ -133,17 +137,21 @@ function buildDial(r) {
 }
 
 function placeDial() {
-  if (selection.length !== 1) { dial.visible = false; return; }
-  const sel = primary();
-  const a = sizes[sel.asset_id];
-  const r = Math.max(0.45, Math.hypot(a.size[0], a.size[2]) / 2 + 0.2);
+  if (!selection.length) { dial.visible = false; return; }
+  const single = selection.length === 1 ? primary() : null;
+  const b = single ? null : unionBox(selection, 0, 0);
+  if (!single && !b) { dial.visible = false; return; }
+  const a = single && sizes[single.asset_id];
+  const r = single
+    ? Math.max(0.45, Math.hypot(a.size[0], a.size[2]) / 2 + 0.2)
+    : Math.max(0.45, Math.hypot(b.x1 - b.x0, b.z1 - b.z0) / 2 + 0.2);
   if (Math.abs(r - dialRadius) > 1e-6) buildDial(r);
-  dial.position.set(sel.holder.position.x, 0.006, sel.holder.position.z);
-  dial.rotation.y = sel.holder.rotation.y;
+  dial.position.set(single ? single.holder.position.x : b.cx, 0.006,
+                    single ? single.holder.position.z : b.cz);
+  dial.rotation.y = single ? single.holder.rotation.y : groupAngle;
   dial.visible = true;
   // 2D は引くと輪が点になる。掴める大きさを画面側で保つ
-  dial.scale.setScalar(V.is2D
-    ? Math.max(1, 40 * V.mpp() / dialRadius) : 1);
+  dial.scale.setScalar(V.is2D ? Math.max(1, 40 * V.mpp() / dialRadius) : 1);
   handle.scale.setScalar(dialHot ? 1.25 : 1);
 }
 
@@ -440,11 +448,11 @@ function drawGuides(s) {
   guides.visible = n > 0;
 }
 
-/** 相手の外接。自分は呼ぶ側で外す */
+/** 相手の外接。選択中のものは互いの相手にしない */
 function snapBoxes(except) {
   const out = [];
   for (const it of items) {
-    if (it === except) continue;
+    if (except.has(it)) continue;
     const r = footRect(it);
     if (!r) continue;
     out.push({ ...G.aabb(r), cx: r.cx, cz: r.cz, aligned: G.axisAligned(r.t) });
@@ -452,28 +460,55 @@ function snapBoxes(except) {
   return out;
 }
 
-/**
- * 置き場所を決める。**吸着はその軸のグリッドを上書きする。**
- * 5mm 刻みは目分量の端数を消すためのもので、相手に合わせた位置はそれ自体が
- * 正しい値。丸めると 2mm の隙間が残る。
+/** 記録の並びから、動かした先での外接を 1 つにまとめる。
+ *
+ * **吸着は選択全体の外に効かせる。** 5 体のセットを壁へ寄せるとき、
+ * 揃えたいのはセットの端であって、たまたま掴んだ 1 体の端ではない。
  */
-function resolveMove(assetId, rotDeg, except, rawX, rawZ, ev) {
+function unionBox(recs, dx, dz) {
+  let x0 = Infinity, x1 = -Infinity, z0 = Infinity, z1 = -Infinity;
+  let aligned = true;
+  for (const r of recs) {
+    const a = sizes[r.asset_id];
+    if (!a?.size) continue;
+    const t = THREE.MathUtils.degToRad(r.rotation);
+    const b = G.aabb(G.rect(r.translation[0] + dx, r.translation[2] + dz,
+                            a.size[0], a.size[2], t));
+    x0 = Math.min(x0, b.x0); x1 = Math.max(x1, b.x1);
+    z0 = Math.min(z0, b.z0); z1 = Math.max(z1, b.z1);
+    if (!G.axisAligned(t)) aligned = false;
+  }
+  if (x0 === Infinity) return null;
+  return { x0, x1, z0, z1, cx: (x0 + x1) / 2, cz: (z0 + z1) / 2, aligned };
+}
+
+/**
+ * 吸着と刻みを当てて、動かす量を決める。
+ *
+ * **吸着はその軸のグリッドを上書きする。** 5mm 刻みは目分量の端数を消す
+ * ためのもので、相手に合わせた位置はそれ自体が正しい値。丸めると 2mm の
+ * 隙間が残る。
+ */
+function resolveDelta(m, except, ev) {
   const noSnap = ev.altKey;                       // Alt で吸着を切る
   const noGrid = ev.altKey && ev.shiftKey;        // Alt+Shift で刻みも切る
-  let x = noGrid ? rawX : snap(rawX);
-  let z = noGrid ? rawZ : snap(rawZ);
-  if (noSnap) { hideGuides(); return { x, z }; }
+  let dx = noGrid ? 0 : snap(m.cx) - m.cx;
+  let dz = noGrid ? 0 : snap(m.cz) - m.cz;
+  if (noSnap) { hideGuides(); return { dx, dz }; }
+  const tol = SNAP_PX * V.mpp(new THREE.Vector3(m.cx, 0, m.cz));
+  const got = snapMove(m, snapBoxes(except), room.walls(), tol, !!room.size);
+  if (got.x) dx = got.x.d;
+  if (got.z) dz = got.z.d;
+  drawGuides(got);
+  return { dx, dz };
+}
 
+/** 1 体ぶんの外接を作る（ドロップの下見用） */
+function oneBox(assetId, rotDeg, x, z) {
   const a = sizes[assetId];
   const t = THREE.MathUtils.degToRad(rotDeg);
-  const r = G.rect(rawX, rawZ, a.size[0], a.size[2], t);
-  const m = { ...G.aabb(r), cx: rawX, cz: rawZ, aligned: G.axisAligned(t) };
-  const tol = SNAP_PX * V.mpp(new THREE.Vector3(rawX, 0, rawZ));
-  const got = snapMove(m, snapBoxes(except), room.walls(), tol, !!room.size);
-  if (got.x) x = rawX + got.x.d;
-  if (got.z) z = rawZ + got.z.d;
-  drawGuides(got);
-  return { x, z };
+  const r = G.rect(x, z, a.size[0], a.size[2], t);
+  return { ...G.aabb(r), cx: x, cz: z, aligned: G.axisAligned(t) };
 }
 
 // --- 描き直し ----------------------------------------------------------
@@ -682,9 +717,9 @@ view.addEventListener('dragover', (ev) => {
   if (!p) return;
   const a = sizes[dropping];
   // 落ちる前から吸わせる。ベッドに接した状態でナイトテーブルを置ける
-  const q = resolveMove(dropping, 0, null, p.x, p.z, ev);
+  const d = resolveDelta(oneBox(dropping, 0, p.x, p.z), new Set(), ev);
   ghost.scale.set(a.size[0], 1, a.size[2]);
-  ghost.position.set(q.x, 0.004, q.z);
+  ghost.position.set(p.x + d.dx, 0.004, p.z + d.dz);
   ghost.visible = true;
 });
 
@@ -699,7 +734,8 @@ view.addEventListener('drop', async (ev) => {
   if (!id || !sizes[id]) return;
   const p = floorPoint(ev);
   if (!p) return;
-  const q = resolveMove(id, 0, null, p.x, p.z, ev);
+  const d = resolveDelta(oneBox(id, 0, p.x, p.z), new Set(), ev);
+  const q = { x: p.x + d.dx, z: p.z + d.dz };
   // 指した所に床置きの家具があれば、その上に載せる。机の上のランプ
   await add(id, q, 0, surfaceAt(q.x, q.z, id, null));
 });
@@ -750,16 +786,69 @@ function onHandle(ev) {
 
 let spin = null;
 
+// --- 囲んで選ぶ ----------------------------------------------------------
+// **2D の左ドラッグと、どの視点でも Shift+ドラッグ。**
+// 透視投影で囲むと奥行きの違うものまで入って分かりにくい。真上から見た
+// 固定の視点なら、囲んだ範囲と足元の形が素直に対応する
+let band = null;
+
+function startBand(ev) {
+  band = { x: ev.clientX, y: ev.clientY,
+           keep: ev.shiftKey ? [...selection] : [] };
+  V.controls.enabled = false;
+  renderer.domElement.setPointerCapture(ev.pointerId);
+  $('#band').hidden = false;
+  moveBand(ev);
+}
+
+function moveBand(ev) {
+  const r = renderer.domElement.getBoundingClientRect();
+  const lo = { x: Math.min(band.x, ev.clientX), y: Math.min(band.y, ev.clientY) };
+  const hi = { x: Math.max(band.x, ev.clientX), y: Math.max(band.y, ev.clientY) };
+  Object.assign($('#band').style, {
+    left: `${lo.x - r.left}px`, top: `${lo.y - r.top}px`,
+    width: `${hi.x - lo.x}px`, height: `${hi.y - lo.y}px`,
+  });
+  // **触れていれば選ぶ**（Figma と同じ）。真上から見た図では足元の形が
+  // その家具そのものなので、完全に囲ませる必要がない
+  const got = [];
+  const v = new THREE.Vector3();
+  for (const it of items) {
+    const rect = footRect(it);
+    if (!rect) continue;
+    let a0 = Infinity, a1 = -Infinity, b0 = Infinity, b1 = -Infinity;
+    for (const [cx, cz] of G.corners(rect)) {
+      v.set(cx, it.translation[1], cz).project(V.cam);
+      const px = r.left + (v.x + 1) / 2 * r.width;
+      const py = r.top + (-v.y + 1) / 2 * r.height;
+      a0 = Math.min(a0, px); a1 = Math.max(a1, px);
+      b0 = Math.min(b0, py); b1 = Math.max(b1, py);
+    }
+    if (a1 >= lo.x && a0 <= hi.x && b1 >= lo.y && b0 <= hi.y) got.push(it);
+  }
+  setSelection([...band.keep, ...got]);
+}
+
+function endBand() {
+  band = null;
+  $('#band').hidden = true;
+  V.controls.enabled = true;
+}
+
 renderer.domElement.addEventListener('pointerdown', (ev) => {
   if (ev.button !== 0) return;
 
   // つまみを先に見る。家具の真上に重なっていても回転が取れるように
-  if (selection.length === 1 && onHandle(ev)) {
-    const sel = primary();
-    const a = angleAt(ev, sel.holder.position.x, sel.holder.position.z);
+  if (selection.length && onHandle(ev)) {
+    const a = angleAt(ev, dial.position.x, dial.position.z);
     if (a !== null) {
-      spin = { rec: sel, from: a, start: sel.holder.rotation.y,
-               before: history.begin() };
+      spin = {
+        recs: [...selection], from: a,
+        start: selection.length === 1 ? primary().holder.rotation.y : groupAngle,
+        center: { x: dial.position.x, z: dial.position.z },
+        base: selection.map((r) => ({ t: [...r.translation], rot: r.rotation })),
+        before: history.begin(),
+      };
       guide.visible = true;
       V.controls.enabled = false;
       renderer.domElement.setPointerCapture(ev.pointerId);
@@ -768,47 +857,82 @@ renderer.domElement.addEventListener('pointerdown', (ev) => {
   }
 
   const rec = pick(ev);
-  select(rec);
-  if (!rec) return;
+
+  if (!rec) {
+    // 空き地。2D の左ドラッグと、どの視点でも Shift+ドラッグは囲んで選ぶ
+    if (V.is2D || ev.shiftKey) return startBand(ev);
+    return select(null);
+  }
+  if (ev.shiftKey) return selectAdd(rec);     // 足し引き
+  if (!isSel(rec)) select(rec);               // 選択外を掴んだら選び直す
+
   plane.constant = -rec.holder.position.y;
   if (ray.ray.intersectPlane(plane, hit)) {
-    drag = { rec, dx: rec.holder.position.x - hit.x,
-             dz: rec.holder.position.z - hit.z, before: history.begin() };
+    // 掴んだ時の配置を控える。移動量はここからの差で出す
+    drag = {
+      recs: [...selection],
+      base: selection.map((r) => [...r.translation]),
+      grab: { x: hit.x, z: hit.z },
+      before: history.begin(),
+    };
     V.controls.enabled = false;
     renderer.domElement.setPointerCapture(ev.pointerId);
   }
 });
 
-// 既定は 15 度刻み。Shift で 1 度——**既定を細かくしない。**
-// 家具は壁に沿うのが普通で、端数の角度は直したいものであることが多い
-const snapDeg = (d, fine) => {
-  const step = fine ? 1 : 15;
-  return Math.round(d / step) * step;
-};
-
 renderer.domElement.addEventListener('pointermove', (ev) => {
+  if (band) return moveBand(ev);
   if (spin) {
-    const a = angleAt(ev, spin.rec.holder.position.x, spin.rec.holder.position.z);
+    const a = angleAt(ev, spin.center.x, spin.center.z);
     if (a === null) return;
-    setAngle(spin.rec,
-      snapDeg(THREE.MathUtils.radToDeg(spin.start - (a - spin.from)), ev.shiftKey));
-    showAngle();
+    const deg = snapDeg(THREE.MathUtils.radToDeg(spin.start - (a - spin.from)),
+                        ev.shiftKey);
+    if (spin.recs.length === 1) {
+      setAngle(spin.recs[0], deg);
+      showAngle(spin.recs[0].rotation);
+    } else {
+      // **選択の中心で回す。** 1 体ずつ回しても位置関係は付いてこない——
+      // 机だけ向きを変えても椅子は向かいに残らない
+      const d = THREE.MathUtils.degToRad(deg);
+      spin.recs.forEach((r, i) => {
+        const b = spin.base[i];
+        const p = rotateAround(spin.center.x, spin.center.z, b.t[0], b.t[2], d);
+        r.rotation = ((b.rot + deg) % 360 + 360) % 360;
+        r.translation = [p.x, b.t[1], p.z];
+        apply(r);
+      });
+      groupAngle = d;
+      touch();
+      showAngle(deg);
+    }
     return;
   }
   if (!drag) return;
   pointerRay(ev);
   if (!ray.ray.intersectPlane(plane, hit)) return;
-  const p = resolveMove(drag.rec.asset_id, drag.rec.rotation, drag.rec,
-                        hit.x + drag.dx, hit.z + drag.dz, ev);
-  // **動かすたびに支えを見直す。** 花瓶を机へ引き込んだら天板へ載り、
-  // 外へ出したら床へ降りる。置いた時だけ見ていると机に食い込んだままになる
-  const y = surfaceAt(p.x, p.z, drag.rec.asset_id, drag.rec);
-  place(drag.rec, p.x, p.z, y ?? drag.rec.translation[1]);
+  // 掴んだ所からの差。選択全体を同じだけ動かす
+  const mx = hit.x - drag.grab.x, mz = hit.z - drag.grab.z;
+  drag.recs.forEach((r, i) => {
+    r.translation[0] = drag.base[i][0] + mx;
+    r.translation[2] = drag.base[i][2] + mz;
+  });
+  const m = unionBox(drag.recs, 0, 0);
+  const d = m ? resolveDelta(m, new Set(drag.recs), ev) : { dx: 0, dz: 0 };
+  drag.recs.forEach((r, i) => {
+    const x = drag.base[i][0] + mx + d.dx;
+    const z = drag.base[i][2] + mz + d.dz;
+    // **動かすたびに支えを見直す。** 花瓶を机へ引き込んだら天板へ載り、
+    // 外へ出したら床へ降りる
+    const y = drag.recs.length === 1
+      ? surfaceAt(x, z, r.asset_id, r) : null;
+    place(r, x, z, y ?? r.translation[1]);
+  });
 });
 
 const endDrag = () => {
   // **区切りは指を離したとき。** 途中経過を積むと、1 回動かすのに
   // 何十回も取り消すことになる
+  if (band) endBand();
   if (drag) { history.commit(drag.before, '移動'); drag = null; hideGuides(); }
   if (spin) {
     history.commit(spin.before, '回転');
@@ -830,13 +954,13 @@ renderer.domElement.addEventListener('pointermove', (ev) => {
 
 // 角度はつまみの脇に出す。右の欄まで目を動かさずに読めるように
 const tag = $('#angle');
-function showAngle() {
+function showAngle(deg = 0) {
   if (!spin) return;
   const r = renderer.domElement.getBoundingClientRect();
   const h = handleWorld().project(V.cam);
   tag.style.left = `${(h.x + 1) / 2 * r.width}px`;
   tag.style.top = `${(-h.y + 1) / 2 * r.height}px`;
-  tag.textContent = `${Math.round(spin.rec.rotation)}°`;
+  tag.textContent = `${Math.round(deg)}°`;
   tag.hidden = false;
 }
 const hideAngle = () => { tag.hidden = true; };
@@ -863,6 +987,14 @@ addEventListener('keydown', (ev) => {
     if (drag || spin) return;     // 掴んでいる最中に足元を入れ替えない
     return void (ev.shiftKey ? history.redo() : history.undo());
   }
+  if (meta && ev.key.toLowerCase() === 'a') {
+    ev.preventDefault();
+    return setSelection([...items]);
+  }
+  if (meta && ev.key.toLowerCase() === 'd') {
+    ev.preventDefault();
+    return void duplicate();
+  }
   if (meta && ev.key.toLowerCase() === 'y') {
     ev.preventDefault();
     if (!drag && !spin) history.redo();
@@ -871,6 +1003,18 @@ addEventListener('keydown', (ev) => {
 
   if (!selection.length) return;
   if (ev.key === 'f' || ev.key === 'F') return focusOn(primary());
+
+  const arrow = ARROWS[ev.key];
+  if (arrow) {
+    ev.preventDefault();                    // 押さないと右の欄が送られる
+    // 50mm 刻み。5mm（しまい込める最小）を既定にすると、1m 動かすのに
+    // 200 回押すことになる
+    const n = ev.shiftKey ? 0.005 : 0.05;
+    const [ax, az] = arrow(V);
+    step('移動', () => selection.forEach((r) => place(
+      r, r.translation[0] + ax * n, r.translation[2] + az * n)));
+    return;
+  }
   const turn = ev.shiftKey ? 1 : 15;
   if (ev.key.toLowerCase() === 'q') {
     step('回転', () => selection.forEach(
@@ -946,6 +1090,7 @@ function syncPanel() {
       <span class="note">${fmt(Math.max(sz.x, sz.z))}×${fmt(Math.min(sz.x, sz.z))} m</span>`;
   }
   $('#rot').hidden = !selection.length;
+  $('#multi').hidden = selection.length < 2;
   if (sel) {
     $('#deg').value = Math.round(sel.rotation * 10) / 10;
     $('#ypos').value = Math.round(sel.translation[1] * 1000) / 1000;
@@ -982,6 +1127,81 @@ $('#ypos').addEventListener('change', () => {
   step('高さ', () => selection.forEach(
     (r) => place(r, r.translation[0], r.translation[2], Math.max(0, v))));
 });
+
+// --- 矢印の向き ----------------------------------------------------------
+// 2D は見たままで、画面右が +X・画面の奥が −Z（`cam2.up` をそう決めてある）。
+// **3D では視点に合わせて入れ替える**——後ろへ回り込んだとき、画面の「左」が
+// −X とは限らない。世界軸のまま固定すると「矢印が逆に動く」ことになる
+function screenAxes(V) {
+  if (V.is2D) return { fwd: [0, -1], right: [1, 0] };
+  const f = new THREE.Vector3();
+  V.cam.getWorldDirection(f);
+  f.y = 0;
+  if (f.lengthSq() < 1e-9) return { fwd: [0, -1], right: [1, 0] };
+  f.normalize();
+  // 最も近い世界軸へ丸める。斜めのまま使うと刻みが軸からずれる
+  const fwd = Math.abs(f.x) > Math.abs(f.z)
+    ? [Math.sign(f.x), 0] : [0, Math.sign(f.z)];
+  return { fwd, right: [-fwd[1], fwd[0]] };
+}
+
+const ARROWS = {
+  ArrowUp: (V) => screenAxes(V).fwd,
+  ArrowDown: (V) => screenAxes(V).fwd.map((v) => -v),
+  ArrowRight: (V) => screenAxes(V).right,
+  ArrowLeft: (V) => screenAxes(V).right.map((v) => -v),
+};
+
+// --- 並べる --------------------------------------------------------------
+/** 選択の外接を並び順どおりに作る */
+const selBoxes = () => selection.map((r) => {
+  const q = footRect(r);
+  return { ...G.aabb(q), cx: q.cx, cz: q.cz };
+});
+
+function applyDeltas(ds, label) {
+  step(label, () => selection.forEach((r, i) => {
+    if (!ds[i]) return;
+    place(r, r.translation[0] + ds[i].dx, r.translation[2] + ds[i].dz);
+  }));
+}
+
+for (const b of document.querySelectorAll('#multi [data-align]'))
+  b.onclick = () => {
+    if (selection.length < 2) return;
+    applyDeltas(alignDelta(selBoxes(), b.dataset.align), '整列');
+  };
+
+for (const b of document.querySelectorAll('#multi [data-spread]'))
+  b.onclick = () => {
+    if (selection.length < 3) return;
+    const { deltas, fits } = spreadDelta(selBoxes(), b.dataset.spread);
+    applyDeltas(deltas, '等間隔');
+    if (!fits) note('入りきらないので中心を均しました', true);
+  };
+
+/** 隣に接して複製する。連打すると椅子が並ぶ。
+ *
+ * 自分の幅ぶん +X へずらすので、複製が元と重なることがない。
+ */
+async function duplicate() {
+  if (!selection.length) return;
+  const b = unionBox(selection, 0, 0);
+  if (!b) return;
+  const src = [...selection];
+  const dx = (b.x1 - b.x0) + 0.02;
+  const made = [];
+  await history.batch('複製', async () => {
+    for (const r of src) {
+      const n = await add(r.asset_id,
+        { x: r.translation[0] + dx, z: r.translation[2] },
+        r.rotation, r.translation[1]);
+      if (n) made.push(n);
+    }
+  });
+  setSelection(made);
+  redrawAll();
+}
 
 // --- 視点の切り替え -----------------------------------------------------
 function setView(to2D) {

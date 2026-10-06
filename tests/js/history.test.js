@@ -173,3 +173,31 @@ test('変化のたびに知らせる', () => {
   h.undo(); h.redo(); h.savePoint();
   assert.equal(n, 4);
 });
+
+test('まとめて 1 段にできる', async () => {
+  // 複製のように、内側で何度も足すが取り消しは 1 回で戻したい操作
+  const r = rig();
+  await r.h.batch('複製', async () => {
+    r.put(1); r.put(2); r.put(3);
+  });
+  assert.equal(r.h.depth, 1, '3 回足しても 1 段');
+  r.h.undo();
+  assert.deepEqual(r.uids(), []);
+});
+
+test('まとめた中の個別の積み上げは効かない', async () => {
+  const r = rig();
+  await r.h.batch('複製', async () => {
+    const b = r.h.begin();
+    assert.equal(b, null, '中では写しを取れない');
+    r.put(1);
+    assert.equal(r.h.commit(b), false);
+  });
+  assert.equal(r.h.depth, 1);
+});
+
+test('まとめても何も変わらなければ段を作らない', async () => {
+  const r = rig();
+  await r.h.batch('複製', async () => { /* 何もしない */ });
+  assert.equal(r.h.depth, 0);
+});

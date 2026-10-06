@@ -55,6 +55,7 @@ window.__crash = (msg, file, line) => {
       <button data-mode="3d" class="on">3D</button><button data-mode="2d">2D</button>
     </div>
     <div id="hint">左の一覧から家具をここへドラッグしてください</div>
+    <div id="band" hidden></div>
     <div id="labels"></div>
     <div id="angle" class="badge" hidden></div>
     <pre id="crash" hidden></pre>
@@ -100,11 +101,30 @@ window.__crash = (msg, file, line) => {
         <button data-face="270">270</button>
       </div>
     </div>
+    <div id="multi" hidden>
+      <h2>並べる</h2>
+      <div class="row btns">
+        <button data-align="x0" title="左揃え（−X）">⇤</button>
+        <button data-align="xc" title="左右の中央">⇔</button>
+        <button data-align="x1" title="右揃え（+X）">⇥</button>
+        <button data-align="z0" title="奥揃え（−Z）">⤒</button>
+        <button data-align="zc" title="奥手前の中央">⇕</button>
+        <button data-align="z1" title="手前揃え（+Z）">⤓</button>
+      </div>
+      <div class="row btns">
+        <button data-spread="x" title="左右に等間隔（3 体以上）">↔ 等間隔</button>
+        <button data-spread="z" title="奥手前に等間隔（3 体以上）">↕ 等間隔</button>
+      </div>
+    </div>
+
     <div id="keys" class="note">
 一覧からドラッグ=追加 / 家具をドラッグ=移動<br>
 輪をドラッグ=回転（<kbd>Shift</kbd>で1°）<br>
       <kbd>Q</kbd><kbd>E</kbd>=15°回転 /
       <kbd>Cmd/Ctrl+Z</kbd>=取り消し（<kbd>Shift</kbd>でやり直し）<br>
+      <kbd>Shift</kbd>+クリック=選択に足す / 2Dで空きをドラッグ=囲んで選ぶ<br>
+      <kbd>←↑↓→</kbd>=5cm 動かす（<kbd>Shift</kbd>で5mm）<br>
+      <kbd>Cmd/Ctrl+D</kbd>=複製 / <kbd>Cmd/Ctrl+A</kbd>=全選択<br>
       <kbd>Alt</kbd>=吸着を切る（<kbd>Alt+Shift</kbd>で刻みも）<br>
       床置きの上に落とすと、その高さに載ります<br>
       通路 60cm（よく通る所 80cm）/ 扉・引き出しの前 80cm<br>

@@ -58,6 +58,18 @@ export function createHistory({ snapshot, restore, onChange = () => {},
     return true;
   }
 
+  /** 中の積み上げを抑えて、**全体を 1 段**にする。
+   *
+   * `freeze` と違い世代を進めない——外で取った写しを活かすため。複製のように
+   * 「内側で何度も足すが、取り消しは 1 回で戻したい」操作に使う。
+   */
+  async function batch(label, fn) {
+    const b = begin();
+    frozen++;
+    try { await fn(); } finally { frozen--; }
+    return commit(b, label);
+  }
+
   /** 中を履歴に残さずに実行する。テンプレートの読み込みなど。 */
   async function freeze(fn) {
     frozen++; epoch++;
@@ -74,7 +86,7 @@ export function createHistory({ snapshot, restore, onChange = () => {},
   function savePoint() { savedAt = undoStack.length; onChange(); }
 
   return {
-    begin, commit, undo, redo, freeze, reset, savePoint,
+    begin, commit, batch, undo, redo, freeze, reset, savePoint,
     get dirty() { return undoStack.length !== savedAt; },
     get canUndo() { return undoStack.length > 0; },
     get canRedo() { return redoStack.length > 0; },

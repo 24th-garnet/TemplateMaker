@@ -94,3 +94,8 @@ kbd{background:#23262e;border:1px solid var(--line);border-bottom-width:2px;
 #room{flex:1;min-width:0}
 #roomsize input{flex:1;min-width:0;text-align:right;
   font-variant-numeric:tabular-nums}
+
+#warn{color:var(--warn);font-size:11px;margin:6px 0 0;
+  border-left:2px solid var(--warn);padding-left:7px}
+#placed li.bad b::after{content:' ⚠';color:var(--warn)}
+#ypos{flex:1;min-width:0;text-align:right;font-variant-numeric:tabular-nums}

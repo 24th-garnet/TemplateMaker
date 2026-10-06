@@ -74,6 +74,7 @@ window.__crash = (msg, file, line) => {
 
     <h2>まとまり</h2>
     <table id="group"></table>
+    <div id="warn" hidden></div>
     <h2>置いたもの <span id="count"></span></h2>
     <ul id="placed"></ul>
     <h2>選択中</h2>
@@ -83,6 +84,11 @@ window.__crash = (msg, file, line) => {
         <label for="deg">向き</label>
         <input id="deg" type="number" step="1" min="0" max="359">
         <span class="unit">°</span>
+      </div>
+      <div class="row">
+        <label for="ypos">高さ</label>
+        <input id="ypos" type="number" step="0.01" min="0" max="2.4">
+        <span class="unit">m</span>
       </div>
       <div class="row btns">
         <button data-turn="-15" title="左に15°">⟲</button>
@@ -99,6 +105,7 @@ window.__crash = (msg, file, line) => {
       <kbd>Q</kbd><kbd>E</kbd>=15°回転 /
       <kbd>Cmd/Ctrl+Z</kbd>=取り消し（<kbd>Shift</kbd>でやり直し）<br>
       <kbd>Alt</kbd>=吸着を切る（<kbd>Alt+Shift</kbd>で刻みも）<br>
+      床置きの上に落とすと、その高さに載ります<br>
       <kbd>V</kbd>=2D/3D 切り替え /
       <kbd>F</kbd>=寄る /
       <kbd>Backspace</kbd>=削除 / <kbd>Esc</kbd>=選択解除

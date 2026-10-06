@@ -31,3 +31,20 @@ export function defaultY(placement, category, height) {
   if (placement === 'wall') return WALL_Y[category] ?? 1.0;
   return 0;
 }
+
+//: 接しているだけの状態を重なりに数えないための余裕。
+//:
+//: **この数が無いと吸着と警告が打ち消し合う。** 接面で寄せた瞬間に「重なって
+//: いる」と出ると、2 つの機能が互いを無意味にする。
+export const OVERLAP_EPS = 0.002;
+
+//: 下に入れて使う組み合わせ。**高さでは分けられない。**
+//: 椅子は座面より背もたれが高く（約 0.85m）、食卓の天板は約 0.73m なので、
+//: 高さで判定すると 4 脚の食卓セットが毎回警告を出す。押し込んだ椅子は
+//: 誤りではなく正しい状態なので、組み合わせで明示的に許す
+export const TUCK = new Set([
+  'chair|table', 'chair|desk', 'stool|desk', 'stool|table', 'bench|table',
+]);
+
+/** 品目の組を正規化した鍵にする。順序に依らない */
+export const pairKey = (a, b) => [a, b].sort().join('|');

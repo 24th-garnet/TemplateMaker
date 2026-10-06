@@ -11,6 +11,8 @@ import { createView } from './view.js';
 import { createRoom } from './room.js';
 import { PRESETS, defaultY } from './spec.js';
 import { snapMove } from './snap.js';
+import { overlapping } from './clearance.js';
+import { TUCK, pairKey } from './spec.js';
 
 const $ = (s) => document.querySelector(s);
 const fmt = (v) => v.toFixed(2);
@@ -261,6 +263,78 @@ function badge(text, world, cls = '') {
 const labelsEnd = () => {
   for (let i = labelUsed; i < labelPool.length; i++) labelPool[i].hidden = true;
 };
+
+// --- 重なり --------------------------------------------------------------
+// **許して警告する。** 構成中の一時的な重なりは正常で、吸着が大半を未然に
+// 防ぐ。置けなくすると、意図的に重ねたい配置まで止めることになる。
+//
+// 色は変えない。`model` が material を共有しているので、1 体を染めると同じ
+// 素材の家具が全部染まる。輪郭だけを足す
+const clashGeo = new THREE.BufferGeometry();
+clashGeo.setAttribute('position', new THREE.BufferAttribute(
+  new Float32Array(PLAN_CAP * 8 * 3), 3).setUsage(THREE.DynamicDrawUsage));
+const clash = new THREE.LineSegments(clashGeo, new THREE.LineBasicMaterial({
+  color: 0xffb86b, transparent: true, opacity: 0.95, depthTest: false }));
+clash.renderOrder = 4;
+clash.visible = false;
+scene.add(clash);
+
+/** 重なりの判定に渡す形 */
+function clashItem(it) {
+  const r = footRect(it);
+  const a = sizes[it.asset_id];
+  if (!r) return null;
+  return { rect: r, y0: it.translation[1], y1: it.translation[1] + a.size[1],
+           place: a.placement, cat: a.category };
+}
+
+let clashCount = 0;
+
+function syncClash() {
+  const list = [], recs = [];
+  for (const it of items) {
+    const d = clashItem(it);
+    if (d) { list.push(d); recs.push(it); }
+  }
+  const bad = overlapping(list);
+  clashCount = bad.size;
+  for (const it of items) it.bad = false;
+  const arr = clashGeo.attributes.position.array;
+  let n = 0;
+  for (const i of bad) {
+    recs[i].bad = true;
+    const c = G.corners(list[i].rect);
+    const y = Math.max(0.025, list[i].y0 + 0.005);
+    for (let k = 0; k < 4; k++) {
+      const a = c[k], b = c[(k + 1) % 4];
+      arr[n++] = a[0]; arr[n++] = y; arr[n++] = a[1];
+      arr[n++] = b[0]; arr[n++] = y; arr[n++] = b[1];
+    }
+  }
+  clashGeo.setDrawRange(0, n / 3);
+  clashGeo.attributes.position.needsUpdate = true;
+  clashGeo.computeBoundingSphere();
+  clash.visible = n > 0;
+}
+
+/** その点の真下にある床置きの上面。載せられないなら 0 */
+function surfaceAt(x, z, newId) {
+  const na = sizes[newId];
+  if (na.placement !== 'floor') return 0;
+  const dot = G.rect(x, z, 0.001, 0.001, 0);
+  let top = 0;
+  for (const it of items) {
+    const a = sizes[it.asset_id];
+    if (a.placement !== 'floor') continue;
+    // 下に入れて使う組み合わせは、上に載せない（椅子は机の上に出さない）
+    if (TUCK.has(pairKey(a.category, na.category))) continue;
+    if (Math.max(na.size[0], na.size[2]) > Math.min(a.size[0], a.size[2])) continue;
+    const r = footRect(it);
+    if (!r || !G.rectHit(r, dot)) continue;
+    top = Math.max(top, it.translation[1] + a.size[1]);
+  }
+  return snap(top);
+}
 
 // --- 吸着 ----------------------------------------------------------------
 //: 許容は画面のピクセルで測る。引いて全体を見ているときに 5mm しか吸わない
@@ -551,7 +625,11 @@ view.addEventListener('drop', async (ev) => {
   hideGhost(); dropping = null;
   if (!id || !sizes[id]) return;
   const p = floorPoint(ev);
-  if (p) await add(id, resolveMove(id, 0, null, p.x, p.z, ev));
+  if (!p) return;
+  const q = resolveMove(id, 0, null, p.x, p.z, ev);
+  // 指した所に床置きの家具があれば、その上に載せる。机の上のランプ
+  const y = surfaceAt(q.x, q.z, id);
+  await add(id, q, 0, y || null);
 });
 
 // --- 操作 ---------------------------------------------------------------
@@ -741,6 +819,7 @@ function syncScene() {
   paintSelection();
   placeDial();
   syncPlan();
+  syncClash();
 }
 
 // 右の欄。数字は動くが、要素は作り直さない
@@ -766,8 +845,13 @@ function syncPanel() {
   for (const it of items) {
     if (!it.li) continue;
     it.li.classList.toggle('on', isSel(it));
+    it.li.classList.toggle('bad', !!it.bad);
     it.li.lastElementChild.textContent = `${Math.round(it.rotation)}°`;
   }
+  const w = $('#warn');
+  w.hidden = !clashCount;
+  // 保存の通知路（#msg）は使わない。上書きし合う
+  if (clashCount) w.textContent = `重なり ${clashCount} 体`;
 
   const sel = primary();
   if (!selection.length) {
@@ -784,7 +868,10 @@ function syncPanel() {
       <span class="note">${fmt(Math.max(sz.x, sz.z))}×${fmt(Math.min(sz.x, sz.z))} m</span>`;
   }
   $('#rot').hidden = !selection.length;
-  if (sel) $('#deg').value = Math.round(sel.rotation * 10) / 10;
+  if (sel) {
+    $('#deg').value = Math.round(sel.rotation * 10) / 10;
+    $('#ypos').value = Math.round(sel.translation[1] * 1000) / 1000;
+  }
 }
 
 // 一覧の行。**体が増減したときだけ。**
@@ -806,6 +893,15 @@ function syncList() {
   for (const li of [...ul.children]) if (!items.some((it) => it.li === li)) li.remove();
   want({ panel: true });
 }
+
+$('#ypos').addEventListener('change', () => {
+  const sel = primary();
+  if (!sel) return;
+  const v = parseFloat($('#ypos').value);
+  if (!Number.isFinite(v)) return void ($('#ypos').value = sel.translation[1]);
+  step('高さ', () => selection.forEach(
+    (r) => place(r, r.translation[0], r.translation[2], Math.max(0, v))));
+});
 
 // --- 視点の切り替え -----------------------------------------------------
 function setView(to2D) {

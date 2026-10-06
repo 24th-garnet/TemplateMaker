@@ -57,3 +57,32 @@ export const TUCK = new Set([
 
 /** 品目の組を正規化した鍵にする。順序に依らない */
 export const pairKey = (a, b) => [a, b].sort().join('|');
+
+//: 通路と動作域の基準（m）。人が通れるか、扉が開くかで決まる数で、
+//: 和室・洋室どちらでも使われている一般値
+export const CLEAR = {
+  walk: 0.60,        // 通路。横向きなら通れる最小
+  walkBusy: 0.80,    // よく通る所
+  door: 0.80,        // 扉・引き出しの前
+  sofaTable: 0.30,   // ソファ↔ローテーブル（30〜45cm の下限）
+  dining: 0.90,      // 食卓まわり（90〜120cm）
+  bedWall: 0.60,     // ベッド↔壁。寝具を直すのに要る
+};
+
+//: 品目の組ごとの下限。**近いのが正しい組み合わせ**がある
+export const GAP = {
+  'sofa|table': CLEAR.sofaTable,
+  'bench|table': CLEAR.sofaTable,
+  'chair|table': 0,      // 押し込むものなので間隔を問わない
+  'chair|desk': 0,
+  'stool|table': 0,
+  'stool|desk': 0,
+};
+
+/** 2 品目の間に要る最小の間隔。
+ *
+ * **食卓まわりの 90〜120cm は自動で判定しない。** `table` がローテーブルと
+ * 食卓を兼ねており、語彙は用途ではなく置き方で切ってあるため、どちらかを
+ * 推測することになる。推測で警告を出すより、凡例に書いて人に委ねる。
+ */
+export const minGap = (a, b) => GAP[pairKey(a, b)] ?? CLEAR.walk;

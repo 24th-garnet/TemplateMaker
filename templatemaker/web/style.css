@@ -99,3 +99,9 @@ kbd{background:#23262e;border:1px solid var(--line);border-bottom-width:2px;
   border-left:2px solid var(--warn);padding-left:7px}
 #placed li.bad b::after{content:' ⚠';color:var(--warn)}
 #ypos{flex:1;min-width:0;text-align:right;font-variant-numeric:tabular-nums}
+
+.check{display:flex;gap:6px;align-items:center;color:var(--dim);
+  font-size:11px;margin-top:8px;cursor:pointer}
+.check input{accent-color:var(--accent);margin:0}
+#labels .badge.tight{background:var(--warn);color:#1a1408;border-color:var(--warn);
+  font-weight:600}

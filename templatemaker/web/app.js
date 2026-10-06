@@ -11,7 +11,7 @@ import { createView } from './view.js';
 import { createRoom } from './room.js';
 import { PRESETS, defaultY } from './spec.js';
 import { snapMove } from './snap.js';
-import { overlapping } from './clearance.js';
+import { overlapping, gaps } from './clearance.js';
 import { TUCK, pairKey } from './spec.js';
 
 const $ = (s) => document.querySelector(s);
@@ -207,8 +207,7 @@ function footRect(it) {
 
 function syncPlan() {
   plan.visible = V.is2D;
-  labelsBegin();
-  if (!V.is2D) { labelsEnd(); return; }
+  if (!V.is2D) return;
   const arr = planGeo.attributes.position.array;
   let n = 0;
   const seg = (x1, z1, x2, z2) => {
@@ -235,7 +234,6 @@ function syncPlan() {
   planGeo.setDrawRange(0, n / 3);
   planGeo.attributes.position.needsUpdate = true;
   planGeo.computeBoundingSphere();
-  labelsEnd();
 }
 
 // --- 画面に重ねる札 ------------------------------------------------------
@@ -341,6 +339,74 @@ function surfaceAt(x, z, newId, except) {
     top = Math.max(top, it.translation[1] + a.size[1]);
   }
   return snap(top);
+}
+
+// --- 間隔 ----------------------------------------------------------------
+// **選んだ 1 体のときだけ。** 常時出すと 30 体で線だらけになる。
+// 四方に 1 本ずつ、最大 4 本——体数が増えても表示量が変わらない
+const DIM_CAP = 4 * 3;                       // 本線 + 両端の爪
+const dimGeo = new THREE.BufferGeometry();
+dimGeo.setAttribute('position', new THREE.BufferAttribute(
+  new Float32Array(DIM_CAP * 2 * 3), 3).setUsage(THREE.DynamicDrawUsage));
+dimGeo.setAttribute('color', new THREE.BufferAttribute(
+  new Float32Array(DIM_CAP * 2 * 3), 3).setUsage(THREE.DynamicDrawUsage));
+const dims = new THREE.LineSegments(dimGeo, new THREE.LineBasicMaterial({
+  vertexColors: true, transparent: true, opacity: 0.95, depthTest: false }));
+dims.renderOrder = 5;
+dims.visible = false;
+scene.add(dims);
+
+const DIM_OK = new THREE.Color(0x8d94a3);
+const DIM_TIGHT = new THREE.Color(0xffb86b);
+
+function syncGaps() {
+  dims.visible = false;
+  if (!$('#showgap')?.checked || selection.length !== 1) return;
+  const sel = primary();
+  const me = clashItem(sel);
+  if (!me) return;
+  const others = [];
+  for (const it of items) {
+    if (it === sel) continue;
+    const d = clashItem(it);
+    if (d) others.push(d);
+  }
+  const list = gaps(me, others, room.walls());
+  const pos = dimGeo.attributes.position.array;
+  const col = dimGeo.attributes.color.array;
+  let n = 0;
+  const seg = (x1, z1, x2, z2, c) => {
+    for (const [x, z] of [[x1, z1], [x2, z2]]) {
+      pos[n] = x; pos[n + 1] = 0.012; pos[n + 2] = z;
+      col[n] = c.r; col[n + 1] = c.g; col[n + 2] = c.b;
+      n += 3;
+    }
+  };
+  for (const g of list) {
+    const ax = g.key[1], out = g.key[0] === '+' ? 1 : -1;
+    const mid = (g.span[0] + g.span[1]) / 2;
+    const a = g.at, b = g.at + out * g.dist;
+    const c = g.tight ? DIM_TIGHT : DIM_OK;
+    const T = 0.05;                                   // 端の爪
+    if (ax === 'x') {
+      seg(a, mid, b, mid, c);
+      seg(a, mid - T, a, mid + T, c);
+      seg(b, mid - T, b, mid + T, c);
+      badge(`${Math.round(g.dist * 100)} cm`,
+            new THREE.Vector3((a + b) / 2, 0.03, mid), g.tight ? 'tight' : 'dim');
+    } else {
+      seg(mid, a, mid, b, c);
+      seg(mid - T, a, mid + T, a, c);
+      seg(mid - T, b, mid + T, b, c);
+      badge(`${Math.round(g.dist * 100)} cm`,
+            new THREE.Vector3(mid, 0.03, (a + b) / 2), g.tight ? 'tight' : 'dim');
+    }
+  }
+  dimGeo.setDrawRange(0, n / 3);
+  dimGeo.attributes.position.needsUpdate = true;
+  dimGeo.attributes.color.needsUpdate = true;
+  dimGeo.computeBoundingSphere();
+  dims.visible = n > 0;
 }
 
 // --- 吸着 ----------------------------------------------------------------
@@ -827,8 +893,11 @@ function syncScene() {
   if (b) groupBox.box.copy(b);
   paintSelection();
   placeDial();
+  labelsBegin();                 // 札は場面全体で 1 つのプールを使い回す
   syncPlan();
   syncClash();
+  syncGaps();
+  labelsEnd();
 }
 
 // 右の欄。数字は動くが、要素は作り直さない
@@ -902,6 +971,8 @@ function syncList() {
   for (const li of [...ul.children]) if (!items.some((it) => it.li === li)) li.remove();
   want({ panel: true });
 }
+
+$('#showgap').addEventListener('change', () => want({ scene: true }));
 
 $('#ypos').addEventListener('change', () => {
   const sel = primary();

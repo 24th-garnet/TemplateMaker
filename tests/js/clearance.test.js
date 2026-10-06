@@ -113,3 +113,92 @@ test('許容は外から変えられる', () => {
   assert.equal(collides(a, b, OVERLAP_EPS), true);
   assert.equal(collides(a, b, 0.01), false, '許容を広げれば見逃す');
 });
+
+// --- 間隔 -----------------------------------------------------------------
+import { gaps } from '../../templatemaker/web/clearance.js';
+import { CLEAR } from '../../templatemaker/web/spec.js';
+
+const side = (g, k) => g.find((x) => x.key === k);
+const nearly = (a, b, eps = 1e-6) =>
+  assert.ok(Math.abs(a - b) < eps, `${a} ≠ ${b}`);
+
+test('向かい合うものとの隙間を測る', () => {
+  const s = it(0, 0, 1, 1);
+  const o = it(1.7, 0, 1, 1);           // 隙間 0.7
+  const g = gaps(s, [o]);
+  nearly(side(g, '+x').dist, 0.7);
+  assert.equal(side(g, '+x').tight, false, '通路 0.6 を満たす');
+});
+
+test('狭ければ警告になる', () => {
+  const g = gaps(it(0, 0, 1, 1), [it(1.4, 0, 1, 1)]);   // 隙間 0.4
+  assert.equal(side(g, '+x').tight, true);
+  nearly(side(g, '+x').need, CLEAR.walk);
+});
+
+test('横にずれているだけなら通り道ではない', () => {
+  // 直交する側で範囲が重なっていなければ測らない
+  const g = gaps(it(0, 0, 1, 1), [it(1.7, 5, 1, 1)]);
+  assert.equal(g.length, 0);
+});
+
+test('辺ごとに一番近いものだけ', () => {
+  const s = it(0, 0, 1, 1);
+  const g = gaps(s, [it(1.7, 0, 1, 1), it(2.5, 0, 1, 1)]);
+  assert.equal(g.filter((x) => x.key === '+x').length, 1);
+  nearly(side(g, '+x').dist, 0.7);
+});
+
+test('四方で最大 4 本', () => {
+  // 体数が増えても表示量が変わらないのが雑音対策
+  const s = it(0, 0, 1, 1);
+  const o = [];
+  for (let i = 0; i < 20; i++) o.push(it(1.7 + i * 0.1, 0, 1, 1));
+  o.push(it(-1.7, 0, 1, 1), it(0, 1.7, 1, 1), it(0, -1.7, 1, 1));
+  assert.ok(gaps(s, o).length <= 4);
+});
+
+test('壁との隙間も測る', () => {
+  const g = gaps(it(0, 0, 1, 1), [], [{ axis: 'x', at: 1.0 }]);
+  nearly(side(g, '+x').dist, 0.5);
+  assert.equal(side(g, '+x').cat, 'wall');
+  assert.equal(side(g, '+x').tight, true, 'ベッド↔壁の 0.6 を割る');
+});
+
+test('ソファとローテーブルは近くてよい', () => {
+  // 通路の 0.6 を当てると、正しい配置に警告が出る
+  const sofa = it(0, 0, 2, 0.9, 'sofa');
+  const tbl = it(0, 1.05, 1.1, 0.5, 'table');   // 隙間 0.4
+  const g = gaps(sofa, [tbl]);
+  nearly(side(g, '+z').need, CLEAR.sofaTable);
+  assert.equal(side(g, '+z').tight, false);
+});
+
+test('押し込む組み合わせは測らない', () => {
+  const tbl = it(0, 0, 1.6, 0.9, 'table', { h: 0.73 });
+  const chair = it(0, 0.8, 0.5, 0.5, 'chair', { h: 0.85 });
+  assert.equal(gaps(tbl, [chair]).length, 0);
+});
+
+test('高さが離れていれば通路の話ではない', () => {
+  const desk = it(0, 0, 1.2, 0.6, 'desk', { h: 0.75 });
+  const lamp = it(0, 0.5, 0.2, 0.2, 'lamp', { y0: 0.75, h: 0.4 });
+  assert.equal(gaps(desk, [lamp]).length, 0);
+});
+
+test('壁掛けは床の通路に数えない', () => {
+  const sofa = it(0, 0, 2, 0.9, 'sofa');
+  const art = it(0, 1.2, 1, 0.1, 'wall_decor', { place: 'wall', y0: 1.2, h: 0.6 });
+  assert.equal(gaps(sofa, [art]).length, 0);
+});
+
+test('重なっているものは隙間を持たない', () => {
+  assert.equal(gaps(it(0, 0, 1, 1), [it(0.5, 0, 1, 1)]).length, 0);
+});
+
+test('線を引く範囲は向かい合う部分だけ', () => {
+  const s = it(0, 0, 1, 2);            // z: -1..1
+  const o = it(1.7, 0.5, 1, 1);        // z: 0..1
+  const g = side(gaps(s, [o]), '+x');
+  nearly(g.span[0], 0); nearly(g.span[1], 1);
+});

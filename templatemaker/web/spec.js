@@ -19,16 +19,25 @@ export const PRESETS = {
   '10畳': [3.52, 4.40],
 };
 
-//: 壁に付くものの既定の高さ（下端）。部屋が無くても使う
-export const WALL_Y = { mirror: 0.90, wall_decor: 1.40, headboard: 0 };
+//: 壁に掛けるものの中心を合わせる高さ。絵も鏡も、下端ではなく**中心**を
+//: 目線に合わせて掛ける。下端を固定すると、背の高いものほど上へ行き、
+//: 実測では 1.22m の壁掛けが天井（2.4m）を 0.22m 突き抜けていた
+export const EYE = 1.45;
 
-/** 品目と置き方から、置いたときの既定の高さを決める。
+const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), Math.max(lo, hi));
+
+/** 品目と置き方から、置いたときの既定の高さ（下端）を決める。
  *
- * 壁掛けや天井吊りを床に置いても意味がない。
+ * **自分の高さを見て決める。** 品目ごとの固定値だと、大きいものが天井を
+ * 突き抜け、小さいものが床すれすれに来る。
  */
 export function defaultY(placement, category, height) {
-  if (placement === 'ceiling') return Math.max(0, ROOM_H - (height || 0));
-  if (placement === 'wall') return WALL_Y[category] ?? 1.0;
+  const h = height || 0;
+  if (placement === 'ceiling') return clamp(ROOM_H - h, 0, ROOM_H);
+  if (placement === 'wall') {
+    if (category === 'headboard') return 0;   // ベッドに付くので床から立つ
+    return clamp(EYE - h / 2, 0, ROOM_H - h);
+  }
   return 0;
 }
 

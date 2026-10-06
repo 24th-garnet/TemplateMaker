@@ -317,13 +317,20 @@ function syncClash() {
   clash.visible = n > 0;
 }
 
-/** その点の真下にある床置きの上面。載せられないなら 0 */
-function surfaceAt(x, z, newId) {
+/** その点で支えになる面の高さ。
+ *
+ * **床置きだけが床の事情に従う。** 壁掛けや天井吊りに `null` を返すのは、
+ * 掴んで動かしただけで床へ落ちないようにするため。
+ *
+ * 置くものが無ければ 0 を返す——机から外へ引き出したら床へ降りてほしい。
+ */
+function surfaceAt(x, z, newId, except) {
   const na = sizes[newId];
-  if (na.placement !== 'floor') return 0;
+  if (na.placement !== 'floor') return null;
   const dot = G.rect(x, z, 0.001, 0.001, 0);
   let top = 0;
   for (const it of items) {
+    if (it === except) continue;
     const a = sizes[it.asset_id];
     if (a.placement !== 'floor') continue;
     // 下に入れて使う組み合わせは、上に載せない（椅子は机の上に出さない）
@@ -628,8 +635,7 @@ view.addEventListener('drop', async (ev) => {
   if (!p) return;
   const q = resolveMove(id, 0, null, p.x, p.z, ev);
   // 指した所に床置きの家具があれば、その上に載せる。机の上のランプ
-  const y = surfaceAt(q.x, q.z, id);
-  await add(id, q, 0, y || null);
+  await add(id, q, 0, surfaceAt(q.x, q.z, id, null));
 });
 
 // --- 操作 ---------------------------------------------------------------
@@ -728,7 +734,10 @@ renderer.domElement.addEventListener('pointermove', (ev) => {
   if (!ray.ray.intersectPlane(plane, hit)) return;
   const p = resolveMove(drag.rec.asset_id, drag.rec.rotation, drag.rec,
                         hit.x + drag.dx, hit.z + drag.dz, ev);
-  place(drag.rec, p.x, p.z);
+  // **動かすたびに支えを見直す。** 花瓶を机へ引き込んだら天板へ載り、
+  // 外へ出したら床へ降りる。置いた時だけ見ていると机に食い込んだままになる
+  const y = surfaceAt(p.x, p.z, drag.rec.asset_id, drag.rec);
+  place(drag.rec, p.x, p.z, y ?? drag.rec.translation[1]);
 });
 
 const endDrag = () => {

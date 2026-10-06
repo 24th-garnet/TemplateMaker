@@ -1,7 +1,7 @@
 // 領域の知識としての数。**畳の寸法と、壁に付くものの高さ。**
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { TATAMI, ROOM_H, PRESETS, defaultY, WALL_Y }
+import { TATAMI, ROOM_H, PRESETS, defaultY, EYE }
   from '../../templatemaker/web/spec.js';
 
 const near = (a, b, eps = 1e-9) =>
@@ -39,20 +39,34 @@ test('床置きは高さ 0', () => {
   near(defaultY('floor_flat', 'rug', 0.02), 0);
 });
 
-test('壁に付くものは品目ごとの高さ', () => {
-  near(defaultY('wall', 'mirror', 1.2), WALL_Y.mirror);
-  near(defaultY('wall', 'wall_decor', 0.6), WALL_Y.wall_decor);
+test('壁に掛けるものは中心が目線に来る', () => {
+  // **下端を固定しない。** 自分の高さを見て決めないと、大きいものほど上へ行く
+  for (const h of [0.31, 0.61, 1.22]) {
+    const y = defaultY('wall', 'wall_decor', h);
+    near(y + h / 2, EYE, 1e-9);
+  }
+});
+
+test('背の高い壁掛けでも天井を突き抜けない', () => {
+  // 実測で 1.22m の壁掛けが、下端 1.40m 固定だと 2.62m に達していた
+  for (const h of [1.22, 2.0, 2.39]) {
+    const y = defaultY('wall', 'wall_decor', h);
+    assert.ok(y + h <= ROOM_H + 1e-9, `${h}m が天井を越える`);
+    assert.ok(y >= 0, `${h}m が床より下`);
+  }
+});
+
+test('鏡も中心を合わせる', () => {
+  near(defaultY('wall', 'mirror', 0.77) + 0.77 / 2, EYE);
+});
+
+test('ヘッドボードは床から立つ', () => {
+  // ベッドに付くものなので、目線に掛けるのではない
   near(defaultY('wall', 'headboard', 1.0), 0);
 });
 
 test('知らない壁掛けでも床には落とさない', () => {
   assert.ok(defaultY('wall', 'unknown', 0.5) > 0);
-});
-
-test('天井吊りは天井から下げる', () => {
-  // 器具の高さぶん下がった位置が下端になる
-  near(defaultY('ceiling', 'ceiling_light', 0.4), ROOM_H - 0.4);
-  near(defaultY('ceiling', 'ceiling_light', 0), ROOM_H);
 });
 
 test('天井より背の高い器具でも床より下へは行かない', () => {

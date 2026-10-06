@@ -10,6 +10,7 @@ import { createHistory } from './history.js';
 import { createView } from './view.js';
 import { createRoom } from './room.js';
 import { PRESETS, defaultY } from './spec.js';
+import { snapMove } from './snap.js';
 
 const $ = (s) => document.querySelector(s);
 const fmt = (v) => v.toFixed(2);
@@ -261,6 +262,73 @@ const labelsEnd = () => {
   for (let i = labelUsed; i < labelPool.length; i++) labelPool[i].hidden = true;
 };
 
+// --- 吸着 ----------------------------------------------------------------
+//: 許容は画面のピクセルで測る。引いて全体を見ているときに 5mm しか吸わない
+//: のでは、吸う意味がない。回転つまみの判定で既に採った考え方と同じ
+const SNAP_PX = 8;
+
+const guideGeo = new THREE.BufferGeometry();
+guideGeo.setAttribute('position', new THREE.BufferAttribute(
+  new Float32Array(2 * 2 * 3), 3).setUsage(THREE.DynamicDrawUsage));
+const guides = new THREE.LineSegments(guideGeo, new THREE.LineBasicMaterial({
+  color: 0x7fb8ff, transparent: true, opacity: 0.9, depthTest: false }));
+guides.renderOrder = 5;
+guides.visible = false;
+scene.add(guides);
+
+const hideGuides = () => { guides.visible = false; };
+
+function drawGuides(s) {
+  const arr = guideGeo.attributes.position.array;
+  let n = 0;
+  const seg = (x1, z1, x2, z2) => {
+    arr[n++] = x1; arr[n++] = 0.015; arr[n++] = z1;
+    arr[n++] = x2; arr[n++] = 0.015; arr[n++] = z2;
+  };
+  if (s.x) seg(s.x.at, s.x.span[0], s.x.at, s.x.span[1]);
+  if (s.z) seg(s.z.span[0], s.z.at, s.z.span[1], s.z.at);
+  guideGeo.setDrawRange(0, n / 3);
+  guideGeo.attributes.position.needsUpdate = true;
+  guideGeo.computeBoundingSphere();
+  guides.visible = n > 0;
+}
+
+/** 相手の外接。自分は呼ぶ側で外す */
+function snapBoxes(except) {
+  const out = [];
+  for (const it of items) {
+    if (it === except) continue;
+    const r = footRect(it);
+    if (!r) continue;
+    out.push({ ...G.aabb(r), cx: r.cx, cz: r.cz, aligned: G.axisAligned(r.t) });
+  }
+  return out;
+}
+
+/**
+ * 置き場所を決める。**吸着はその軸のグリッドを上書きする。**
+ * 5mm 刻みは目分量の端数を消すためのもので、相手に合わせた位置はそれ自体が
+ * 正しい値。丸めると 2mm の隙間が残る。
+ */
+function resolveMove(assetId, rotDeg, except, rawX, rawZ, ev) {
+  const noSnap = ev.altKey;                       // Alt で吸着を切る
+  const noGrid = ev.altKey && ev.shiftKey;        // Alt+Shift で刻みも切る
+  let x = noGrid ? rawX : snap(rawX);
+  let z = noGrid ? rawZ : snap(rawZ);
+  if (noSnap) { hideGuides(); return { x, z }; }
+
+  const a = sizes[assetId];
+  const t = THREE.MathUtils.degToRad(rotDeg);
+  const r = G.rect(rawX, rawZ, a.size[0], a.size[2], t);
+  const m = { ...G.aabb(r), cx: rawX, cz: rawZ, aligned: G.axisAligned(t) };
+  const tol = SNAP_PX * V.mpp(new THREE.Vector3(rawX, 0, rawZ));
+  const got = snapMove(m, snapBoxes(except), room.walls(), tol, !!room.size);
+  if (got.x) x = rawX + got.x.d;
+  if (got.z) z = rawZ + got.z.d;
+  drawGuides(got);
+  return { x, z };
+}
+
 // --- 描き直し ----------------------------------------------------------
 // **要求を溜めて、次の 1 フレームでまとめて払う。**
 // pointermove は 1 フレームに何度も来る。来るたびに組み直すと、指の速さ
@@ -466,12 +534,14 @@ view.addEventListener('dragover', (ev) => {
   const p = floorPoint(ev);
   if (!p) return;
   const a = sizes[dropping];
+  // 落ちる前から吸わせる。ベッドに接した状態でナイトテーブルを置ける
+  const q = resolveMove(dropping, 0, null, p.x, p.z, ev);
   ghost.scale.set(a.size[0], 1, a.size[2]);
-  ghost.position.set(snap(p.x), 0.004, snap(p.z));
+  ghost.position.set(q.x, 0.004, q.z);
   ghost.visible = true;
 });
 
-const hideGhost = () => { ghost.visible = false; };
+const hideGhost = () => { ghost.visible = false; hideGuides(); };
 view.addEventListener('dragleave', hideGhost);
 addEventListener('dragend', () => { hideGhost(); dropping = null; });
 
@@ -481,7 +551,7 @@ view.addEventListener('drop', async (ev) => {
   hideGhost(); dropping = null;
   if (!id || !sizes[id]) return;
   const p = floorPoint(ev);
-  if (p) await add(id, { x: snap(p.x), z: snap(p.z) });
+  if (p) await add(id, resolveMove(id, 0, null, p.x, p.z, ev));
 });
 
 // --- 操作 ---------------------------------------------------------------
@@ -578,14 +648,15 @@ renderer.domElement.addEventListener('pointermove', (ev) => {
   if (!drag) return;
   pointerRay(ev);
   if (!ray.ray.intersectPlane(plane, hit)) return;
-  // 5mm 刻み。目分量で置いたものが端数だらけにならないように
-  place(drag.rec, snap(hit.x + drag.dx), snap(hit.z + drag.dz));
+  const p = resolveMove(drag.rec.asset_id, drag.rec.rotation, drag.rec,
+                        hit.x + drag.dx, hit.z + drag.dz, ev);
+  place(drag.rec, p.x, p.z);
 });
 
 const endDrag = () => {
   // **区切りは指を離したとき。** 途中経過を積むと、1 回動かすのに
   // 何十回も取り消すことになる
-  if (drag) { history.commit(drag.before, '移動'); drag = null; }
+  if (drag) { history.commit(drag.before, '移動'); drag = null; hideGuides(); }
   if (spin) {
     history.commit(spin.before, '回転');
     spin = null; guide.visible = false; hideAngle();
@@ -660,7 +731,8 @@ addEventListener('keydown', (ev) => {
   }
 });
 
-// --- 描き直し -----------------------------------------------------------
+// --- 画面の組み立て ---------------------------------------------------
+
 // 場面だけ。**毎フレーム走りうる経路**なので DOM を触らない
 function syncScene() {
   const b = groupBounds();

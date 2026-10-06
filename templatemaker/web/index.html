@@ -51,8 +51,12 @@ window.__crash = (msg, file, line) => {
   </aside>
 
   <div id="view"><canvas id="c"></canvas>
+    <div id="viewmode">
+      <button data-mode="3d" class="on">3D</button><button data-mode="2d">2D</button>
+    </div>
     <div id="hint">左の一覧から家具をここへドラッグしてください</div>
-    <div id="angle" hidden></div>
+    <div id="labels"></div>
+    <div id="angle" class="badge" hidden></div>
     <pre id="crash" hidden></pre>
   </div>
 
@@ -83,6 +87,7 @@ window.__crash = (msg, file, line) => {
 輪をドラッグ=回転（<kbd>Shift</kbd>で1°）<br>
       <kbd>Q</kbd><kbd>E</kbd>=15°回転 /
       <kbd>Cmd/Ctrl+Z</kbd>=取り消し（<kbd>Shift</kbd>でやり直し）<br>
+      <kbd>V</kbd>=2D/3D 切り替え /
       <kbd>F</kbd>=寄る /
       <kbd>Backspace</kbd>=削除 / <kbd>Esc</kbd>=選択解除
     </div>

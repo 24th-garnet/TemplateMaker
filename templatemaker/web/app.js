@@ -5,9 +5,9 @@
 // Group が「どこに置いたか」だけを持つので、動かす・回すが素直になる。
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import * as G from './geom.js';
 import { createHistory } from './history.js';
+import { createView } from './view.js';
 
 const $ = (s) => document.querySelector(s);
 const fmt = (v) => v.toFixed(2);
@@ -20,11 +20,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: $('#c'), antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x15161a);
-const cam = new THREE.PerspectiveCamera(45, 1, 0.05, 200);
-cam.position.set(4, 3.4, 4.6);
-const controls = new OrbitControls(cam, renderer.domElement);
-controls.target.set(0, 0.45, 0);
-controls.maxPolarAngle = Math.PI / 2 - 0.02;
+const V = createView(renderer, scene, view);
 
 scene.add(new THREE.HemisphereLight(0xdfe6f2, 0x30343c, 2.1));
 const sun = new THREE.DirectionalLight(0xffffff, 1.5);
@@ -140,9 +136,92 @@ function placeDial() {
   dial.position.set(sel.holder.position.x, 0.006, sel.holder.position.z);
   dial.rotation.y = sel.holder.rotation.y;
   dial.visible = true;
-  const s = dialHot ? 1.25 : 1;
-  handle.scale.setScalar(s);
+  // 2D は引くと輪が点になる。掴める大きさを画面側で保つ
+  dial.scale.setScalar(V.is2D
+    ? Math.max(1, 40 * V.mpp() / dialRadius) : 1);
+  handle.scale.setScalar(dialHot ? 1.25 : 1);
 }
+
+// --- 2D の重ね描き -------------------------------------------------------
+// **メッシュは消さない。** 外形は外接しか無いので平面図形へ置き換えると
+// ソファと本棚が同じ長方形になる。真上から見た実物は十分に見分けがつく。
+// 足りないのは正確な外形と向きなので、そこだけ線で重ねる
+const PLAN_CAP = 256;
+const planGeo = new THREE.BufferGeometry();
+planGeo.setAttribute('position', new THREE.BufferAttribute(
+  new Float32Array(PLAN_CAP * 10 * 3), 3).setUsage(THREE.DynamicDrawUsage));
+const plan = new THREE.LineSegments(planGeo, new THREE.LineBasicMaterial({
+  color: 0x8d94a3, transparent: true, opacity: 0.85, depthTest: false }));
+plan.renderOrder = 3;
+plan.visible = false;
+scene.add(plan);
+
+/** 記録を長方形に直す。寸法と角度だけで決まる */
+function footRect(it) {
+  const a = sizes[it.asset_id];
+  if (!a?.size) return null;
+  return G.rect(it.translation[0], it.translation[2], a.size[0], a.size[2],
+                THREE.MathUtils.degToRad(it.rotation));
+}
+
+function syncPlan() {
+  plan.visible = V.is2D;
+  labelsBegin();
+  if (!V.is2D) { labelsEnd(); return; }
+  const arr = planGeo.attributes.position.array;
+  let n = 0;
+  const seg = (x1, z1, x2, z2) => {
+    arr[n++] = x1; arr[n++] = 0.02; arr[n++] = z1;
+    arr[n++] = x2; arr[n++] = 0.02; arr[n++] = z2;
+  };
+  for (const it of items.slice(0, PLAN_CAP)) {
+    const r = footRect(it);
+    if (!r) continue;
+    const c = G.corners(r);
+    for (let i = 0; i < 4; i++) seg(c[i][0], c[i][1], c[(i + 1) % 4][0], c[(i + 1) % 4][1]);
+    const [vx, vz] = G.axisZ(r.t);          // 正面の印。つまみと同じ約束
+    seg(r.cx, r.cz, r.cx + vx * (r.hd + 0.12), r.cz + vz * (r.hd + 0.12));
+
+    // **札は footprint が 44px より広いときだけ。**
+    // 全部に出すと 30 体で文字の壁になる
+    const a = sizes[it.asset_id];
+    const px = Math.min(a.size[0], a.size[2]) / V.mpp();
+    if (px > 44) {
+      const txt = isSel(it) ? `${a.category} ${a.width}×${a.depth}` : a.category;
+      badge(txt, new THREE.Vector3(r.cx, 0.03, r.cz));
+    }
+  }
+  planGeo.setDrawRange(0, n / 3);
+  planGeo.attributes.position.needsUpdate = true;
+  planGeo.computeBoundingSphere();
+  labelsEnd();
+}
+
+// --- 画面に重ねる札 ------------------------------------------------------
+// 角度・品目名・間隔の寸法が共用する。作り直さず使い回す
+const labelBox = $('#labels');
+const labelPool = [];
+let labelUsed = 0;
+const labelsBegin = () => { labelUsed = 0; };
+function badge(text, world, cls = '') {
+  let el = labelPool[labelUsed];
+  if (!el) {
+    el = document.createElement('div');
+    labelBox.append(el); labelPool.push(el);
+  }
+  labelUsed++;
+  const r = renderer.domElement.getBoundingClientRect();
+  const p = world.clone().project(V.cam);
+  el.textContent = text;
+  el.className = `badge ${cls}`;
+  el.style.left = `${(p.x + 1) / 2 * r.width}px`;
+  el.style.top = `${(-p.y + 1) / 2 * r.height}px`;
+  el.hidden = false;
+  return el;
+}
+const labelsEnd = () => {
+  for (let i = labelUsed; i < labelPool.length; i++) labelPool[i].hidden = true;
+};
 
 // --- 描き直し ----------------------------------------------------------
 // **要求を溜めて、次の 1 フレームでまとめて払う。**
@@ -159,18 +238,16 @@ function flush() {
   if (need.panel) { need.panel = false; syncPanel(); }
 }
 
-function resize() {
-  const w = view.clientWidth, h = view.clientHeight;
-  renderer.setSize(w, h, false);
-  cam.aspect = w / h; cam.updateProjectionMatrix();
-}
+const resize = () => { V.resize(); want({ scene: true }); };
 addEventListener('resize', resize);
+// 視点が動くと札の画面位置がずれる。動いた時だけ組み直す
+V.onChange(() => want({ scene: true }));
 
 (function loop() {
   requestAnimationFrame(loop);        // 先に次を予約する。flush が投げても止まらない
   flush();
-  controls.update();
-  renderer.render(scene, cam);
+  V.controls.update();
+  renderer.render(scene, V.cam);
 })();
 
 // --- 素材の読み込み -----------------------------------------------------
@@ -377,7 +454,7 @@ function pointerRay(ev) {
   const r = renderer.domElement.getBoundingClientRect();
   ray.setFromCamera(new THREE.Vector2(
     ((ev.clientX - r.left) / r.width) * 2 - 1,
-    -((ev.clientY - r.top) / r.height) * 2 + 1), cam);
+    -((ev.clientY - r.top) / r.height) * 2 + 1), V.cam);
   return ray;
 }
 
@@ -404,7 +481,7 @@ function angleAt(ev, cx, cz) {
 function onHandle(ev) {
   if (!dial.visible) return false;
   const r = renderer.domElement.getBoundingClientRect();
-  const h = handleWorld().project(cam);
+  const h = handleWorld().project(V.cam);
   const hx = r.left + (h.x + 1) / 2 * r.width;
   const hy = r.top + (-h.y + 1) / 2 * r.height;
   return Math.hypot(ev.clientX - hx, ev.clientY - hy) < 22;
@@ -423,7 +500,7 @@ renderer.domElement.addEventListener('pointerdown', (ev) => {
       spin = { rec: sel, from: a, start: sel.holder.rotation.y,
                before: history.begin() };
       guide.visible = true;
-      controls.enabled = false;
+      V.controls.enabled = false;
       renderer.domElement.setPointerCapture(ev.pointerId);
       return;
     }
@@ -436,7 +513,7 @@ renderer.domElement.addEventListener('pointerdown', (ev) => {
   if (ray.ray.intersectPlane(plane, hit)) {
     drag = { rec, dx: rec.holder.position.x - hit.x,
              dz: rec.holder.position.z - hit.z, before: history.begin() };
-    controls.enabled = false;
+    V.controls.enabled = false;
     renderer.domElement.setPointerCapture(ev.pointerId);
   }
 });
@@ -472,7 +549,7 @@ const endDrag = () => {
     history.commit(spin.before, '回転');
     spin = null; guide.visible = false; hideAngle();
   }
-  controls.enabled = true;
+  V.controls.enabled = true;
 };
 
 // 掴める所に来たら膨らませる。掴めることを触る前に見せる
@@ -491,7 +568,7 @@ const tag = $('#angle');
 function showAngle() {
   if (!spin) return;
   const r = renderer.domElement.getBoundingClientRect();
-  const h = handleWorld().project(cam);
+  const h = handleWorld().project(V.cam);
   tag.style.left = `${(h.x + 1) / 2 * r.width}px`;
   tag.style.top = `${(-h.y + 1) / 2 * r.height}px`;
   tag.textContent = `${Math.round(spin.rec.rotation)}°`;
@@ -502,16 +579,16 @@ renderer.domElement.addEventListener('pointerup', endDrag);
 renderer.domElement.addEventListener('pointercancel', endDrag);
 
 function focusOn(rec) {
-  const t = new THREE.Vector3(rec.holder.position.x,
-    rec.holder.position.y + sizes[rec.asset_id].size[1] / 2, rec.holder.position.z);
-  const d = cam.position.clone().sub(controls.target);
-  controls.target.copy(t);
-  cam.position.copy(t).add(d);
+  const a = sizes[rec.asset_id];
+  V.focus(new THREE.Vector3(rec.holder.position.x,
+    rec.holder.position.y + a.size[1] / 2, rec.holder.position.z),
+    Math.max(a.size[0], a.size[2]));
 }
 
 addEventListener('keydown', (ev) => {
   if (ev.target.tagName === 'INPUT' || ev.target.tagName === 'SELECT') return;
   if (ev.key === 'Escape') return select(null);
+  if (ev.key === 'v' || ev.key === 'V') return setView(!V.is2D);
 
   // **何も選んでいなくても効く必要がある**ので、選択の判定より前に置く。
   // macOS の Cmd+Shift+Z は key が 'Z' で来るため小文字に寄せる
@@ -550,6 +627,7 @@ function syncScene() {
   if (b) groupBox.box.copy(b);
   paintSelection();
   placeDial();
+  syncPlan();
 }
 
 // 右の欄。数字は動くが、要素は作り直さない
@@ -616,6 +694,16 @@ function syncList() {
   want({ panel: true });
 }
 
+// --- 視点の切り替え -----------------------------------------------------
+function setView(to2D) {
+  V.setMode(to2D);
+  for (const b of document.querySelectorAll('#viewmode button'))
+    b.classList.toggle('on', (b.dataset.mode === '2d') === to2D);
+  want({ scene: true });
+}
+for (const b of document.querySelectorAll('#viewmode button'))
+  b.onclick = () => setView(b.dataset.mode === '2d');
+
 // --- 回転の口 -----------------------------------------------------------
 $('#deg').addEventListener('change', () => {
   const sel = primary();
@@ -666,8 +754,8 @@ function paintAssets() {
       ev.dataTransfer.effectAllowed = 'copy';
     });
     // 落とす先が分からないときのために、見ている場所へ置く道も残す
-    li.ondblclick = () => add(a.id, { x: snap(controls.target.x),
-                                      z: snap(controls.target.z) });
+    li.ondblclick = () => add(a.id, { x: snap(V.controls.target.x),
+                                      z: snap(V.controls.target.z) });
     ul.append(li);
   }
   $('#libnote').textContent =

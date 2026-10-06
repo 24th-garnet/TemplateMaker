@@ -71,10 +71,21 @@ kbd{background:#23262e;border:1px solid var(--line);border-bottom-width:2px;
   font-variant-numeric:tabular-nums}
 #sel .note{display:block;margin-top:2px}
 
-#angle{position:absolute;transform:translate(-50%,-180%);pointer-events:none;
+.badge{position:absolute;transform:translate(-50%,-50%);pointer-events:none;
   background:#ffb86b;color:#1a1408;font-weight:600;font-size:11px;
   padding:2px 7px;border-radius:10px;font-variant-numeric:tabular-nums;
-  box-shadow:0 2px 8px #0008}
+  box-shadow:0 2px 8px #0008;white-space:nowrap}
+#angle{transform:translate(-50%,-180%)}
+#labels{position:absolute;inset:0;pointer-events:none}
+#labels .badge{background:#1c1e24d9;color:var(--dim);font-weight:400;
+  border:1px solid var(--line);box-shadow:none}
+#viewmode{position:absolute;left:10px;top:10px;display:flex;z-index:2;
+  background:#1c1e24cc;border:1px solid var(--line);border-radius:6px;
+  overflow:hidden;backdrop-filter:blur(6px)}
+#viewmode button{border:0;border-radius:0;padding:4px 11px;font-size:11px;
+  background:transparent;color:var(--dim);letter-spacing:.04em}
+#viewmode button:hover{background:#ffffff0f}
+#viewmode button.on{background:var(--accent);color:#10131a;font-weight:600}
 
 #crash{position:absolute;left:16px;right:16px;top:16px;margin:0;z-index:9;
   background:#3a1f1f;border:1px solid #7a3b3b;color:#ffd9d9;border-radius:6px;
